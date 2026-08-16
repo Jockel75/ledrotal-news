@@ -1,0 +1,146 @@
+{
+  "edition": {
+    "date": "Sonntag, 16. August 2026",
+    "label": "Mobile Ausgabe",
+    "brand": "Ledrotal Zeitung",
+    "kicker": "La Gazzetta della Casa Stawole",
+    "subtitle": "Ledro · Garda · Trentino · Italien"
+  },
+  "sections": ["Heute", "Ledrotal", "Pur", "Pieve", "Haus & Alltag", "Verkehr", "Kultur"],
+  "stories": [
+    {
+      "id": "infra",
+      "priority": 100,
+      "hero": true,
+      "section": "Ledrotal",
+      "tag": "Infrastruktur",
+      "title": "Mehr als 65 Millionen Euro für Projekte im Ledrotal",
+      "teaser": "Die Provinz bündelt mehrere Infrastrukturmaßnahmen. Der größte Einzelposten ist die geplante Umfahrung von Molina.",
+      "status": "Offiziell bestätigt",
+      "source": "Provincia autonoma di Trento",
+      "date": "23.07.2026",
+      "readTime": "3 Min.",
+      "imageStyle": "lake",
+      "body": [
+        "Die Autonome Provinz Trient hat für das Ledrotal ein Infrastrukturpaket mit einem Volumen von mehr als 65 Millionen Euro vorgestellt.",
+        "Für die geplante Umfahrung von Molina werden rund 52 Millionen Euro genannt. Weitere Maßnahmen betreffen unter anderem die Verkehrssicherheit und Arbeiten im Bereich der Galleria Dom.",
+        "Für Bewohner und Ferienhausbesitzer sind vor allem mögliche spätere Auswirkungen auf Bauzeiten, Verkehrsführung und die Zufahrt über die SS 240 relevant. Konkrete Sperrungen sollten jeweils kurzfristig anhand offizieller Meldungen geprüft werden."
+      ],
+      "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Val-di-Ledro-65-milioni-di-opere-sul-territorio"
+    },
+    {
+      "id": "wind",
+      "priority": 90,
+      "section": "Ledrotal",
+      "tag": "Natur & See",
+      "title": "Meteotrentino bietet 48-Stunden-Windprognosen für den Ledrosee",
+      "teaser": "Stündliche Windvorhersagen werden zweimal täglich aktualisiert und sollen Aktivitäten am See besser planbar machen.",
+      "status": "Offiziell bestätigt",
+      "source": "Provincia autonoma di Trento",
+      "date": "17.07.2026",
+      "readTime": "2 Min.",
+      "imageStyle": "water",
+      "body": [
+        "Meteotrentino hat seine stündlichen Windprognosen auf weitere Seen ausgeweitet, darunter den Ledrosee.",
+        "Die Vorhersagen reichen 48 Stunden voraus und werden zweimal täglich aktualisiert. Zusätzlich sind Informationen zur Wassertemperatur vorgesehen.",
+        "Für Segler, Paddler, Surfer und Familien am See ist die feinere zeitliche Auflösung besonders praktisch, weil sich die lokalen Windverhältnisse im Tagesverlauf deutlich verändern können."
+      ],
+      "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Meteotrentino-amplia-le-previsioni-del-vento-sui-laghi-trentini"
+    },
+    {
+      "id": "market",
+      "priority": 86,
+      "section": "Pieve",
+      "tag": "Pieve di Ledro",
+      "title": "Sommermärkte in Pieve: nächste Termine am 20. und 27. August",
+      "teaser": "Im historischen Zentrum stehen noch ein Kunsthandwerksmarkt und ein Markt für Gebrauchtes und Kreatives auf dem Programm.",
+      "status": "Offiziell bestätigt",
+      "source": "Comune di Ledro",
+      "date": "Stand 16.08.2026",
+      "readTime": "2 Min.",
+      "imageStyle": "market",
+      "body": [
+        "Der Sommermarkt-Kalender der Gemeinde Ledro läuft bis Ende August weiter.",
+        "Am 20. August ist ein Kunsthandwerksmarkt vorgesehen, am 27. August folgt der Markt für Gebrauchtes und Kreatives. Die Gemeinde nennt jeweils 8 bis 18 Uhr als Zeitfenster.",
+        "Veranstaltungsort ist der historische Bereich von Pieve di Ledro rund um Via Vittoria. Kurzfristige Änderungen wegen Wetter oder Organisation sind möglich."
+      ],
+      "url": "https://www.comune.ledro.tn.it/Vivere-il-comune/Eventi/Mercatino-dell-Usato-e-della-Creativita-e-Mercatino-dell-Artigianato-2026"
+    },
+    {
+      "id": "youth",
+      "priority": 82,
+      "section": "Ledrotal",
+      "tag": "Jugend & Gemeinde",
+      "title": "Projektwoche für Jugendliche in Ledro vom 24. bis 28. August",
+      "teaser": "Beim Projekt „Ci sto? Affare fatica!“ arbeiten Jugendliche in Gruppen an Aufgaben für das Gemeinwohl.",
+      "status": "Offiziell bestätigt",
+      "source": "Comune di Ledro",
+      "date": "19.05.2026",
+      "readTime": "2 Min.",
+      "imageStyle": "forest",
+      "body": [
+        "Das Projekt „Ci sto? Affare fatica!“ richtet sich an Jugendliche von 14 bis 19 Jahren und findet 2026 auch in Ledro statt.",
+        "Für Ledro ist eine weitere Projektwoche vom 24. bis 28. August vorgesehen. Die Gruppen arbeiten montags bis freitags vormittags an Aufgaben für das Gemeinwohl und werden von jungen Tutoren und erwachsenen Freiwilligen begleitet.",
+        "Das Projekt verbindet praktische Arbeit, Gemeinschaft und lokale Beteiligung. Die Gemeinde verweist für Anmeldung und Details auf die Veranstalter."
+      ],
+      "url": "https://www.comune.ledro.tn.it/Novita/Avvisi/Ci-sto-Affare-fatica2"
+    },
+    {
+      "id": "haydn",
+      "priority": 80,
+      "section": "Kultur",
+      "tag": "Locca di Concei",
+      "title": "Haydn-Orchester kommt am 22. August nach Locca di Concei",
+      "teaser": "Die Sommertour des Orchesters macht im Ledrotal Station. Auf dem Programm steht ein Konzert mit Pianist Yifan Wu.",
+      "status": "Pressebericht",
+      "source": "ANSA Trentino",
+      "date": "17.06.2026",
+      "readTime": "2 Min.",
+      "imageStyle": "culture",
+      "body": [
+        "Im Rahmen der Sommertour 2026 des Haydn-Orchesters ist am 22. August eine Station in Locca di Concei angekündigt.",
+        "Nach Angaben von ANSA steht das Konzert am Ende einer Tour mit Dirigent Hossein Pishkar und dem Pianisten Yifan Wu, Gewinner des 65. Busoni-Klavierwettbewerbs.",
+        "Wer hingehen möchte, sollte Veranstaltungsort, Beginn und mögliche Ticketinformationen kurz vor dem Termin nochmals beim Veranstalter beziehungsweise in den lokalen Veranstaltungskalendern prüfen."
+      ],
+      "url": "https://www.ansa.it/trentino/notizie/2026/06/17/haydns-summer-2026-lorchestra-incontra-il-territorio_bfb21ebc-33b7-474d-b5a2-878bff933492.html"
+    },
+    {
+      "id": "wake",
+      "priority": 74,
+      "section": "Pur",
+      "tag": "Pur",
+      "title": "Wakeboard-Anlage bleibt Gegenstand politischer Fragen",
+      "teaser": "Eine Landtagsanfrage fordert Prüfungen zu Genehmigungen, Sicherheit, Landschaft und Verkehrsfragen im Bereich Val di Pur.",
+      "status": "Pressebericht",
+      "source": "l’Adige",
+      "date": "28.07.2026",
+      "readTime": "3 Min.",
+      "imageStyle": "water",
+      "body": [
+        "Eine politische Anfrage von Lucia Coppola befasst sich mit der Wakeboard-Anlage in Val di Pur.",
+        "Gefragt wird unter anderem nach Genehmigungen, möglichen Auswirkungen auf Schwimmer und kleine Boote, Landschaft und Vegetation sowie nach Parkplätzen und Fußwegen.",
+        "Wichtig ist die Einordnung: Eine politische Anfrage ist kein Nachweis eines Verstoßes. Sie dokumentiert Fragen, zu denen die zuständigen Stellen Stellung nehmen sollen."
+      ],
+      "url": "https://www.ladige.it/territori/basso-sarca-ledro/impianto-di-wakeboard-a-ledro-chieste-verifiche-e-sopralluoghi-cvhqbfnz"
+    },
+    {
+      "id": "imis",
+      "priority": 66,
+      "section": "Haus & Alltag",
+      "tag": "Haus & Regeln",
+      "title": "IM.I.S. 2026: Einmalige Zahlung bis 16. Dezember",
+      "teaser": "Die Gemeinde Ledro verlangt 2026 keine Vorauszahlung im Juni; die Steuer wird in einer einzigen Rate fällig.",
+      "status": "Offiziell bestätigt",
+      "source": "Comune di Ledro",
+      "date": "08.06.2026",
+      "readTime": "2 Min.",
+      "imageStyle": "house",
+      "body": [
+        "Die Gemeinde Ledro informiert, dass die IM.I.S. für das Jahr 2026 in einer einzigen Rate bis zum 16. Dezember 2026 zu zahlen ist.",
+        "Eine Vorauszahlung im Juni ist nicht vorgesehen. Die Gemeinde gibt außerdem an, dass die Steuersätze gegenüber 2025 unverändert bleiben.",
+        "Für Eigentümer bleibt es sinnvoll, die individuelle Berechnung und mögliche Sonderfälle anhand der eigenen Unterlagen zu prüfen."
+      ],
+      "url": "https://www.comune.ledro.tn.it/Novita/Avvisi/Imposta-Immobiliare-Semplice-IM.I.S.-aliquote-e-versamento-anno-2026"
+    }
+  ]
+}
