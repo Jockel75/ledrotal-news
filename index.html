@@ -9,38 +9,496 @@
 <meta name="apple-mobile-web-app-title" content="Ledrotal Zeitung">
 <title>Ledrotal Zeitung</title>
 <style>
-:root{--paper:#f7f5ef;--ink:#171717;--muted:#6c6962;--rule:#d9d5ca;--rust:#a84f36;--card:#fffdfa;--safe:env(safe-area-inset-bottom,0px)}
-*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Arial,sans-serif}button{font:inherit}.app{max-width:720px;margin:auto;padding-bottom:calc(74px + var(--safe));min-height:100vh}
-.top{position:sticky;top:0;z-index:20;background:rgba(247,245,239,.96);backdrop-filter:blur(15px);border-bottom:1px solid var(--rule);padding:13px 16px 9px}.kicker{text-align:center;font:600 12px Georgia,serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.brand{text-align:center;font:700 38px/.98 Georgia,serif;letter-spacing:-.035em;margin:3px 0 2px}.sub{text-align:center;font:italic 14px Georgia,serif;color:var(--muted)}.edition{display:flex;justify-content:space-between;margin-top:11px;font-size:12px;color:var(--muted)}.live:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--rust);margin-right:6px}
-.chips{display:flex;gap:8px;overflow:auto;padding:10px 14px 8px;border-bottom:1px solid var(--rule);scrollbar-width:none}.chips::-webkit-scrollbar{display:none}.chip{border:1px solid var(--rule);background:transparent;padding:8px 13px;border-radius:999px;white-space:nowrap;font-weight:650}.chip.active{background:#161616;color:white;border-color:#161616}
-main{padding:0 14px}.hint{margin:13px 0;background:#ece8dd;border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.35}.hero{margin:14px 0 20px;padding-bottom:18px;border-bottom:1px solid var(--rule);cursor:pointer}.visual{height:250px;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(145deg,#91a6ae,#dacba7)}.visual:before,.thumb:before{content:"";position:absolute;inset:auto -6% -18% -6%;height:55%;background:#557d86;border-radius:50% 50% 0 0/35% 35% 0 0;opacity:.9}.visual:after{content:"";position:absolute;left:3%;bottom:34%;width:0;height:0;border-left:155px solid transparent;border-right:155px solid transparent;border-bottom:160px solid #637262;filter:drop-shadow(120px 20px 0 #80886d)}.badge{position:absolute;left:14px;bottom:12px;z-index:2;background:rgba(255,255,255,.94);padding:7px 10px;border-radius:8px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.tag{color:var(--rust);font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin-top:13px}h1{font:700 32px/1.03 Georgia,serif;letter-spacing:-.028em;margin:5px 0 8px}.dek{font:400 17px/1.42 Georgia,serif;color:#34322e;margin:0 0 10px}.meta{font-size:12px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}.meta b{color:var(--ink)}
-.sectionhead{display:flex;justify-content:space-between;align-items:end;margin:24px 0 6px;border-bottom:2px solid var(--ink);padding-bottom:6px}.sectionhead h2{font:700 23px Georgia,serif;margin:0}.sectionhead span{font-size:12px;color:var(--muted)}.story{display:grid;grid-template-columns:1fr 112px;gap:13px;padding:15px 0;border-bottom:1px solid var(--rule);cursor:pointer}.story h3{font:700 21px/1.08 Georgia,serif;letter-spacing:-.015em;margin:4px 0 7px}.story p{font:400 15px/1.36 Georgia,serif;margin:0 0 8px;color:#3c3934}.thumb{height:98px;border-radius:10px;position:relative;overflow:hidden;background:linear-gradient(145deg,#99a98e,#d4c4a4)}.thumb.water{background:linear-gradient(#c1d5dc 0 45%,#5f8792 45%)}.thumb.market{background:linear-gradient(145deg,#dbc6a6,#9b6c4a)}.thumb.house{background:linear-gradient(145deg,#c5b49f,#7c6856)}.thumb.culture{background:linear-gradient(145deg,#574c66,#b38362)}.thumb.forest{background:linear-gradient(145deg,#90a37f,#475d4c)}
-.empty{text-align:center;color:var(--muted);padding:38px 15px;font:italic 16px Georgia,serif}.bottom{position:fixed;left:50%;transform:translateX(-50%);bottom:0;z-index:30;width:min(720px,100%);height:calc(66px + var(--safe));padding-bottom:var(--safe);background:rgba(250,249,246,.97);backdrop-filter:blur(15px);border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(5,1fr)}.nav{border:0;background:transparent;color:var(--muted);font-size:10px;font-weight:650;padding:8px 1px}.nav span{display:block;font-size:20px;line-height:1.1;margin-bottom:3px}.nav.active{color:var(--ink)}
-.viewer{display:none;position:fixed;inset:0;z-index:50;background:var(--paper);overflow:auto}.viewer.show{display:block}.viewerbar{position:sticky;top:0;z-index:3;height:52px;background:rgba(247,245,239,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 12px}.viewerbar button{border:0;background:transparent;padding:8px;font-weight:700}.viewerbar b{font:700 16px Georgia,serif}.article{max-width:670px;margin:auto;padding:19px 18px 70px}.article h2{font:700 37px/1.03 Georgia,serif;letter-spacing:-.03em;margin:5px 0 11px}.lead{font:400 20px/1.43 Georgia,serif;color:#33312d;margin:0 0 15px}.by{font-size:12px;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:14px;margin-bottom:19px}.article p{font:400 18px/1.62 Georgia,serif;margin:0 0 19px}.source{background:#eeebe3;border-left:3px solid #273d52;padding:12px 14px;margin:24px 0;font-size:13px;line-height:1.45}.source a{color:#193d63}
-@media(max-width:679px){.article h2{font-size:30px}}
-@media(min-width:680px){.visual{height:330px}.story{grid-template-columns:1fr 150px}.thumb{height:112px}}
+:root {
+  --paper:#f7f5ef;
+  --ink:#171717;
+  --muted:#68655f;
+  --rule:#d9d5ca;
+  --rust:#9b432d;
+  --rust-soft:#f1e3dd;
+  --card:#fffdfa;
+  --green:#315c47;
+  --blue:#273d52;
+  --weather:#1f5a70;
+  --weather-soft:#e7f0f3;
+  --safe:env(safe-area-inset-bottom,0px);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+html,body { margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Arial,sans-serif; }
+body.locked { overflow:hidden; }
+button,a { font:inherit; }
+a { color:inherit; }
+.app { max-width:920px; min-height:100vh; margin:auto; padding-bottom:calc(78px + var(--safe)); }
+.top { position:sticky; top:0; z-index:20; padding:12px 16px 9px; border-bottom:1px solid var(--rule); background:rgba(247,245,239,.96); backdrop-filter:blur(15px); }
+.kicker { color:var(--muted); font:600 11px Georgia,serif; letter-spacing:.12em; text-align:center; text-transform:uppercase; }
+.brand { margin:3px 0 2px; font:700 36px/.98 Georgia,serif; letter-spacing:-.035em; text-align:center; }
+.sub { color:var(--muted); font:italic 13px Georgia,serif; text-align:center; }
+.edition { display:flex; justify-content:space-between; gap:12px; margin-top:10px; color:var(--muted); font-size:12px; }
+.live::before { display:inline-block; width:7px; height:7px; margin-right:6px; border-radius:50%; background:var(--rust); content:""; }
+.chips { display:flex; gap:8px; overflow-x:auto; padding:10px 14px 8px; border-bottom:1px solid var(--rule); scrollbar-width:none; }
+.chips::-webkit-scrollbar { display:none; }
+.chip { flex:none; padding:8px 13px; border:1px solid var(--rule); border-radius:999px; background:transparent; color:var(--ink); font-size:13px; font-weight:650; white-space:nowrap; }
+.chip.active { border-color:var(--ink); background:var(--ink); color:white; }
+.chip.service-chip { border-color:#aeb8b1; color:var(--green); }
+.chip.service-chip.active { border-color:var(--green); background:var(--green); color:white; }
+.chip.weather-chip { border-color:#a9c1ca; color:var(--weather); }
+.chip.weather-chip.active { border-color:var(--weather); background:var(--weather); color:white; }
+main { padding:0 14px; }
+.hint { margin:13px 0; padding:11px 13px; border-radius:10px; background:#ece8dd; color:#3d3a35; font-size:13px; line-height:1.4; }
+.empty,.data-warning { padding:38px 15px; color:var(--muted); font:italic 16px Georgia,serif; text-align:center; }
+.data-warning { margin:16px 0; padding:16px; border:1px solid #d9baa9; border-radius:10px; background:#f8ece6; color:#72402f; font:normal 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.tag { margin-top:12px; color:var(--rust); font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+.status { display:inline-flex; align-items:center; gap:5px; color:var(--ink); font-weight:750; }
+.status::before { width:7px; height:7px; border-radius:50%; background:var(--muted); content:""; }
+.status.confirmed::before { background:var(--green); }
+.status.press::before { background:var(--blue); }
+.status.unconfirmed::before { background:var(--rust); }
+.meta { display:flex; flex-wrap:wrap; gap:5px; color:var(--muted); font-size:12px; line-height:1.4; }
+.hero { margin:14px 0 20px; padding-bottom:19px; border-bottom:1px solid var(--rule); }
+.hero-link,.story-link { display:block; color:inherit; text-decoration:none; }
+.hero-link:focus-visible,.story-link:focus-visible,.source-link:focus-visible,.nav:focus-visible,.chip:focus-visible,.viewerbar button:focus-visible { outline:3px solid rgba(39,61,82,.35); outline-offset:3px; }
+.hero-badge { display:inline-block; margin-bottom:3px; padding:5px 8px; border-radius:6px; background:var(--rust-soft); color:var(--rust); font-size:10px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
+.hero h1 { margin:6px 0 9px; font:700 31px/1.05 Georgia,serif; letter-spacing:-.028em; }
+.dek { margin:0 0 11px; color:#34322e; font:400 17px/1.42 Georgia,serif; }
+.story-image { display:block; width:100%; height:auto; object-fit:cover; background:#e8e4da; }
+.hero-figure,.article-figure { margin:0 0 14px; overflow:hidden; border-radius:14px; background:#e8e4da; }
+.hero-figure .story-image { aspect-ratio:16/9; }
+.article-figure .story-image { aspect-ratio:16/9; }
+.article-figure figcaption { padding:8px 10px; border-top:1px solid var(--rule); background:#eeebe3; color:var(--muted); font-size:11px; line-height:1.4; }
+.article-figure figcaption a { color:var(--blue); }
+.sectionhead { display:flex; align-items:end; justify-content:space-between; margin:24px 0 6px; padding-bottom:6px; border-bottom:2px solid var(--ink); }
+.sectionhead h2 { margin:0; font:700 23px Georgia,serif; }
+.sectionhead span { color:var(--muted); font-size:12px; }
+.story { border-bottom:1px solid var(--rule); }
+.story-link { padding:16px 0; }
+.story-link.with-image { display:grid; grid-template-columns:minmax(0,1fr) 112px; gap:13px; }
+.story h3 { margin:4px 0 7px; font:700 21px/1.12 Georgia,serif; letter-spacing:-.015em; }
+.story p { margin:0 0 9px; color:#3c3934; font:400 15px/1.38 Georgia,serif; }
+.story-thumb { width:112px; height:98px; overflow:hidden; border-radius:9px; background:#e8e4da; }
+.story-thumb .story-image { width:100%; height:100%; }
+.bottom { position:fixed; bottom:0; left:50%; z-index:30; display:grid; grid-template-columns:repeat(5,1fr); width:min(920px,100%); height:calc(68px + var(--safe)); padding-bottom:var(--safe); transform:translateX(-50%); border-top:1px solid var(--rule); background:rgba(250,249,246,.97); backdrop-filter:blur(15px); }
+.nav { padding:8px 1px; border:0; background:transparent; color:var(--muted); font-size:10px; font-weight:650; }
+.nav span { display:block; margin-bottom:3px; font-size:20px; line-height:1.1; }
+.nav.active { color:var(--ink); }
+.nav[data-section="Öffnungszeiten"].active { color:var(--green); }
+.nav[data-section="Wetter & Wasser"].active { color:var(--weather); }
+.viewer { position:fixed; inset:0; z-index:50; display:none; overflow:auto; background:var(--paper); }
+.viewer.show { display:block; }
+.viewerbar { position:sticky; top:0; z-index:3; display:flex; align-items:center; justify-content:space-between; height:52px; padding:0 12px; border-bottom:1px solid var(--rule); background:rgba(247,245,239,.97); backdrop-filter:blur(14px); }
+.viewerbar button { padding:8px; border:0; background:transparent; font-weight:700; }
+.viewerbar b { font:700 16px Georgia,serif; }
+.article { max-width:680px; margin:auto; padding:18px 18px 72px; }
+.article h2 { margin:5px 0 11px; font:700 30px/1.05 Georgia,serif; letter-spacing:-.03em; }
+.lead { margin:0 0 15px; color:#33312d; font:400 19px/1.43 Georgia,serif; }
+.by { margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid var(--rule); color:var(--muted); font-size:12px; line-height:1.45; }
+.article-body p { margin:0 0 19px; font:400 18px/1.62 Georgia,serif; }
+.sources { margin:30px 0 10px; padding:17px; border:1px solid #c7cfd3; border-left:4px solid var(--blue); border-radius:10px; background:#eef1f2; }
+.sources h3 { margin:0 0 5px; font:700 20px Georgia,serif; }
+.sources-intro { margin:0 0 12px!important; color:var(--muted); font:400 13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important; }
+.source-entry + .source-entry { margin-top:12px; padding-top:12px; border-top:1px solid #cdd4d7; }
+.source-publisher { display:block; margin-bottom:2px; font-size:13px; font-weight:800; }
+.source-date { color:var(--muted); font-size:12px; }
+.source-title { margin:4px 0 7px!important; font:400 14px/1.38 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important; }
+.source-link { display:inline-block; color:#173e61; font-size:13px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
+.service-hero { margin:16px 0 14px; padding:19px; border-radius:14px; background:var(--green); color:white; }
+.service-hero .tag { margin:0 0 5px; color:#d8e9df; }
+.service-hero h1 { margin:0 0 8px; font:700 30px/1.05 Georgia,serif; }
+.service-hero p { margin:0; color:#f2f7f4; font:400 15px/1.45 Georgia,serif; }
+.service-updated { display:block; margin-top:11px; color:#d8e9df; font-size:12px; }
+.service-group { margin:11px 0; border:1px solid var(--rule); border-radius:12px; background:var(--card); }
+.service-group summary { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:15px; cursor:pointer; font:700 18px/1.2 Georgia,serif; list-style:none; }
+.service-group summary::-webkit-details-marker { display:none; }
+.service-group summary::after { flex:none; color:var(--muted); font:700 20px/1 sans-serif; content:"+"; }
+.service-group[open] summary::after { content:"−"; }
+.service-group[open] summary { border-bottom:1px solid var(--rule); }
+.service-count { color:var(--muted); font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.service-grid { display:grid; gap:0; padding:0 14px; }
+.service-card { padding:16px 0; }
+.service-card + .service-card { border-top:1px solid var(--rule); }
+.service-card h3 { margin:0 0 3px; font:700 19px/1.2 Georgia,serif; }
+.service-place { margin:0 0 11px; color:var(--muted); font-size:12px; line-height:1.4; }
+.schedule { margin:0; }
+.schedule-row { display:grid; grid-template-columns:minmax(92px,.75fr) minmax(0,1.5fr); gap:10px; padding:5px 0; border-top:1px solid #ebe8e0; font-size:13px; line-height:1.35; }
+.schedule-row:first-child { border-top:0; }
+.schedule dt { color:var(--muted); font-weight:650; }
+.schedule dd { margin:0; font-weight:700; }
+.service-note,.service-season { margin:10px 0 0; padding:9px 10px; border-radius:7px; background:#f1eee6; color:#4b4842; font-size:12px; line-height:1.42; }
+.service-season { background:#e8f0eb; color:#315344; }
+.service-sources { display:flex; flex-wrap:wrap; gap:8px; margin-top:11px; }
+.service-sources a { color:var(--blue); font-size:12px; font-weight:700; text-decoration:underline; text-underline-offset:2px; }
+.weather-hero { margin:16px 0 12px; padding:19px; border-radius:14px; background:var(--weather); color:white; }
+.weather-hero .tag { margin:0 0 5px; color:#d9edf3; }
+.weather-hero h1 { margin:0 0 8px; font:700 30px/1.05 Georgia,serif; }
+.weather-hero p { margin:0; color:#f2f8fa; font:400 15px/1.45 Georgia,serif; }
+.weather-updated { display:block; margin-top:11px; color:#d9edf3; font-size:12px; }
+.warning-stack { display:grid; gap:8px; margin:12px 0 16px; }
+.weather-warning { padding:13px 14px; border:1px solid #d3a742; border-left:5px solid #c08a12; border-radius:10px; background:#fff4cf; }
+.warning-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:5px; }
+.warning-level { padding:4px 7px; border-radius:5px; background:#e0aa22; color:#332606; font-size:10px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+.warning-status { color:#6c531a; font-size:11px; font-weight:750; }
+.weather-warning h2 { margin:0 0 5px; font:700 18px/1.18 Georgia,serif; }
+.weather-warning p { margin:0; color:#4b4128; font-size:13px; line-height:1.4; }
+.weather-warning a { display:inline-block; margin-top:8px; color:#4b3810; font-size:12px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
+.weather-sectionhead { margin:19px 0 8px; padding-bottom:6px; border-bottom:2px solid var(--ink); }
+.weather-sectionhead h2 { margin:0; font:700 23px Georgia,serif; }
+.weather-sectionhead p { margin:3px 0 0; color:var(--muted); font-size:12px; }
+.weather-compare { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; }
+.today-weather { min-width:0; overflow:hidden; padding:13px; border:1px solid #b9ccd3; border-radius:12px; background:var(--card); }
+.today-place { color:var(--weather); font-size:11px; font-weight:850; letter-spacing:.05em; text-transform:uppercase; }
+.today-weather h3 { margin:3px 0 8px; font:700 18px/1.12 Georgia,serif; }
+.today-temp { display:flex; align-items:baseline; gap:6px; margin-bottom:7px; }
+.today-temp strong { font:700 38px/.95 Georgia,serif; letter-spacing:-.04em; }
+.today-temp span { color:var(--muted); font-size:12px; font-weight:700; }
+.today-condition { min-height:54px; margin:0 0 9px; color:#343a3c; font:400 13px/1.35 Georgia,serif; }
+.today-facts { display:grid; gap:5px; margin:0 0 11px; }
+.today-fact { padding-top:5px; border-top:1px solid #e4e9eb; color:#3f494d; font-size:12px; line-height:1.35; }
+.water-box { padding:10px; border-radius:8px; background:var(--weather-soft); }
+.water-box b { display:block; margin-bottom:3px; color:var(--weather); font-size:11px; letter-spacing:.05em; text-transform:uppercase; }
+.water-value { display:block; margin-bottom:4px; font:700 21px/1.1 Georgia,serif; }
+.water-value.unavailable { color:#514f4a; font:700 14px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.water-meta { display:block; color:#59676c; font-size:10px; line-height:1.38; }
+.water-box a { display:inline-block; margin-top:7px; color:#174b60; font-size:11px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
+.forecast-table { overflow:hidden; margin-bottom:16px; border:1px solid #b9c8ce; border-radius:12px; background:var(--card); }
+.forecast-row { display:grid; grid-template-columns:54px repeat(2,minmax(0,1fr)); }
+.forecast-row + .forecast-row { border-top:1px solid var(--rule); }
+.forecast-row > * + * { border-left:1px solid var(--rule); }
+.forecast-heading { padding:10px 8px; background:#e5eef1; color:#244b5a; font-size:11px; font-weight:800; line-height:1.2; }
+.forecast-day { padding:10px 5px; color:var(--muted); font-size:10px; font-weight:750; text-align:center; }
+.forecast-day b { display:block; margin-bottom:2px; color:var(--ink); font-size:12px; }
+.forecast-cell { min-width:0; padding:9px 8px; }
+.forecast-temp { display:block; margin-bottom:3px; font:700 18px/1 Georgia,serif; }
+.forecast-condition { display:block; margin-bottom:6px; color:#333b3e; font-size:11px; font-weight:650; line-height:1.25; }
+.forecast-detail { display:block; color:var(--muted); font-size:10px; line-height:1.35; }
+.forecast-model { display:inline-block; margin-top:5px; color:#52646b; font-size:9px; font-weight:750; }
+.forecast-model.provisional { padding:3px 4px; border-radius:4px; background:#f5e8ca; color:#6c511a; }
+.weather-method { margin:12px 0; padding:11px 13px; border-radius:9px; background:#e8e5dc; color:#48453f; font-size:12px; line-height:1.42; }
+@media (min-width:760px) {
+  .top { padding-inline:28px; }
+  .brand { font-size:42px; }
+  .chips { padding-inline:28px; }
+  main { padding-inline:28px; }
+  .hero h1 { max-width:760px; font-size:42px; }
+  .hero-figure .story-image { aspect-ratio:2/1; }
+  .story-link.with-image { grid-template-columns:minmax(0,1fr) 220px; gap:24px; }
+  .story-thumb { width:220px; height:132px; }
+  .story h3 { font-size:25px; }
+  .article h2 { font-size:40px; }
+  .service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 24px; }
+  .service-card:nth-child(2) { border-top:0; }
+  .weather-compare { gap:16px; }
+  .today-weather { padding:18px; }
+  .today-weather h3 { font-size:22px; }
+  .today-temp strong { font-size:46px; }
+  .today-condition { min-height:0; font-size:15px; }
+  .forecast-row { grid-template-columns:76px repeat(2,minmax(0,1fr)); }
+  .forecast-heading,.forecast-cell { padding:12px 15px; }
+  .forecast-temp { font-size:21px; }
+  .forecast-condition { font-size:13px; }
+  .forecast-detail { font-size:11px; }
+}
 </style>
 </head>
 <body>
 <div class="app">
-<header class="top"><div class="kicker" id="kicker">La Gazzetta della Casa Stawole</div><div class="brand" id="brand">Ledrotal Zeitung</div><div class="sub" id="subtitle">Ledro · Garda · Trentino · Italien</div><div class="edition"><span id="date">–</span><span class="live" id="editionLabel">Mobile Ausgabe</span></div></header>
-<div class="chips" id="chips"></div>
-<main><div class="hint"><b>Wie eine App nutzen:</b> Auf dem iPhone in Safari „Teilen“ → „Zum Home-Bildschirm“.</div><div id="feed"><div class="empty">Nachrichten werden geladen …</div></div></main>
+  <header class="top">
+    <div class="kicker" id="kicker">La Gazzetta della Casa Stawole</div>
+    <div class="brand" id="brand">Ledrotal Zeitung</div>
+    <div class="sub" id="subtitle">Ledro · Garda · Trentino · Italien</div>
+    <div class="edition"><span id="date">–</span><span class="live" id="editionLabel">Mobile Ausgabe</span></div>
+  </header>
+  <div class="chips" id="chips" aria-label="Ressorts"></div>
+  <main>
+    <div class="hint"><b>Wie eine App nutzen:</b> Auf dem iPhone in Safari „Teilen“ → „Zum Home-Bildschirm“.</div>
+    <div id="feed"><div class="empty">Nachrichten werden geladen …</div></div>
+  </main>
 </div>
-<nav class="bottom"><button class="nav active" data-section="Heute"><span>⌂</span>Heute</button><button class="nav" data-section="Ledrotal"><span>●</span>Ledro</button><button class="nav" data-section="Verkehr"><span>↗</span>Anreise</button><button class="nav" data-section="Kultur"><span>♫</span>Kultur</button><button class="nav" data-section="Haus & Alltag"><span>⌁</span>Alltag</button></nav>
-<div class="viewer" id="viewer"><div class="viewerbar"><button id="back">‹ Zurück</button><b>Ledrotal Zeitung</b><button id="share">Teilen</button></div><div class="article" id="article"></div></div>
+<nav class="bottom" aria-label="Hauptnavigation">
+  <button class="nav active" type="button" data-section="Heute"><span aria-hidden="true">⌂</span>Heute</button>
+  <button class="nav" type="button" data-section="Ledrotal"><span aria-hidden="true">●</span>Ledro</button>
+  <button class="nav" type="button" data-section="Wetter & Wasser"><span aria-hidden="true">☂</span>Wetter</button>
+  <button class="nav" type="button" data-section="Verkehr"><span aria-hidden="true">↗</span>Anreise</button>
+  <button class="nav" type="button" data-section="Öffnungszeiten"><span aria-hidden="true">◷</span>Öffnungszeiten</button>
+</nav>
+<div class="viewer" id="viewer" aria-hidden="true">
+  <div class="viewerbar"><button id="back" type="button">‹ Zurück</button><b>Ledrotal Zeitung</b><button id="share" type="button">Teilen</button></div>
+  <article class="article" id="article"></article>
+</div>
 <script>
-let DATA=null,current='Heute',currentStory=null;
-const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
-async function load(){try{const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error(r.status);DATA=await r.json();setup();}catch(e){document.getElementById('feed').innerHTML='<div class="empty">news.json konnte nicht geladen werden. Bitte später neu laden.</div>';}}
-function setup(){const e=DATA.edition||{};kicker.textContent=e.kicker||'';brand.textContent=e.brand||'Ledrotal Zeitung';subtitle.textContent=e.subtitle||'';date.textContent=e.date||'';editionLabel.textContent=e.label||'Mobile Ausgabe';const c=document.getElementById('chips');c.innerHTML='';(DATA.sections||['Heute']).forEach((s,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=s;b.onclick=()=>select(s,b);c.appendChild(b)});render();if(location.hash)open(location.hash.slice(1),true)}
-function select(section,btn){current=section;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===btn));document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.section===section));render();window.scrollTo({top:0,behavior:'smooth'})}
-function stories(){let s=[...(DATA.stories||[])].sort((a,b)=>(b.priority||0)-(a.priority||0));return current==='Heute'?s:s.filter(x=>x.section===current||x.tag===current)}
-function visualClass(s){return ['water','market','house','culture','forest'].includes(s.imageStyle)?s.imageStyle:''}
-function render(){const list=stories(),feed=document.getElementById('feed');if(!list.length){feed.innerHTML='<div class="empty">In diesem Ressort gibt es in dieser Ausgabe keine eigene Meldung.</div>';return}let html='';const hero=list.find(x=>x.hero)||list[0];if(current==='Heute'){html+=`<section class="hero" data-id="${esc(hero.id)}"><div class="visual"><span class="badge">Top-Meldung · ${esc(hero.section)}</span></div><div class="tag">${esc(hero.tag)}</div><h1>${esc(hero.title)}</h1><p class="dek">${esc(hero.teaser)}</p><div class="meta"><b>${esc(hero.status)}</b><span>·</span><span>${esc(hero.readTime)}</span><span>·</span><span>${esc(hero.source)}, ${esc(hero.date)}</span></div></section><div class="sectionhead"><h2>Heute im Tal</h2><span>lokal zuerst</span></div>`}const rest=current==='Heute'?list.filter(x=>x.id!==hero.id):list;html+=rest.map(s=>`<article class="story" data-id="${esc(s.id)}"><div><div class="tag">${esc(s.tag)}</div><h3>${esc(s.title)}</h3><p>${esc(s.teaser)}</p><div class="meta"><b>${esc(s.status)}</b><span>· ${esc(s.readTime)}</span></div></div><div class="thumb ${visualClass(s)}"></div></article>`).join('');feed.innerHTML=html;feed.querySelectorAll('[data-id]').forEach(el=>el.onclick=()=>open(el.dataset.id))}
-function open(id,skipPush=false){const s=(DATA.stories||[]).find(x=>x.id===id);if(!s)return;currentStory=s;document.getElementById('article').innerHTML=`<div class="tag">${esc(s.tag)}</div><h2>${esc(s.title)}</h2><p class="lead">${esc(s.teaser)}</p><div class="by"><b>${esc(s.status)}</b> · ${esc(s.source)} · ${esc(s.date)} · ${esc(s.readTime)}</div>${(s.body||[]).map(p=>`<p>${esc(p)}</p>`).join('')}<div class="source"><b>Quelle:</b> ${esc(s.source)}${s.url?`<br><a href="${esc(s.url)}" target="_blank" rel="noopener">Originalquelle öffnen</a>`:''}</div>`;viewer.classList.add('show');document.body.style.overflow='hidden';if(!skipPush)history.pushState({article:id},'', '#'+id)}
-function close(skip=false){viewer.classList.remove('show');document.body.style.overflow='';currentStory=null;if(!skip&&location.hash)history.back()}
-back.onclick=()=>close();share.onclick=async()=>{if(!currentStory)return;const payload={title:currentStory.title,text:currentStory.teaser,url:location.href};if(navigator.share){try{await navigator.share(payload)}catch(e){}}else{try{await navigator.clipboard.writeText(location.href);alert('Link kopiert.')}catch(e){}}};window.addEventListener('popstate',()=>{if(viewer.classList.contains('show'))close(true)});document.querySelectorAll('.nav').forEach(b=>b.onclick=()=>{const s=b.dataset.section;const chip=[...document.querySelectorAll('.chip')].find(x=>x.textContent===s);if(chip)select(s,chip);else{current=s;document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x===b));render();window.scrollTo({top:0,behavior:'smooth'})}});load();
+let DATA=null;
+let current='Heute';
+let currentStory=null;
+const kicker=document.getElementById('kicker');
+const brand=document.getElementById('brand');
+const subtitle=document.getElementById('subtitle');
+const date=document.getElementById('date');
+const editionLabel=document.getElementById('editionLabel');
+const viewer=document.getElementById('viewer');
+const back=document.getElementById('back');
+const share=document.getElementById('share');
+
+const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({
+  '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+}[char]));
+
+function safeUrl(value){
+  try{
+    const url=new URL(String(value||''),location.href);
+    return ['http:','https:'].includes(url.protocol)?url.href:'';
+  }catch{return ''}
+}
+
+function safeImageSrc(value){
+  const src=String(value||'').trim();
+  return /^(?:\.\/)?images\/[A-Za-z0-9_./%-]+$/.test(src)&&!src.includes('..')?src:'';
+}
+
+function validSource(source){
+  return Boolean(source&&source.publisher&&source.date&&source.title&&safeUrl(source.url));
+}
+
+function sourcesFor(item){
+  if(Array.isArray(item?.sources)&&item.sources.length){
+    return item.sources.every(validSource)?item.sources:[];
+  }
+  if(item?.source&&item?.date&&safeUrl(item?.url)){
+    return [{publisher:item.source,date:item.date,title:item.sourceTitle||item.title,url:item.url}];
+  }
+  return [];
+}
+
+function imageFor(story){
+  const image=story?.image;
+  const src=safeImageSrc(image?.src);
+  if(!src||!image?.alt||!image?.credit||!image?.license||!safeUrl(image?.sourceUrl))return null;
+  return {...image,src};
+}
+
+function normalizedStatus(value){
+  return ['Offiziell bestätigt','Pressebericht','noch unbestätigt'].includes(value)?value:'noch unbestätigt';
+}
+
+function statusClass(value){
+  return value==='Offiziell bestätigt'?'confirmed':value==='Pressebericht'?'press':'unconfirmed';
+}
+
+function publishableStories(){
+  return (DATA?.stories||[])
+    .filter(story=>story?.id&&story?.title&&story?.teaser&&sourcesFor(story).length)
+    .sort((a,b)=>(b.priority||0)-(a.priority||0));
+}
+
+function currentStories(){
+  const stories=publishableStories();
+  if(current==='Heute')return stories;
+  return stories.filter(story=>story.section===current||(story.filters||[]).includes(current));
+}
+
+function sourceMeta(story){
+  const sources=sourcesFor(story);
+  if(!sources.length)return '';
+  return sources.length===1?sources[0].publisher:`${sources[0].publisher} + ${sources.length-1}`;
+}
+
+function storyImage(story,kind){
+  const image=imageFor(story);
+  if(!image)return '';
+  if(kind==='thumb')return `<div class="story-thumb"><img class="story-image" src="${esc(image.src)}" alt="${esc(image.alt)}" loading="lazy"></div>`;
+  if(kind==='article'){
+    return `<figure class="article-figure"><img class="story-image" src="${esc(image.src)}" alt="${esc(image.alt)}"><figcaption>${esc(image.caption||image.alt)} · Foto: ${esc(image.credit)} · ${esc(image.license)} · <a href="${esc(safeUrl(image.sourceUrl))}" target="_blank" rel="noopener noreferrer">Bildquelle</a></figcaption></figure>`;
+  }
+  return `<figure class="hero-figure"><img class="story-image" src="${esc(image.src)}" alt="${esc(image.alt)}"></figure>`;
+}
+
+function sourceBlock(item,intro='Direkte Originalseiten zu dieser Meldung.'){
+  const sources=sourcesFor(item);
+  if(!sources.length)return '';
+  return `<section class="sources" aria-label="Quellen"><h3>Quellen</h3><p class="sources-intro">${esc(intro)}</p>${sources.map(source=>`<div class="source-entry"><span class="source-publisher">${esc(source.publisher)}</span><span class="source-date">${esc(source.date)}</span><p class="source-title">${esc(source.title)}</p><a class="source-link" href="${esc(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">Originalquelle öffnen</a></div>`).join('')}</section>`;
+}
+
+function setup(){
+  const edition=DATA.edition||{};
+  kicker.textContent=edition.kicker||'';
+  brand.textContent=edition.brand||'Ledrotal Zeitung';
+  subtitle.textContent=edition.subtitle||'';
+  date.textContent=edition.date||'';
+  editionLabel.textContent=edition.label||'Mobile Ausgabe';
+  const chips=document.getElementById('chips');
+  const sections=DATA.sections||['Heute'];
+  chips.innerHTML=sections.map((section,index)=>`<button class="chip${index===0?' active':''}" type="button" data-section="${esc(section)}">${esc(section)}</button>`).join('')+`<button class="chip weather-chip" type="button" data-section="Wetter & Wasser">Wetter & Wasser</button><button class="chip service-chip" type="button" data-section="Öffnungszeiten">Öffnungszeiten</button>`;
+  chips.querySelectorAll('.chip').forEach(button=>button.addEventListener('click',()=>select(button.dataset.section)));
+  render();
+  if(location.hash)openStory(location.hash.slice(1),true);
+}
+
+function select(section){
+  current=section;
+  document.querySelectorAll('[data-section]').forEach(element=>element.classList.toggle('active',element.dataset.section===section));
+  render();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function bindStories(){
+  document.querySelectorAll('[data-story-id]').forEach(link=>link.addEventListener('click',event=>{
+    event.preventDefault();
+    openStory(link.dataset.storyId);
+  }));
+}
+
+function render(){
+  if(current==='Wetter & Wasser'){
+    renderWeather();
+    return;
+  }
+  if(current==='Öffnungszeiten'){
+    renderServices();
+    return;
+  }
+  const list=currentStories();
+  const feed=document.getElementById('feed');
+  if(!list.length){
+    feed.innerHTML='<div class="empty">In diesem Ressort gibt es in dieser Ausgabe keine verifizierte Meldung.</div>';
+    return;
+  }
+  let html='';
+  const hero=list.find(story=>story.hero)||list[0];
+  if(current==='Heute'){
+    const status=normalizedStatus(hero.status);
+    html+=`<article class="hero"><a class="hero-link" href="#${esc(hero.id)}" data-story-id="${esc(hero.id)}">${storyImage(hero,'hero')}<span class="hero-badge">Top-Meldung · ${esc(hero.section)}</span><div class="tag">${esc(hero.tag)}</div><h1>${esc(hero.title)}</h1><p class="dek">${esc(hero.teaser)}</p><div class="meta"><span class="status ${statusClass(status)}">${esc(status)}</span><span>·</span><span>${esc(hero.readTime)}</span><span>·</span><span>${esc(sourceMeta(hero))}</span></div></a></article><div class="sectionhead"><h2>Heute im Tal</h2><span>lokal zuerst</span></div>`;
+  }
+  const rest=current==='Heute'?list.filter(story=>story.id!==hero.id):list;
+  html+=rest.map(story=>{
+    const status=normalizedStatus(story.status);
+    const hasImage=Boolean(imageFor(story));
+    return `<article class="story"><a class="story-link${hasImage?' with-image':''}" href="#${esc(story.id)}" data-story-id="${esc(story.id)}"><div><div class="tag">${esc(story.tag)}</div><h3>${esc(story.title)}</h3><p>${esc(story.teaser)}</p><div class="meta"><span class="status ${statusClass(status)}">${esc(status)}</span><span>· ${esc(story.readTime)}</span><span>· ${esc(sourceMeta(story))}</span></div></div>${storyImage(story,'thumb')}</a></article>`;
+  }).join('');
+  feed.innerHTML=html;
+  bindStories();
+}
+
+function formatNumber(value,digits=0){
+  return Number.isFinite(value)?value.toLocaleString('de-DE',{minimumFractionDigits:0,maximumFractionDigits:digits}):'–';
+}
+
+function firstSourceLink(item,label){
+  const source=sourcesFor(item)[0];
+  if(!source)return '';
+  return `<a href="${esc(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">${esc(label)}</a>`;
+}
+
+function waterCard(water){
+  const verified=water?.status==='verified'&&Number.isFinite(water?.valueC)&&water?.measuredAt;
+  const value=verified?(water.label||`${formatNumber(water.valueC,2)} °C`):'Aktuell kein verifizierter Messwert verfügbar';
+  const timing=verified?`Messung: ${water.measuredAt}`:'Kein aktueller Zeitstempel verfügbar';
+  return `<div class="water-box"><b>Wassertemperatur</b><span class="water-value${verified?'':' unavailable'}">${esc(value)}</span><span class="water-meta">${esc(water?.place||'Messort nicht verfügbar')}<br>${esc(timing)}</span>${water?.note?`<span class="water-meta">${esc(water.note)}</span>`:''}${firstSourceLink(water,'Messquelle öffnen')}</div>`;
+}
+
+function todayWeatherCard(location){
+  const today=location.forecast[0];
+  const wind=today.windKmh==null?`Böen bis ${formatNumber(today.gustKmh)} km/h`:`${esc(today.windDirection||'variabel')} ${formatNumber(today.windKmh)} km/h · Böen ${formatNumber(today.gustKmh)} km/h`;
+  return `<article class="today-weather"><span class="today-place">Heute</span><h3>${esc(location.name)}</h3><div class="today-temp"><strong>${formatNumber(today.maxC)}°</strong><span>Tiefstwert ${formatNumber(today.minC)}°</span></div><p class="today-condition">${esc(location.todayCondition||today.condition)}</p><div class="today-facts"><span class="today-fact"><b>Niederschlag:</b> ${formatNumber(today.rainProbability)} %${today.rainMm==null?'':` · ${formatNumber(today.rainMm,1)} mm`}</span><span class="today-fact"><b>Wind:</b> ${wind}</span></div>${waterCard(location.water)}</article>`;
+}
+
+function forecastCell(day){
+  const rain=`${formatNumber(day.rainProbability)} %${day.rainMm==null?'':` · ${formatNumber(day.rainMm,1)} mm`}`;
+  const wind=day.windKmh==null?`Wind – · Böen ${formatNumber(day.gustKmh)} km/h`:`Wind ${esc(day.windDirection||'variabel')} ${formatNumber(day.windKmh)} · Böen ${formatNumber(day.gustKmh)} km/h`;
+  return `<div class="forecast-cell"><span class="forecast-temp">${formatNumber(day.maxC)}° / ${formatNumber(day.minC)}°</span><span class="forecast-condition">${esc(day.condition)}</span><span class="forecast-detail">Regen ${rain}<br>${wind}</span><span class="forecast-model${day.provisional?' provisional':''}">${esc(day.source)}${day.provisional?' · höhere Unsicherheit':''}</span></div>`;
+}
+
+function allWeatherSources(weather){
+  const groups=[weather,...(weather.warnings||[])];
+  (weather.locations||[]).forEach(location=>groups.push(location,location.water));
+  const unique=new Map();
+  groups.flatMap(sourcesFor).forEach(source=>{
+    const url=safeUrl(source.url);
+    if(url&&!unique.has(url))unique.set(url,source);
+  });
+  return [...unique.values()];
+}
+
+function renderWeather(){
+  const weather=DATA.weather||{};
+  const locations=(weather.locations||[]).filter(location=>location?.name&&Array.isArray(location.forecast)&&location.forecast.length===7&&sourcesFor(location).length&&sourcesFor(location.water).length);
+  if(locations.length!==2){
+    document.getElementById('feed').innerHTML='<div class="data-warning">Die Wetterdaten sind unvollständig oder nicht vollständig belegt und werden deshalb nicht veröffentlicht.</div>';
+    return;
+  }
+  const warnings=(weather.warnings||[]).filter(warning=>warning?.kind&&sourcesFor(warning).length).map(warning=>`<article class="weather-warning"><div class="warning-head"><span class="warning-level">${esc(warning.level)} · Warnung</span><span class="warning-status">${esc(warning.status)} · ${esc(warning.issued)}</span></div><h2>${esc(warning.kind)}</h2><p>${esc(warning.text)}</p>${firstSourceLink(warning,'Originalwarnung öffnen')}</article>`).join('');
+  const days=locations[0].forecast.map((day,index)=>`<div class="forecast-row"><div class="forecast-day"><b>${esc(day.day)}</b>${esc(day.date)}</div>${forecastCell(day)}${forecastCell(locations[1].forecast[index])}</div>`).join('');
+  const sources=allWeatherSources(weather);
+  document.getElementById('feed').innerHTML=`<section class="weather-hero"><div class="tag">Täglich aktualisiert</div><h1>${esc(weather.title||'Wetter & Wasser')}</h1><p>${esc(weather.intro||'Wettervergleich für Ledro und Riva del Garda.')}</p><span class="weather-updated">Daten geprüft: ${esc(weather.updated||'–')} · Meteotrentino-Bulletin: ${esc(weather.forecastIssued||'–')}</span></section>${warnings?`<div class="warning-stack">${warnings}</div>`:''}<div class="weather-sectionhead"><h2>Heute</h2><p>Temperatur, Wetterlage, Wind und verifizierte Wasserwerte im direkten Vergleich</p></div><div class="weather-compare">${locations.map(todayWeatherCard).join('')}</div><div class="weather-sectionhead"><h2>7-Tage-Vorschau</h2><p>Höchst-/Tiefstwerte · Niederschlagswahrscheinlichkeit · Wind und Böen</p></div><div class="forecast-table"><div class="forecast-row"><div class="forecast-heading">Tag</div><div class="forecast-heading">${esc(locations[0].name)}</div><div class="forecast-heading">${esc(locations[1].name)}</div></div>${days}</div>${weather.notice?`<p class="weather-method"><b>Methodik:</b> ${esc(weather.notice)}</p>`:''}${sourceBlock({sources},'Originalseiten zu Vorhersage, Warnungen, Wind- und Wasserwerten.')}`;
+}
+
+function serviceSources(item){
+  const sources=sourcesFor(item);
+  return `<div class="service-sources">${sources.map(source=>`<a href="${esc(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">Angabe prüfen · ${esc(source.publisher)}</a>`).join('')}</div>`;
+}
+
+function renderServiceItem(item){
+  const schedule=(item.schedule||[]).map(row=>`<div class="schedule-row"><dt>${esc(row.days)}</dt><dd>${esc(row.hours)}</dd></div>`).join('');
+  return `<article class="service-card"><h3>${esc(item.name)}</h3><p class="service-place">${esc([item.locality,item.address].filter(Boolean).join(' · '))}</p>${schedule?`<dl class="schedule">${schedule}</dl>`:''}${item.season?`<p class="service-season"><b>Saisonal:</b> ${esc(item.season)}</p>`:''}${item.note?`<p class="service-note">${esc(item.note)}</p>`:''}${serviceSources(item)}</article>`;
+}
+
+function renderServices(){
+  const services=DATA.services||{};
+  const categories=(services.categories||[]).map((category,index)=>{
+    const items=(category.items||[]).filter(item=>item?.name&&sourcesFor(item).length);
+    if(!items.length)return '';
+    return `<details class="service-group"${index===0?' open':''}><summary><span>${esc(category.title)}</span><span class="service-count">${items.length} Einträge</span></summary><div class="service-grid">${items.map(renderServiceItem).join('')}</div></details>`;
+  }).join('');
+  document.getElementById('feed').innerHTML=`<section class="service-hero"><div class="tag">Dauerhafter Service</div><h1>${esc(services.title||'Öffnungszeiten')}</h1><p>${esc(services.intro||'Verifizierte Anlaufstellen im Ledrotal.')}</p><span class="service-updated">Zuletzt redaktionell geprüft: ${esc(services.updated||'–')}</span></section>${services.notice?`<div class="hint"><b>Bitte beachten:</b> ${esc(services.notice)}</div>`:''}${categories||'<div class="empty">Noch keine verifizierten Öffnungszeiten vorhanden.</div>'}`;
+}
+
+function openStory(id,skipPush=false){
+  const story=publishableStories().find(item=>item.id===id);
+  if(!story)return;
+  currentStory=story;
+  const status=normalizedStatus(story.status);
+  document.getElementById('article').innerHTML=`${storyImage(story,'article')}<div class="tag">${esc(story.tag)}</div><h2>${esc(story.title)}</h2><p class="lead">${esc(story.teaser)}</p><div class="by"><span class="status ${statusClass(status)}">${esc(status)}</span> · ${esc(story.date)} · ${esc(story.readTime)} · ${esc(sourceMeta(story))}</div><div class="article-body">${(story.body||[]).map(paragraph=>`<p>${esc(paragraph)}</p>`).join('')}</div>${sourceBlock(story)}`;
+  viewer.classList.add('show');
+  viewer.setAttribute('aria-hidden','false');
+  document.body.classList.add('locked');
+  viewer.scrollTop=0;
+  if(!skipPush)history.pushState({article:id},'','#'+id);
+}
+
+function closeStory(skipHistory=false){
+  viewer.classList.remove('show');
+  viewer.setAttribute('aria-hidden','true');
+  document.body.classList.remove('locked');
+  currentStory=null;
+  if(!skipHistory&&location.hash)history.back();
+}
+
+async function load(){
+  try{
+    const response=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});
+    if(!response.ok)throw new Error(response.status);
+    DATA=await response.json();
+    setup();
+  }catch{
+    document.getElementById('feed').innerHTML='<div class="empty">news.json konnte nicht geladen werden. Bitte später neu laden.</div>';
+  }
+}
+
+back.addEventListener('click',()=>closeStory());
+share.addEventListener('click',async()=>{
+  if(!currentStory)return;
+  const payload={title:currentStory.title,text:currentStory.teaser,url:location.href};
+  if(navigator.share){try{await navigator.share(payload)}catch{}}
+  else{try{await navigator.clipboard.writeText(location.href);alert('Link kopiert.')}catch{}}
+});
+window.addEventListener('popstate',()=>{
+  if(viewer.classList.contains('show'))closeStory(true);
+  else if(location.hash)openStory(location.hash.slice(1),true);
+});
+document.addEventListener('error',event=>{
+  if(event.target instanceof HTMLImageElement&&event.target.classList.contains('story-image')){
+    event.target.closest('.hero-figure,.article-figure,.story-thumb')?.remove();
+  }
+},true);
+document.querySelectorAll('.nav').forEach(button=>button.addEventListener('click',()=>select(button.dataset.section)));
+load();
 </script>
 </body>
 </html>

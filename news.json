@@ -1,146 +1,858 @@
 {
   "edition": {
     "date": "Sonntag, 16. August 2026",
-    "label": "Mobile Ausgabe",
+    "label": "Aktualisiert · Quellen geprüft",
     "brand": "Ledrotal Zeitung",
     "kicker": "La Gazzetta della Casa Stawole",
     "subtitle": "Ledro · Garda · Trentino · Italien"
   },
-  "sections": ["Heute", "Ledrotal", "Pur", "Pieve", "Haus & Alltag", "Verkehr", "Kultur"],
+  "sections": [
+    "Heute",
+    "Ledrotal",
+    "Orte & Termine",
+    "Verkehr",
+    "Kultur",
+    "Service & Regeln",
+    "Hintergrund"
+  ],
   "stories": [
     {
-      "id": "infra",
+      "id": "central-color-concei-2026",
       "priority": 100,
       "hero": true,
       "section": "Ledrotal",
-      "tag": "Infrastruktur",
-      "title": "Mehr als 65 Millionen Euro für Projekte im Ledrotal",
-      "teaser": "Die Provinz bündelt mehrere Infrastrukturmaßnahmen. Der größte Einzelposten ist die geplante Umfahrung von Molina.",
+      "filters": ["Orte & Termine"],
+      "tag": "Concei · Heute",
+      "title": "Heute in Concei: Fünf Kilometer Farbe durch das Tal",
+      "teaser": "Die nicht wettkampforientierte Central Color führt am Nachmittag auf einer fünf Kilometer langen Strecke durch das Grün der Val Concei.",
       "status": "Offiziell bestätigt",
-      "source": "Provincia autonoma di Trento",
-      "date": "23.07.2026",
-      "readTime": "3 Min.",
-      "imageStyle": "lake",
-      "body": [
-        "Die Autonome Provinz Trient hat für das Ledrotal ein Infrastrukturpaket mit einem Volumen von mehr als 65 Millionen Euro vorgestellt.",
-        "Für die geplante Umfahrung von Molina werden rund 52 Millionen Euro genannt. Weitere Maßnahmen betreffen unter anderem die Verkehrssicherheit und Arbeiten im Bereich der Galleria Dom.",
-        "Für Bewohner und Ferienhausbesitzer sind vor allem mögliche spätere Auswirkungen auf Bauzeiten, Verkehrsführung und die Zufahrt über die SS 240 relevant. Konkrete Sperrungen sollten jeweils kurzfristig anhand offizieller Meldungen geprüft werden."
-      ],
-      "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Val-di-Ledro-65-milioni-di-opere-sul-territorio"
-    },
-    {
-      "id": "wind",
-      "priority": 90,
-      "section": "Ledrotal",
-      "tag": "Natur & See",
-      "title": "Meteotrentino bietet 48-Stunden-Windprognosen für den Ledrosee",
-      "teaser": "Stündliche Windvorhersagen werden zweimal täglich aktualisiert und sollen Aktivitäten am See besser planbar machen.",
-      "status": "Offiziell bestätigt",
-      "source": "Provincia autonoma di Trento",
-      "date": "17.07.2026",
+      "date": "16.08.2026",
       "readTime": "2 Min.",
-      "imageStyle": "water",
       "body": [
-        "Meteotrentino hat seine stündlichen Windprognosen auf weitere Seen ausgeweitet, darunter den Ledrosee.",
-        "Die Vorhersagen reichen 48 Stunden voraus und werden zweimal täglich aktualisiert. Zusätzlich sind Informationen zur Wassertemperatur vorgesehen.",
-        "Für Segler, Paddler, Surfer und Familien am See ist die feinere zeitliche Auflösung besonders praktisch, weil sich die lokalen Windverhältnisse im Tagesverlauf deutlich verändern können."
+        "Treffpunkt für die Central Color ist heute um 14 Uhr am Parco Ex Centrale in Concei. Der Start der nicht wettkampforientierten, fünf Kilometer langen Runde ist gegen 15 Uhr vorgesehen.",
+        "Die Veranstaltungsseite nennt ein Zeitfenster bis 20 Uhr. Vor Ort sollen außerdem ein Barbetrieb, Aperitifs und belegte Brote angeboten werden.",
+        "Die Meldung stützt sich auf den aktuellen Veranstaltungseintrag von Garda Trentino mit Angaben der Pro Loco di Concei. Kurzfristige wetter- oder organisationsbedingte Änderungen sollten direkt beim Veranstalter geprüft werden."
       ],
-      "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Meteotrentino-amplia-le-previsioni-del-vento-sui-laghi-trentini"
+      "sources": [
+        {
+          "publisher": "Garda Trentino",
+          "date": "16.08.2026",
+          "title": "Central Color - Color run",
+          "url": "https://www.gardatrentino.it/it/eventi/central-color-color-run_68346"
+        }
+      ]
     },
     {
-      "id": "market",
-      "priority": 86,
-      "section": "Pieve",
+      "id": "a22-rueckreise-16-august",
+      "priority": 95,
+      "section": "Verkehr",
+      "tag": "Anreise · A22",
+      "title": "A22 rechnet heute mit starkem Rückreiseverkehr",
+      "teaser": "Der 16. August gehört laut Sommerprognose zu den besonders belasteten Reisetagen. Aktuelle Störungen sollten unmittelbar vor der Fahrt geprüft werden.",
+      "status": "Offiziell bestätigt",
+      "date": "16.08.2026",
+      "readTime": "2 Min.",
+      "body": [
+        "Auf der Brennerautobahn ist am heutigen Rückreise-Sonntag mit hoher Belastung in beiden Fahrtrichtungen zu rechnen. Die Sommerprognose der A22 führt den 16. August unter den besonders kritischen Tagen.",
+        "Das ist eine Verkehrsprognose und keine Aussage über eine durchgehend bestehende konkrete Warteschlange. Vor der Abfahrt sind deshalb die Echtzeitmeldungen, Webcams und Hinweise der A22 sowie die Verkehrslage in Trentino maßgeblich.",
+        "Für die Anreise ins Ledrotal bleibt nach der A22 außerdem die Strecke über Rovereto beziehungsweise Trento, Riva del Garda und die SS240 relevant. Zeitreserven sind an einem Rückreisetag sinnvoll."
+      ],
+      "sources": [
+        {
+          "publisher": "Autostrada del Brennero A22",
+          "date": "Stand 16.08.2026",
+          "title": "Previsioni traffico estive und aktuelle Verkehrsinformationen",
+          "url": "https://www.autobrennero.it/it/"
+        },
+        {
+          "publisher": "Corriere del Trentino",
+          "date": "11.07.2026",
+          "title": "Esodo estivo sull’A22, 17 giorni da bollino nero",
+          "url": "https://corrieredeltrentino.corriere.it/notizie/cronaca/26_luglio_11/esodo-estivo-sull-a22-17-giorni-da-bollino-nero-controllate-il-traffico-su-telegram-e-viaggiate-con-acqua-e-cibo-dc3d7f73-bdc8-4a3b-a1c3-08ddd9465xlk_amp.shtml"
+        }
+      ]
+    },
+    {
+      "id": "mercatini-pieve-20-27-agosto",
+      "priority": 90,
+      "section": "Orte & Termine",
+      "filters": ["Ledrotal"],
       "tag": "Pieve di Ledro",
       "title": "Sommermärkte in Pieve: nächste Termine am 20. und 27. August",
-      "teaser": "Im historischen Zentrum stehen noch ein Kunsthandwerksmarkt und ein Markt für Gebrauchtes und Kreatives auf dem Programm.",
+      "teaser": "Im historischen Zentrum folgen ein Kunsthandwerksmarkt und eine Ausgabe des Markts für Gebrauchtes und Kreatives.",
       "status": "Offiziell bestätigt",
-      "source": "Comune di Ledro",
+      "date": "13.07.2026",
+      "readTime": "2 Min.",
+      "body": [
+        "Der Sommermarkt-Kalender der Gemeinde Ledro läuft bis Ende August weiter. Am Donnerstag, 20. August, ist der Kunsthandwerksmarkt vorgesehen.",
+        "Am 27. August folgt der Markt für Gebrauchtes und Kreatives. Die Gemeinde nennt für beide Termine 8 bis 18 Uhr und als Ort den historischen Bereich von Pieve di Ledro rund um Via Vittoria 16.",
+        "Bei Veranstaltungen im Freien sind kurzfristige Änderungen möglich. Maßgeblich bleibt der Veranstaltungseintrag der Gemeinde."
+      ],
+      "sources": [
+        {
+          "publisher": "Comune di Ledro",
+          "date": "13.07.2026",
+          "title": "Mercatino dell'Usato e della Creatività e Mercatino dell'Artigianato 2026",
+          "url": "https://www.comune.ledro.tn.it/Vivere-il-comune/Eventi/Mercatino-dell-Usato-e-della-Creativita-e-Mercatino-dell-Artigianato-2026"
+        }
+      ]
+    },
+    {
+      "id": "kawai-ledro-21-22-agosto",
+      "priority": 88,
+      "section": "Kultur",
+      "filters": ["Ledrotal", "Orte & Termine"],
+      "tag": "Locca di Concei",
+      "title": "Kawai a Ledro: zwei Konzertabende am 21. und 22. August",
+      "teaser": "Im Kulturzentrum von Locca stehen ein Abend für Sopran und Klavier sowie das Konzert des Haydn-Orchesters auf dem Programm.",
+      "status": "Offiziell bestätigt",
+      "date": "30.07.2026",
+      "readTime": "3 Min.",
+      "body": [
+        "Die 21. Ausgabe von Kawai a Ledro setzt ihr Programm am Freitag, 21. August, um 21 Uhr im Centro culturale di Locca fort. Angekündigt sind die Sopranistin Yana Kleyn und die Pianistin Tatiana Larionova.",
+        "Am Samstag, 22. August, ebenfalls um 21 Uhr, gastiert das Haydn-Orchester von Bozen und Trient. Yifan Wu spielt Klavier, die Leitung hat Hossein Pishkar.",
+        "Die Gemeinde nennt für den Freitag 12 Euro regulär und 6 Euro ermäßigt. Für das Haydn-Konzert werden 15 Euro regulär und 12 Euro für Unter-30-Jährige genannt. Die Abendkasse öffnet laut Programm jeweils eine Stunde vor Beginn."
+      ],
+      "sources": [
+        {
+          "publisher": "Comune di Ledro",
+          "date": "30.07.2026",
+          "title": "Kawai a Ledro XXI edizione - rassegna concertistica - La voce di un Angelo",
+          "url": "https://www.comune.ledro.tn.it/Novita/Notizie/Kawai-a-Ledro-XXI-edizione-rassegna-concertistica-La-voce-di-un-Angelo"
+        },
+        {
+          "publisher": "Garda Trentino",
+          "date": "Stand 16.08.2026",
+          "title": "Kawai a Ledro - 21° edizione",
+          "url": "https://www.gardatrentino.it/it/eventi/kawai-a-ledro-21-edizione_58355"
+        },
+        {
+          "publisher": "ANSA Trentino",
+          "date": "17.06.2026",
+          "title": "Haydn's Summer 2026, l'Orchestra incontra il territorio",
+          "url": "https://www.ansa.it/trentino/notizie/2026/06/17/haydns-summer-2026-lorchestra-incontra-il-territorio_bfb21ebc-33b7-474d-b5a2-878bff933492.html"
+        }
+      ]
+    },
+    {
+      "id": "sagra-mozac-lenzumo-2026",
+      "priority": 86,
+      "section": "Orte & Termine",
+      "filters": ["Ledrotal"],
+      "tag": "Lenzumo · Val Concei",
+      "title": "Sagra dei Mozac am 22. und 23. August in Lenzumo",
+      "teaser": "Die 43. Ausgabe verbindet typische Küche, Musik und das Sonntagsprogramm mit Caponec und traditioneller Unterhaltung.",
+      "status": "Offiziell bestätigt",
       "date": "Stand 16.08.2026",
       "readTime": "2 Min.",
-      "imageStyle": "market",
       "body": [
-        "Der Sommermarkt-Kalender der Gemeinde Ledro läuft bis Ende August weiter.",
-        "Am 20. August ist ein Kunsthandwerksmarkt vorgesehen, am 27. August folgt der Markt für Gebrauchtes und Kreatives. Die Gemeinde nennt jeweils 8 bis 18 Uhr als Zeitfenster.",
-        "Veranstaltungsort ist der historische Bereich von Pieve di Ledro rund um Via Vittoria. Kurzfristige Änderungen wegen Wetter oder Organisation sind möglich."
+        "Die Sagra dei Mozac kehrt am Wochenende 22. und 23. August nach Lenzumo zurück. Veranstaltungsort ist die Piazza San Silvestro.",
+        "Für Samstag ist abends unter anderem ein Essen mit Polenta und Spießbraten angekündigt. Am Sonntag stehen die traditionellen Caponec, der Palo della Cuccagna, Musik sowie Angebote für Kinder im Mittelpunkt.",
+        "Für einzelne gastronomische Angebote ist laut Veranstaltungseintrag eine Reservierung erforderlich. Details sollten direkt über die Veranstaltungsseite beziehungsweise die Pro Loco di Concei geprüft werden."
       ],
-      "url": "https://www.comune.ledro.tn.it/Vivere-il-comune/Eventi/Mercatino-dell-Usato-e-della-Creativita-e-Mercatino-dell-Artigianato-2026"
+      "sources": [
+        {
+          "publisher": "Garda Trentino / Pro Loco di Concei",
+          "date": "Stand 16.08.2026",
+          "title": "Sagra dei Mozac - 43° edizione della Sagra di Lenzumo",
+          "url": "https://www.gardatrentino.it/it/eventi/sagra-dei-mozac_59912"
+        }
+      ]
     },
     {
-      "id": "youth",
+      "id": "ledrorunning-23-august-2026",
+      "priority": 84,
+      "section": "Orte & Termine",
+      "filters": ["Ledrotal"],
+      "tag": "Molina di Ledro · Sport",
+      "title": "Ledrorunning startet am 23. August in Molina",
+      "teaser": "Die 17. Ausgabe führt über 9,36 Kilometer rund um den Ledrosee und ist im nationalen FIDAL-Kalender eingetragen.",
+      "status": "Offiziell bestätigt",
+      "date": "Stand 16.08.2026",
+      "readTime": "2 Min.",
+      "body": [
+        "Am Sonntag, 23. August, findet die 17. Ledrorunning statt. Der Veranstalter nennt 9.30 Uhr als Startzeit in Molina di Ledro.",
+        "Die 9,36 Kilometer lange Straßenlaufveranstaltung ist im nationalen FIDAL-Kalender eingetragen. Der Veranstaltungsbereich liegt beim Parco Ex Colonia beziehungsweise in Molina am See.",
+        "Für Teilnehmende gelten die Melde- und Gesundheitsnachweise des Veranstalters. Besucher sollten im Umfeld des Laufs mit zeitweise stärkerer Auslastung rechnen; konkrete Straßensperren sind in den vorliegenden Quellen nicht angekündigt."
+      ],
+      "sources": [
+        {
+          "publisher": "ASD Atletica Alto Garda e Ledro",
+          "date": "Stand 16.08.2026",
+          "title": "Ledrorunning 2026",
+          "url": "https://www.ledrorunning.it/"
+        },
+        {
+          "publisher": "FIDAL Trentino",
+          "date": "Stand 16.08.2026",
+          "title": "XVII Ledrorunning - calendario nazionale",
+          "url": "https://trentino.fidal.it/calendario/NAZ-XVII%5E-Ledrorunning/COD14905"
+        },
+        {
+          "publisher": "Garda Trentino",
+          "date": "Stand 16.08.2026",
+          "title": "Ledro Running",
+          "url": "https://www.gardatrentino.it/it/eventi/ledro-running_56446"
+        }
+      ]
+    },
+    {
+      "id": "ci-sto-affare-fatica-agosto-2026",
       "priority": 82,
       "section": "Ledrotal",
+      "filters": ["Orte & Termine"],
       "tag": "Jugend & Gemeinde",
-      "title": "Projektwoche für Jugendliche in Ledro vom 24. bis 28. August",
-      "teaser": "Beim Projekt „Ci sto? Affare fatica!“ arbeiten Jugendliche in Gruppen an Aufgaben für das Gemeinwohl.",
+      "title": "Projektwoche für Jugendliche vom 24. bis 28. August",
+      "teaser": "Bei „Ci sto? Affare fatica!“ arbeiten 14- bis 19-Jährige vormittags in Gruppen an Aufgaben für das Gemeinwohl.",
       "status": "Offiziell bestätigt",
-      "source": "Comune di Ledro",
       "date": "19.05.2026",
       "readTime": "2 Min.",
-      "imageStyle": "forest",
       "body": [
-        "Das Projekt „Ci sto? Affare fatica!“ richtet sich an Jugendliche von 14 bis 19 Jahren und findet 2026 auch in Ledro statt.",
-        "Für Ledro ist eine weitere Projektwoche vom 24. bis 28. August vorgesehen. Die Gruppen arbeiten montags bis freitags vormittags an Aufgaben für das Gemeinwohl und werden von jungen Tutoren und erwachsenen Freiwilligen begleitet.",
-        "Das Projekt verbindet praktische Arbeit, Gemeinschaft und lokale Beteiligung. Die Gemeinde verweist für Anmeldung und Details auf die Veranstalter."
+        "Die zweite Ledro-Projektwoche von „Ci sto? Affare fatica!“ ist für den 24. bis 28. August vorgesehen. Das Angebot richtet sich an Jugendliche zwischen 14 und 19 Jahren.",
+        "Die Gruppen arbeiten montags bis freitags von 8.30 bis 12.30 Uhr an lokalen Aufgaben für das Gemeinwohl. Begleitet werden sie von jungen Tutorinnen und Tutoren sowie erwachsenen Freiwilligen.",
+        "Die Gemeinde verweist für Anmeldung und aktuelle Platzverfügbarkeit auf die Projektseite. Der kommunale Eintrag nennt den 24. August als Ablaufdatum des Hinweises."
       ],
-      "url": "https://www.comune.ledro.tn.it/Novita/Avvisi/Ci-sto-Affare-fatica2"
+      "sources": [
+        {
+          "publisher": "Comune di Ledro",
+          "date": "19.05.2026",
+          "title": "Ci sto? Affare fatica!",
+          "url": "https://www.comune.ledro.tn.it/Novita/Avvisi/Ci-sto-Affare-fatica2"
+        }
+      ]
     },
     {
-      "id": "haydn",
-      "priority": 80,
-      "section": "Kultur",
-      "tag": "Locca di Concei",
-      "title": "Haydn-Orchester kommt am 22. August nach Locca di Concei",
-      "teaser": "Die Sommertour des Orchesters macht im Ledrotal Station. Auf dem Programm steht ein Konzert mit Pianist Yifan Wu.",
-      "status": "Pressebericht",
-      "source": "ANSA Trentino",
-      "date": "17.06.2026",
-      "readTime": "2 Min.",
-      "imageStyle": "culture",
-      "body": [
-        "Im Rahmen der Sommertour 2026 des Haydn-Orchesters ist am 22. August eine Station in Locca di Concei angekündigt.",
-        "Nach Angaben von ANSA steht das Konzert am Ende einer Tour mit Dirigent Hossein Pishkar und dem Pianisten Yifan Wu, Gewinner des 65. Busoni-Klavierwettbewerbs.",
-        "Wer hingehen möchte, sollte Veranstaltungsort, Beginn und mögliche Ticketinformationen kurz vor dem Termin nochmals beim Veranstalter beziehungsweise in den lokalen Veranstaltungskalendern prüfen."
-      ],
-      "url": "https://www.ansa.it/trentino/notizie/2026/06/17/haydns-summer-2026-lorchestra-incontra-il-territorio_bfb21ebc-33b7-474d-b5a2-878bff933492.html"
-    },
-    {
-      "id": "wake",
-      "priority": 74,
-      "section": "Pur",
-      "tag": "Pur",
-      "title": "Wakeboard-Anlage bleibt Gegenstand politischer Fragen",
-      "teaser": "Eine Landtagsanfrage fordert Prüfungen zu Genehmigungen, Sicherheit, Landschaft und Verkehrsfragen im Bereich Val di Pur.",
-      "status": "Pressebericht",
-      "source": "l’Adige",
-      "date": "28.07.2026",
-      "readTime": "3 Min.",
-      "imageStyle": "water",
-      "body": [
-        "Eine politische Anfrage von Lucia Coppola befasst sich mit der Wakeboard-Anlage in Val di Pur.",
-        "Gefragt wird unter anderem nach Genehmigungen, möglichen Auswirkungen auf Schwimmer und kleine Boote, Landschaft und Vegetation sowie nach Parkplätzen und Fußwegen.",
-        "Wichtig ist die Einordnung: Eine politische Anfrage ist kein Nachweis eines Verstoßes. Sie dokumentiert Fragen, zu denen die zuständigen Stellen Stellung nehmen sollen."
-      ],
-      "url": "https://www.ladige.it/territori/basso-sarca-ledro/impianto-di-wakeboard-a-ledro-chieste-verifiche-e-sopralluoghi-cvhqbfnz"
-    },
-    {
-      "id": "imis",
-      "priority": 66,
-      "section": "Haus & Alltag",
-      "tag": "Haus & Regeln",
-      "title": "IM.I.S. 2026: Einmalige Zahlung bis 16. Dezember",
-      "teaser": "Die Gemeinde Ledro verlangt 2026 keine Vorauszahlung im Juni; die Steuer wird in einer einzigen Rate fällig.",
+      "id": "carta-identita-cartacea-august-2026",
+      "priority": 70,
+      "section": "Service & Regeln",
+      "tag": "Dokumente · Fortlaufender Hinweis",
+      "title": "Papierausweis seit 3. August nur noch sehr eingeschränkt nutzbar",
+      "teaser": "Für Reisen ist die Carta d’identità cartacea nicht mehr gültig. Eine spätere Regelung schützt einzelne bestehende Verträge und wesentliche Dienste übergangsweise.",
       "status": "Offiziell bestätigt",
-      "source": "Comune di Ledro",
-      "date": "08.06.2026",
-      "readTime": "2 Min.",
-      "imageStyle": "house",
+      "date": "06.07.2026",
+      "readTime": "3 Min.",
       "body": [
-        "Die Gemeinde Ledro informiert, dass die IM.I.S. für das Jahr 2026 in einer einzigen Rate bis zum 16. Dezember 2026 zu zahlen ist.",
-        "Eine Vorauszahlung im Juni ist nicht vorgesehen. Die Gemeinde gibt außerdem an, dass die Steuersätze gegenüber 2025 unverändert bleiben.",
-        "Für Eigentümer bleibt es sinnvoll, die individuelle Berechnung und mögliche Sonderfälle anhand der eigenen Unterlagen zu prüfen."
+        "Seit dem 3. August 2026 ist die italienische Carta d’identità in Papierform grundsätzlich nicht mehr als regulärer Identitäts- und Reisedokumentersatz gültig. Für Reisen ins Ausland kann sie in keinem Fall mehr verwendet werden.",
+        "Der Decreto-Legge 108/2026 enthält allerdings Übergangsregeln: Bei bereits vor dem 3. August geschlossenen Vertragsverhältnissen bleibt eine damals hinterlegte Papieridentität bis zur ursprünglichen Dokumentfrist relevant. Für grundlegende Rechte und wesentliche Gesundheits- oder Sozialleistungen ist eine begrenzte Nutzung längstens bis 31. Januar 2027 vorgesehen.",
+        "Wer noch einen Papierausweis besitzt, sollte die CIE beim zuständigen Comune beantragen. Bei konkreten Sonderfällen sind die aktuellen Hinweise der Behörden entscheidend."
       ],
-      "url": "https://www.comune.ledro.tn.it/Novita/Avvisi/Imposta-Immobiliare-Semplice-IM.I.S.-aliquote-e-versamento-anno-2026"
+      "sources": [
+        {
+          "publisher": "Ministero dell’Interno",
+          "date": "08.05.2026",
+          "title": "Carta d’Identità: se non è elettronica, non vale",
+          "url": "https://www.interno.gov.it/it/stampa-e-comunicazione/comunicati-stampa/carta-didentita-non-e-elettronica-non-vale"
+        },
+        {
+          "publisher": "Commissariato del Governo per la Provincia di Trento",
+          "date": "06.07.2026",
+          "title": "Decreto Legge n. 108 del 26 giugno 2026",
+          "url": "https://prefettura.interno.gov.it/it/prefetture/trento/notizie/decreto-legge-n-108-26-giugno-2026"
+        }
+      ]
+    },
+    {
+      "id": "infrastruktur-ledro-hintergrund-2026",
+      "priority": 40,
+      "section": "Hintergrund",
+      "filters": ["Ledrotal"],
+      "tag": "Hintergrund · Infrastruktur",
+      "title": "Infrastrukturpaket für Ledro: die angekündigten Projekte im Überblick",
+      "teaser": "Die Provinz beziffert mehrere Vorhaben auf mehr als 65 Millionen Euro. Das Thema bleibt langfristig relevant, ist aber keine neue Tagesmeldung.",
+      "status": "Offiziell bestätigt",
+      "date": "23.07.2026",
+      "readTime": "3 Min.",
+      "body": [
+        "Dieser Beitrag ist als Hintergrund gekennzeichnet: Die Autonome Provinz Trient stellte das Infrastrukturpaket bereits am 23. Juli vor.",
+        "Der größte Einzelposten ist mit rund 52 Millionen Euro für die geplante Umfahrung von Molina genannt. Weitere Maßnahmen betreffen unter anderem die Verkehrssicherheit und Arbeiten im Bereich der Galleria Dom.",
+        "Konkrete Bauzeiten, Sperrungen oder neue Verkehrsführungen ergeben sich aus der Grundsatzmeldung noch nicht. Für die tägliche Fahrt sind deshalb jeweils aktuelle amtliche Verkehrshinweise maßgeblich."
+      ],
+      "sources": [
+        {
+          "publisher": "Provincia autonoma di Trento",
+          "date": "23.07.2026",
+          "title": "Val di Ledro, 65 milioni di opere sul territorio",
+          "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Val-di-Ledro-65-milioni-di-opere-sul-territorio"
+        }
+      ]
     }
-  ]
+  ],
+  "weather": {
+    "title": "Wetter & Wasser",
+    "updated": "16.08.2026, 21:22 CEST",
+    "forecastIssued": "16.08.2026, 11:04 CEST",
+    "intro": "Täglicher Vergleich für Ledro und Riva del Garda mit amtlichen Ortsprognosen, Warnlagen und ausschließlich zeitgestempelten Wasser-Messwerten.",
+    "notice": "Meteotrentino veröffentlicht für die Ortsprognosen derzeit sechs vollständige Tage. Der siebte Tag ist deshalb klar als ergänzender ICON-Modellwert von Open-Meteo gekennzeichnet und besitzt eine höhere Unsicherheit.",
+    "warnings": [
+      {
+        "level": "Gelb",
+        "kind": "Gewitter und hydrogeologische Gefahren",
+        "status": "Aktiv",
+        "issued": "16.08.2026",
+        "text": "Die Protezione Civile Trentino führt eine gelbe Warnung für Gewitter und hydrogeologische Gefahren. Meteotrentino bewertet die Wahrscheinlichkeit intensiver Gewitter für heute und Montag als mittel; lokal sind Starkregen, Hagel, Blitzschlag und starke Böen möglich.",
+        "sources": [
+          {
+            "publisher": "Protezione Civile Trentino",
+            "date": "16.08.2026",
+            "title": "Allerta ordinaria gialla: temporali ed idrogeologica",
+            "url": "https://avvisi.protezionecivile.tn.it/"
+          },
+          {
+            "publisher": "Meteotrentino",
+            "date": "16.08.2026, 10:48 CEST",
+            "title": "Bollettino probabilistico eventi intensi",
+            "url": "https://www.meteotrentino.it/previsioni/bollettino-eventi-intensi/"
+          }
+        ]
+      },
+      {
+        "level": "Gelb",
+        "kind": "Hohe Temperaturen",
+        "status": "Aktiv gelistet",
+        "issued": "09.08.2026",
+        "text": "Die offizielle Warnübersicht führt weiterhin eine gelbe Warnung wegen hoher Temperaturen. Der aktuelle Meteotrentino-Bulletin nennt für heute noch sehr hohe Temperaturen, danach einen Rückgang.",
+        "sources": [
+          {
+            "publisher": "Protezione Civile Trentino",
+            "date": "09.08.2026",
+            "title": "Allerta ordinaria gialla: temperature elevate",
+            "url": "https://avvisi.protezionecivile.tn.it/"
+          },
+          {
+            "publisher": "Meteotrentino",
+            "date": "16.08.2026, 11:04 CEST",
+            "title": "Bollettino meteorologico ufficiale per il Trentino",
+            "url": "https://www.meteotrentino.it/previsioni/bollettino-meteorologico-ufficiale-per-il-trentino/"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "ledro",
+        "name": "Ledrotal / Lago di Ledro",
+        "elevation": "Ortsprognose Ledro · 660 m",
+        "todayCondition": "Zunächst sonnig und heiß, später unbeständiger mit örtlichen Gewittern, die lokal intensiv ausfallen können.",
+        "water": {
+          "status": "unavailable",
+          "valueC": null,
+          "label": "Aktuell kein verifizierter Messwert verfügbar",
+          "place": "Lago di Ledro · Messstelle in der veröffentlichten Grafik nicht näher bezeichnet",
+          "measuredAt": null,
+          "note": "Die aktuell eingebettete Meteotrentino-Grafik trägt noch den Zeitstempel 23.07.2026, 13:13:44. Der dort gezeigte Wert wird deshalb nicht als aktueller Messwert veröffentlicht.",
+          "sources": [
+            {
+              "publisher": "Meteotrentino",
+              "date": "Abruf 16.08.2026",
+              "title": "Vento sul lago di Ledro – Temperatura dell’acqua",
+              "url": "https://www.meteotrentino.it/previsioni/vento/ledro/"
+            }
+          ]
+        },
+        "forecast": [
+          {"date":"16.08.","day":"Heute","minC":16,"maxC":30,"condition":"Sonnig, später örtliche Gewitter","rainProbability":55,"rainMm":2.2,"windKmh":4,"gustKmh":25,"windDirection":"SE","source":"Meteotrentino"},
+          {"date":"17.08.","day":"Mo","minC":15,"maxC":26,"condition":"Unbeständig, verbreitete Schauer und Gewitter","rainProbability":75,"rainMm":5.2,"windKmh":4,"gustKmh":29,"windDirection":"N","source":"Meteotrentino"},
+          {"date":"18.08.","day":"Di","minC":14,"maxC":27,"condition":"Sonnig und stabil","rainProbability":40,"rainMm":0,"windKmh":4,"gustKmh":25,"windDirection":"E","source":"Meteotrentino"},
+          {"date":"19.08.","day":"Mi","minC":15,"maxC":28,"condition":"Meist sonnig, abends einzelne Gewitter möglich","rainProbability":50,"rainMm":1.8,"windKmh":null,"gustKmh":36,"windDirection":null,"source":"Meteotrentino"},
+          {"date":"20.08.","day":"Do","minC":16,"maxC":24,"condition":"Sehr bewölkt, verbreitete kräftige Niederschläge","rainProbability":80,"rainMm":20.3,"windKmh":4,"gustKmh":29,"windDirection":"ESE","source":"Meteotrentino"},
+          {"date":"21.08.","day":"Fr","minC":15,"maxC":24,"condition":"Sehr bewölkt mit verbreiteten Niederschlägen","rainProbability":75,"rainMm":21.3,"windKmh":null,"gustKmh":29,"windDirection":null,"source":"Meteotrentino"},
+          {"date":"22.08.","day":"Sa","minC":17,"maxC":24,"condition":"Bedeckt; ergänzender Modellwert","rainProbability":80,"rainMm":null,"windKmh":9,"gustKmh":25,"windDirection":"SW","source":"Open-Meteo · ICON","provisional":true}
+        ],
+        "sources": [
+          {
+            "publisher": "Meteotrentino / Euregio meteo.report",
+            "date": "16.08.2026, Modelllauf ab 02:00 CEST",
+            "title": "Ortsprognose Ledro – offene Vorhersagedaten",
+            "url": "https://meteo.report/var/data/forecasts/ceca8894-abbc-4ba3-b0ee-e8150b7e3a9f.json"
+          },
+          {
+            "publisher": "Meteotrentino",
+            "date": "16.08.2026",
+            "title": "Windvorhersage für den Lago di Ledro",
+            "url": "https://www.meteotrentino.it/previsioni/vento/ledro/"
+          },
+          {
+            "publisher": "Open-Meteo · ICON Seamless",
+            "date": "16.08.2026",
+            "title": "Ergänzender Modellwert Ledro für den 22. August 2026",
+            "url": "https://api.open-meteo.com/v1/forecast?latitude=45.885345&longitude=10.717427&elevation=660&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max,wind_gusts_10m_max,wind_direction_10m_dominant&timezone=Europe%2FRome&forecast_days=7&models=icon_seamless"
+          }
+        ]
+      },
+      {
+        "id": "riva",
+        "name": "Riva del Garda / nördlicher Gardasee",
+        "elevation": "Ortsprognose Riva del Garda · 73 m",
+        "todayCondition": "Sonnig und heiß; am Nachmittag und Abend sind örtliche, teils intensive Gewitter möglich.",
+        "water": {
+          "status": "verified",
+          "valueC": 25.54,
+          "label": "25,54 °C",
+          "place": "APPA-Sonde zwischen Punta Lido und Spiaggia Sabbioni, Riva del Garda · etwa 100 m vom Ufer · Messtiefe 1 m",
+          "measuredAt": "16.08.2026, 19:55:23 CEST",
+          "note": "Kontinuierliche Messung der multiparametrischen APPA-Sonde im nördlichen Gardasee.",
+          "sources": [
+            {
+              "publisher": "APPA – Provincia autonoma di Trento",
+              "date": "Messung 16.08.2026, 19:55:23 CEST",
+              "title": "Temperatura lago di Garda – sonda presso Riva del Garda, Spiaggia dei Sabbioni",
+              "url": "https://www.appa.provincia.tn.it/Documenti-e-dati/Documenti-tecnici-di-supporto/Temperatura-lago-di-Garda-sonda-presso-Riva-del-Garda-spiaggia-dei-Sabbioni"
+            }
+          ]
+        },
+        "forecast": [
+          {"date":"16.08.","day":"Heute","minC":22,"maxC":34,"condition":"Sonnig, später örtliche Gewitter","rainProbability":55,"rainMm":1.6,"windKmh":11,"gustKmh":36,"windDirection":"ESE","source":"Meteotrentino"},
+          {"date":"17.08.","day":"Mo","minC":22,"maxC":30,"condition":"Unbeständig, verbreitete Schauer und Gewitter","rainProbability":70,"rainMm":5.0,"windKmh":14,"gustKmh":40,"windDirection":"NE","source":"Meteotrentino"},
+          {"date":"18.08.","day":"Di","minC":21,"maxC":30,"condition":"Sonnig und stabil","rainProbability":40,"rainMm":0,"windKmh":14,"gustKmh":36,"windDirection":"ENE","source":"Meteotrentino"},
+          {"date":"19.08.","day":"Mi","minC":22,"maxC":31,"condition":"Meist sonnig, abends einzelne Gewitter möglich","rainProbability":50,"rainMm":1.6,"windKmh":11,"gustKmh":40,"windDirection":"SE","source":"Meteotrentino"},
+          {"date":"20.08.","day":"Do","minC":21,"maxC":28,"condition":"Sehr bewölkt, verbreitete kräftige Niederschläge","rainProbability":80,"rainMm":19.8,"windKmh":11,"gustKmh":36,"windDirection":"ENE","source":"Meteotrentino"},
+          {"date":"21.08.","day":"Fr","minC":19,"maxC":27,"condition":"Sehr bewölkt mit verbreiteten Niederschlägen","rainProbability":80,"rainMm":20.4,"windKmh":11,"gustKmh":36,"windDirection":"ENE","source":"Meteotrentino"},
+          {"date":"22.08.","day":"Sa","minC":20,"maxC":28,"condition":"Bedeckt; ergänzender Modellwert","rainProbability":80,"rainMm":null,"windKmh":9,"gustKmh":25,"windDirection":"SW","source":"Open-Meteo · ICON","provisional":true}
+        ],
+        "sources": [
+          {
+            "publisher": "Meteotrentino / Euregio meteo.report",
+            "date": "16.08.2026, Modelllauf ab 02:00 CEST",
+            "title": "Ortsprognose Riva del Garda – offene Vorhersagedaten",
+            "url": "https://meteo.report/var/data/forecasts/5acc95bb-cfb3-4d53-8547-f1d9a3418d11.json"
+          },
+          {
+            "publisher": "Meteotrentino",
+            "date": "16.08.2026",
+            "title": "Windvorhersage für den Alto Garda",
+            "url": "https://www.meteotrentino.it/previsioni/vento/alto-garda/"
+          },
+          {
+            "publisher": "Open-Meteo · ICON Seamless",
+            "date": "16.08.2026",
+            "title": "Ergänzender Modellwert Riva del Garda für den 22. August 2026",
+            "url": "https://api.open-meteo.com/v1/forecast?latitude=45.888901&longitude=10.842831&elevation=73&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max,wind_gusts_10m_max,wind_direction_10m_dominant&timezone=Europe%2FRome&forecast_days=7&models=icon_seamless"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "publisher": "Meteotrentino",
+        "date": "16.08.2026, 11:04 CEST",
+        "title": "Bollettino meteorologico ufficiale per il Trentino",
+        "url": "https://www.meteotrentino.it/previsioni/bollettino-meteorologico-ufficiale-per-il-trentino/"
+      },
+      {
+        "publisher": "Dati Trentino – Provincia autonoma di Trento",
+        "date": "Aktualisierung zweimal täglich",
+        "title": "Previsioni meteorologiche locali per la Provincia di Trento",
+        "url": "https://dati.trentino.it/dataset/previsioni-meteorologiche-locali-per-la-provincia-di-trento"
+      }
+    ]
+  },
+  "services": {
+    "title": "Öffnungszeiten",
+    "updated": "16.08.2026",
+    "intro": "Dauerhafte, von den Tagesnachrichten getrennte Serviceangaben für Ledro. Jede Angabe ist mit einer überprüfbaren Originalseite verknüpft.",
+    "notice": "Saisonzeiten, Feiertage und kurzfristige Schließungen können abweichen. Vor einer längeren Anfahrt bitte immer den verlinkten Betreiberhinweis prüfen.",
+    "categories": [
+      {
+        "id": "shopping",
+        "title": "Einkaufen und Supermärkte",
+        "items": [
+          {
+            "name": "Famiglia Cooperativa Pieve",
+            "locality": "Pieve di Ledro",
+            "address": "Via Foletto 2",
+            "schedule": [
+              {"days": "Montag–Sonntag", "hours": "08:00–19:30"}
+            ],
+            "season": "Betreiberangabe vom Juni 2026; Ferien- und Feiertagszeiten können abweichen.",
+            "sources": [
+              {
+                "publisher": "Famiglia Cooperativa Valle di Ledro",
+                "date": "12.06.2026",
+                "title": "Famiglia Cooperativa Pieve",
+                "url": "https://www.fcvallediledro.it/famiglia-cooperativa-pieve/"
+              }
+            ]
+          },
+          {
+            "name": "Famiglia Cooperativa Bezzecca",
+            "locality": "Bezzecca",
+            "address": "Via 21 Luglio 11",
+            "schedule": [
+              {"days": "Montag–Samstag", "hours": "08:00–12:00 · 15:30–19:00"},
+              {"days": "Sonntag", "hours": "08:00–12:00"}
+            ],
+            "note": "Auf der Betreiberseite steht der Ortsname in der URL verkürzt als „Bezzeca“; gemeint ist der Laden in Bezzecca.",
+            "sources": [
+              {
+                "publisher": "Famiglia Cooperativa Valle di Ledro",
+                "date": "01.07.2026",
+                "title": "Famiglia Cooperativa Bezzecca",
+                "url": "https://www.fcvallediledro.it/famiglia-cooperativa-bezzeca/"
+              }
+            ]
+          },
+          {
+            "name": "Famiglia Cooperativa Tiarno di Sotto",
+            "locality": "Tiarno di Sotto",
+            "address": "Via G. Garibaldi 95",
+            "schedule": [
+              {"days": "Montag–Samstag", "hours": "07:30–12:00 · 16:15–19:00"},
+              {"days": "Sonntag", "hours": "08:00–12:00"}
+            ],
+            "sources": [
+              {
+                "publisher": "Famiglia Cooperativa Valle di Ledro",
+                "date": "01.07.2026",
+                "title": "Famiglia Cooperativa Tiarno di Sotto",
+                "url": "https://www.fcvallediledro.it/famiglia-cooperativa-tiarno-di-sotto/"
+              }
+            ]
+          },
+          {
+            "name": "Margherita Conad",
+            "locality": "Ledro",
+            "address": "Via Garibaldi 5",
+            "schedule": [
+              {"days": "Montag–Samstag", "hours": "07:30–12:30 · 15:30–20:30"},
+              {"days": "Sonntag", "hours": "07:30–12:30"}
+            ],
+            "note": "Die Conad-Filialseite zeigt tagesaktuelle Abweichungen gesondert an.",
+            "sources": [
+              {
+                "publisher": "Conad",
+                "date": "Stand 16.08.2026",
+                "title": "Margherita Conad, Via Garibaldi 5, Ledro",
+                "url": "https://www.conad.it/ricerca-negozi/margherita-conad-via-garibaldi-5-38067-ledro--009617"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "municipality",
+        "title": "Gemeinde, Rathaus und Behörden",
+        "items": [
+          {
+            "name": "Rathaus · Segreteria e Affari Generali",
+            "locality": "Pieve di Ledro",
+            "address": "Via Vittoria 5, 2. Stock",
+            "schedule": [
+              {"days": "Montag–Freitag", "hours": "08:30–12:30"}
+            ],
+            "note": "Für einzelne Anliegen ist eine Terminvereinbarung sinnvoll oder erforderlich.",
+            "sources": [
+              {
+                "publisher": "Comune di Ledro",
+                "date": "Gültig seit 01.01.2024",
+                "title": "Area Segreteria e Affari Generali",
+                "url": "https://www.comune.ledro.tn.it/Amministrazione/Aree-amministrative/Area-Segreteria-e-Affari-Generali"
+              }
+            ]
+          },
+          {
+            "name": "Ufficio Edilizia e Urbanistica",
+            "locality": "Bezzecca",
+            "address": "Piazza Garibaldi 1, 1. Stock",
+            "schedule": [
+              {"days": "Montag, Mittwoch, Freitag", "hours": "08:30–12:30"},
+              {"days": "Dienstag, Donnerstag", "hours": "für Publikumsverkehr geschlossen"}
+            ],
+            "note": "Die Schließung am Dienstag und Donnerstag gilt seit 1. Juli 2025.",
+            "sources": [
+              {
+                "publisher": "Comune di Ledro",
+                "date": "26.06.2025",
+                "title": "Ufficio Edilizia e Urbanistica - Orari al pubblico",
+                "url": "https://www.comune.ledro.tn.it/Amministrazione/Uffici/Ufficio-Edilizia-e-Urbanistica"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "waste",
+        "title": "Wertstoffhof, Entsorgung und öffentliche Dienste",
+        "items": [
+          {
+            "name": "Centro di Raccolta Bezzecca",
+            "locality": "Bezzecca",
+            "schedule": [
+              {"days": "Dienstag", "hours": "14:00–18:00"},
+              {"days": "Donnerstag", "hours": "14:00–18:00"},
+              {"days": "Samstag", "hours": "14:00–18:00"}
+            ],
+            "season": "Zusätzliche Mittwochsöffnung 08:00–12:00 nur vom 1. Dezember bis 31. März.",
+            "note": "Zugang für berechtigte Haushalte und angeschlossene Betriebe; Gesundheitskarte beziehungsweise Steuernummer bereithalten.",
+            "sources": [
+              {
+                "publisher": "Comunità Alto Garda e Ledro",
+                "date": "12.11.2025",
+                "title": "RSU: conferimento ai CRM - Orari centri di raccolta",
+                "url": "https://www.altogardaeledro.tn.it/Servizi/RSU-conferimento-ai-crm"
+              }
+            ]
+          },
+          {
+            "name": "Centro di Raccolta Pieve di Ledro",
+            "locality": "Pieve di Ledro",
+            "schedule": [
+              {"days": "Montag, Mittwoch, Freitag", "hours": "14:00–18:00"},
+              {"days": "Samstag", "hours": "08:00–12:00"}
+            ],
+            "sources": [
+              {
+                "publisher": "Comunità Alto Garda e Ledro",
+                "date": "12.11.2025",
+                "title": "RSU: conferimento ai CRM - Orari centri di raccolta",
+                "url": "https://www.altogardaeledro.tn.it/Servizi/RSU-conferimento-ai-crm"
+              }
+            ]
+          },
+          {
+            "name": "Centro di Raccolta Tiarno di Sopra",
+            "locality": "Tiarno di Sopra",
+            "schedule": [
+              {"days": "Montag", "hours": "08:00–12:00"},
+              {"days": "Mittwoch", "hours": "14:00–18:00"},
+              {"days": "Samstag", "hours": "08:00–12:00"}
+            ],
+            "season": "Vom 1. Dezember bis 31. März geschlossen.",
+            "sources": [
+              {
+                "publisher": "Comunità Alto Garda e Ledro",
+                "date": "12.11.2025",
+                "title": "RSU: conferimento ai CRM - Orari centri di raccolta",
+                "url": "https://www.altogardaeledro.tn.it/Servizi/RSU-conferimento-ai-crm"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "public",
+        "title": "Post, Bibliothek und weitere öffentliche Einrichtungen",
+        "items": [
+          {
+            "name": "Ufficio Postale Bezzecca",
+            "locality": "Bezzecca",
+            "address": "Piazza Pier Antonio Cassoni 1",
+            "schedule": [
+              {"days": "Aktuelle Zeiten", "hours": "im offiziellen Filialfinder prüfen"}
+            ],
+            "note": "Poste Italiane stellt keine belastbare statische Wochenzeit für diese Filiale bereit. Deshalb wird hier bewusst keine möglicherweise veraltete Uhrzeit gespeichert.",
+            "sources": [
+              {
+                "publisher": "Poste Italiane",
+                "date": "Stand 16.08.2026",
+                "title": "Cerca Ufficio Postale o Punto Poste",
+                "url": "https://www.poste.it/cerca/index.html#/vieni-in-poste"
+              }
+            ]
+          },
+          {
+            "name": "Biblioteca della Valle di Ledro",
+            "locality": "Bezzecca",
+            "address": "Via Cesare Battisti",
+            "schedule": [
+              {"days": "Dienstag", "hours": "14:30–18:30"},
+              {"days": "Mittwoch", "hours": "14:30–19:30"},
+              {"days": "Donnerstag, Freitag", "hours": "14:30–18:30"},
+              {"days": "Samstag", "hours": "09:00–12:00 · 14:30–18:30"}
+            ],
+            "sources": [
+              {
+                "publisher": "Comune di Ledro",
+                "date": "Gültig seit 01.01.2024",
+                "title": "Biblioteca della Valle di Ledro - Orario per il pubblico",
+                "url": "https://www.comune.ledro.tn.it/Vivere-il-comune/Luoghi/Biblioteca"
+              }
+            ]
+          },
+          {
+            "name": "Touristischer Ärztedienst",
+            "locality": "Bezzecca",
+            "address": "Via Falcone e Borsellino 6",
+            "schedule": [
+              {"days": "Montag–Freitag", "hours": "08:00–20:00 · nur nach Termin"},
+              {"days": "Termin", "hours": "+39 335 8238521"}
+            ],
+            "season": "Nur vom 1. Juli bis 31. August 2026.",
+            "note": "Nicht dringende medizinische Hilfe: 116117 rund um die Uhr. Notfälle: 112.",
+            "sources": [
+              {
+                "publisher": "Comune di Ledro",
+                "date": "30.06.2026",
+                "title": "Medico per i turisti 2026",
+                "url": "https://www.comune.ledro.tn.it/Novita/Avvisi/Medico-per-i-turisti-medical-service-for-italian-and-foreign-tourists-aerztlicher-Bereitschaftsdienst-fuer-italienischen-und-auslaendischen-Touristen"
+              }
+            ]
+          },
+          {
+            "name": "Museo delle Palafitte del Lago di Ledro",
+            "locality": "Molina di Ledro",
+            "address": "Via al Lago 1",
+            "schedule": [
+              {"days": "Juli und August", "hours": "täglich 10:00–18:00"},
+              {"days": "März–Juni, September–Dezember", "hours": "täglich 09:00–17:00"},
+              {"days": "Januar und Februar", "hours": "geschlossen"}
+            ],
+            "season": "Saisonabhängige Öffnungszeiten; Winter-Schließung im Januar und Februar.",
+            "sources": [
+              {
+                "publisher": "MUSE - Museo delle Scienze",
+                "date": "Stand 16.08.2026",
+                "title": "FAQ Museo delle Palafitte - Quando è aperto il museo?",
+                "url": "https://www.muse.it/home/scopri-il-museo/il-muse-sul-territorio/museo-delle-palafitte-del-lago-diledro/faq/"
+              }
+            ]
+          },
+          {
+            "name": "Museo Garibaldino e della Grande Guerra",
+            "locality": "Bezzecca",
+            "address": "Via Lungassat Salvador Greco",
+            "schedule": [
+              {"days": "Mittwoch–Sonntag", "hours": "10:00–13:00 · 14:00–19:00"},
+              {"days": "Montag, Dienstag", "hours": "geschlossen"}
+            ],
+            "season": "Gültig vom 17. Juni bis 1. Oktober 2026.",
+            "sources": [
+              {
+                "publisher": "MUSE - Museo delle Scienze",
+                "date": "Stand 16.08.2026",
+                "title": "Museo Garibaldino e della Grande Guerra di Bezzecca",
+                "url": "https://www.muse.it/home/scopri-il-museo/il-muse-sul-territorio/sedi-convenzionate/museo-garibaldino-e-della-grande-guerra-di-bezzecca/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "churches",
+        "title": "Kirchen und Gottesdienste rund um den Ledrosee",
+        "items": [
+          {
+            "name": "Pieve di Ledro",
+            "locality": "Pfarrkirche Pieve",
+            "schedule": [
+              {"days": "Mittwoch", "hours": "09:00"},
+              {"days": "Samstag", "hours": "18:00"}
+            ],
+            "note": "Ein Samstag im Monat kann laut Pfarrei auf 20 Uhr wechseln; aktuelle Avvisi prüfen.",
+            "sources": [
+              {
+                "publisher": "Unità Pastorale Valle di Ledro",
+                "date": "Stand 16.08.2026",
+                "title": "Le Sante Messe - Orario delle Messe",
+                "url": "https://www.parrocchieledro.it/messe.html"
+              }
+            ]
+          },
+          {
+            "name": "Molina di Ledro",
+            "locality": "Pfarrkirche Molina",
+            "schedule": [
+              {"days": "Sonntag", "hours": "09:30"},
+              {"days": "Donnerstag", "hours": "09:00"}
+            ],
+            "season": "Im Juli und August donnerstags um 18 Uhr in der Kirche Santa Trinità statt um 09:00 Uhr.",
+            "sources": [
+              {
+                "publisher": "Unità Pastorale Valle di Ledro",
+                "date": "Stand 16.08.2026",
+                "title": "Le Sante Messe - Orario delle Messe",
+                "url": "https://www.parrocchieledro.it/messe.html"
+              }
+            ]
+          },
+          {
+            "name": "Bezzecca",
+            "locality": "Pfarrkirche Bezzecca",
+            "schedule": [
+              {"days": "Freitag", "hours": "09:00"},
+              {"days": "Sonntag", "hours": "18:00"}
+            ],
+            "sources": [
+              {
+                "publisher": "Unità Pastorale Valle di Ledro",
+                "date": "Stand 16.08.2026",
+                "title": "Le Sante Messe - Orario delle Messe",
+                "url": "https://www.parrocchieledro.it/messe.html"
+              }
+            ]
+          },
+          {
+            "name": "Biacesa und Prè",
+            "locality": "Westliches Ledrotal",
+            "schedule": [
+              {"days": "Biacesa · Sonntag", "hours": "18:00"},
+              {"days": "Prè · Samstag", "hours": "19:30"}
+            ],
+            "sources": [
+              {
+                "publisher": "Unità Pastorale Valle di Ledro",
+                "date": "Stand 16.08.2026",
+                "title": "Le Sante Messe - Orario delle Messe",
+                "url": "https://www.parrocchieledro.it/messe.html"
+              }
+            ]
+          },
+          {
+            "name": "Mezzolago und Locca",
+            "locality": "abwechselnder Sonntagsdienst",
+            "schedule": [
+              {"days": "Sonntag", "hours": "09:30 · abwechselnd"},
+              {"days": "Mezzolago · Dienstag", "hours": "09:00 · nur Juli und August"},
+              {"days": "Locca · Freitag", "hours": "09:00"}
+            ],
+            "note": "Welche Kirche am jeweiligen Sonntag an der Reihe ist, steht in den aktuellen Avvisi der Pfarreien.",
+            "sources": [
+              {
+                "publisher": "Unità Pastorale Valle di Ledro",
+                "date": "Stand 16.08.2026",
+                "title": "Le Sante Messe - Orario delle Messe",
+                "url": "https://www.parrocchieledro.it/messe.html"
+              }
+            ]
+          },
+          {
+            "name": "Enguiso und Lenzumo",
+            "locality": "abwechselnder Sonntagsdienst",
+            "schedule": [
+              {"days": "Sonntag", "hours": "10:30 · abwechselnd"},
+              {"days": "Enguiso · Dienstag", "hours": "09:00"},
+              {"days": "Lenzumo · Montag", "hours": "09:00"}
+            ],
+            "note": "Aktuelle Sonntagszuordnung in den Avvisi prüfen.",
+            "sources": [
+              {
+                "publisher": "Unità Pastorale Valle di Ledro",
+                "date": "Stand 16.08.2026",
+                "title": "Le Sante Messe - Orario delle Messe",
+                "url": "https://www.parrocchieledro.it/messe.html"
+              }
+            ]
+          },
+          {
+            "name": "Tiarno di Sopra und Tiarno di Sotto",
+            "locality": "abwechselnder Sonntagsdienst",
+            "schedule": [
+              {"days": "Sonntag", "hours": "10:30 · abwechselnd"},
+              {"days": "Tiarno di Sotto · Mittwoch", "hours": "09:00"},
+              {"days": "Tiarno di Sopra · Montag, Donnerstag", "hours": "09:00"}
+            ],
+            "season": "Tiarno di Sopra: donnerstags im Juli, August und bis Mitte September um 09:30 in der Chiesetta La Cros.",
+            "note": "Aktuelle Sonntagszuordnung und Feiertagsordnung in den Avvisi prüfen.",
+            "sources": [
+              {
+                "publisher": "Unità Pastorale Valle di Ledro",
+                "date": "Stand 16.08.2026",
+                "title": "Le Sante Messe - Orario delle Messe",
+                "url": "https://www.parrocchieledro.it/messe.html"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
