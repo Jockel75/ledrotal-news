@@ -46,7 +46,8 @@ a { color:inherit; }
 .section-tab.active { color:var(--ink); font-weight:800; }
 .section-tab.active::after { background:var(--ink); }
 main { padding:0 14px; }
-.hint { margin:13px 0; padding:11px 13px; border-radius:10px; background:#ece8dd; color:#3d3a35; font-size:13px; line-height:1.4; }
+.hint { margin:10px 0 16px; padding:7px 0 7px 11px; border-left:2px solid #918d84; color:var(--muted); font-size:12px; line-height:1.42; }
+.hint b { display:block; margin-bottom:2px; color:var(--ink); font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
 .empty,.data-warning { padding:38px 15px; color:var(--muted); font:italic 16px Georgia,serif; text-align:center; }
 .data-warning { margin:16px 0; padding:16px; border:1px solid #d9baa9; border-radius:10px; background:#f8ece6; color:#72402f; font:normal 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
 .tag { margin-top:12px; color:var(--rust); font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
@@ -100,20 +101,20 @@ main { padding:0 14px; }
 .lead { margin:0 0 15px; color:#33312d; font:400 19px/1.43 Georgia,serif; }
 .by { margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid var(--rule); color:var(--muted); font-size:12px; line-height:1.45; }
 .article-body p { margin:0 0 19px; font:400 18px/1.62 Georgia,serif; }
-.sources { margin:30px 0 10px; padding:17px; border:1px solid #c7cfd3; border-left:4px solid var(--blue); border-radius:10px; background:#eef1f2; }
+.sources { margin:30px 0 10px; padding:15px 0 0; border-top:2px solid var(--ink); }
 .sources h3 { margin:0 0 5px; font:700 20px Georgia,serif; }
 .sources-intro { margin:0 0 12px!important; color:var(--muted); font:400 13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important; }
-.source-entry + .source-entry { margin-top:12px; padding-top:12px; border-top:1px solid #cdd4d7; }
+.source-entry + .source-entry { margin-top:12px; padding-top:12px; border-top:1px solid var(--rule); }
 .source-publisher { display:block; margin-bottom:2px; font-size:13px; font-weight:800; }
 .source-date { color:var(--muted); font-size:12px; }
 .source-title { margin:4px 0 7px!important; font:400 14px/1.38 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important; }
-.source-link { display:inline-block; color:#173e61; font-size:13px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
-.service-hero { margin:16px 0 14px; padding:19px; border-radius:14px; background:var(--green); color:white; }
-.service-hero .tag { margin:0 0 5px; color:#d8e9df; }
-.service-hero h1 { margin:0 0 8px; font:700 30px/1.05 Georgia,serif; }
-.service-hero p { margin:0; color:#f2f7f4; font:400 15px/1.45 Georgia,serif; }
-.service-updated { display:block; margin-top:11px; color:#d8e9df; font-size:12px; }
-.service-group { margin:11px 0; border:1px solid var(--rule); border-radius:12px; background:var(--card); }
+.source-link { display:inline-block; color:var(--ink); font-size:13px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
+.service-hero,.politics-hero,.weather-hero { margin:18px 0 14px; padding:0 0 11px; border-bottom:3px solid var(--ink); color:var(--ink); }
+.service-hero .tag,.politics-hero .tag,.weather-hero .tag { margin:0 0 4px; color:#55514a; }
+.service-hero h1,.politics-hero h1,.weather-hero h1 { margin:0 0 5px; font:700 31px/1.04 Georgia,serif; letter-spacing:-.025em; }
+.service-hero p,.politics-hero p,.weather-hero p { margin:0; color:var(--muted); font:400 13px/1.42 Georgia,serif; }
+.service-updated,.politics-updated,.weather-updated { display:block; margin-top:7px; color:var(--muted); font-size:11px; }
+.service-group { margin:11px 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); background:transparent; }
 .service-group summary { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:15px; cursor:pointer; font:700 18px/1.2 Georgia,serif; list-style:none; }
 .service-group summary::-webkit-details-marker { display:none; }
 .service-group summary::after { flex:none; color:var(--muted); font:700 20px/1 sans-serif; content:"+"; }
@@ -130,40 +131,30 @@ main { padding:0 14px; }
 .schedule-row:first-child { border-top:0; }
 .schedule dt { color:var(--muted); font-weight:650; }
 .schedule dd { margin:0; font-weight:700; }
-.service-note,.service-season { margin:10px 0 0; padding:9px 10px; border-radius:7px; background:#f1eee6; color:#4b4842; font-size:12px; line-height:1.42; }
-.service-season { background:#e8f0eb; color:#315344; }
+.service-note,.service-season { margin:10px 0 0; padding:6px 0 6px 9px; border-left:2px solid #a19d94; color:#4b4842; font-size:12px; line-height:1.42; }
+.service-season { border-left-color:var(--green); color:#315344; }
 .service-body p { margin:10px 0 0; color:#3c3934; font:400 15px/1.5 Georgia,serif; }
 .service-status { display:inline-block; margin-bottom:6px; color:var(--green); font-size:10px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
-.service-sources { margin-top:12px; padding:10px; border-radius:8px; background:#eef1ef; }
+.service-sources { margin-top:12px; padding-top:10px; border-top:1px solid var(--rule); }
 .service-source + .service-source { margin-top:9px; padding-top:9px; border-top:1px solid #d3d9d5; }
 .service-source b,.service-source span { display:block; }
 .service-source b { font-size:12px; }
 .service-source span { margin-top:2px; color:var(--muted); font-size:11px; line-height:1.35; }
-.service-source a { display:inline-block; margin-top:5px; color:var(--blue); font-size:12px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
-.politics-hero { margin:16px 0 14px; padding:19px; border-radius:14px; background:var(--politics); color:white; }
-.politics-hero .tag { margin:0 0 5px; color:#eadbd3; }
-.politics-hero h1 { margin:0 0 8px; font:700 30px/1.05 Georgia,serif; }
-.politics-hero p { margin:0; color:#faf4f1; font:400 15px/1.45 Georgia,serif; }
-.politics-updated { display:block; margin-top:11px; color:#eadbd3; font-size:12px; }
-.dossier { margin:14px 0; padding:16px; border:1px solid #cfbcb1; border-radius:13px; background:var(--card); }
-.dossier .article-figure { margin:-1px -1px 14px; }
-.project-status { display:inline-block; padding:5px 8px; border-radius:6px; background:var(--politics-soft); color:var(--politics); font-size:10px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+.service-source a { display:inline-block; margin-top:5px; color:var(--ink); font-size:12px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
+.dossier { margin:14px 0; padding:16px 0; border-bottom:1px solid var(--rule); background:transparent; }
+.dossier .article-figure { margin:0 0 14px; }
+.project-status { display:inline-block; padding:4px 7px; border:1px solid #c9c5bc; background:#efede7; color:#46433e; font-size:10px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
 .dossier h2 { margin:8px 0 8px; font:700 25px/1.08 Georgia,serif; letter-spacing:-.02em; }
 .dossier-summary { margin:0 0 14px; color:#3c3934; font:400 16px/1.45 Georgia,serif; }
 .project-facts { display:grid; gap:8px; margin:0 0 15px; }
-.project-fact { padding:10px 11px; border-radius:8px; background:#f1ede8; color:#413a35; font-size:13px; line-height:1.45; }
-.project-fact b { display:block; margin-bottom:2px; color:var(--politics); }
+.project-fact { padding:10px 11px; border-radius:3px; background:#efede7; color:#413a35; font-size:13px; line-height:1.45; }
+.project-fact b { display:block; margin-bottom:2px; color:var(--ink); }
 .timeline { margin:12px 0 0; padding:0; list-style:none; }
-.timeline li { position:relative; margin-left:8px; padding:0 0 14px 18px; border-left:2px solid #cbb7ab; color:#403a36; font-size:13px; line-height:1.42; }
+.timeline li { position:relative; margin-left:8px; padding:0 0 14px 18px; border-left:2px solid #b9b5ac; color:#403a36; font-size:13px; line-height:1.42; }
 .timeline li:last-child { padding-bottom:0; }
-.timeline li::before { position:absolute; top:3px; left:-6px; width:10px; height:10px; border-radius:50%; background:var(--politics); content:""; }
+.timeline li::before { position:absolute; top:3px; left:-6px; width:10px; height:10px; border-radius:50%; background:var(--ink); content:""; }
 .timeline b { display:block; color:var(--ink); }
-.timeline-state { color:var(--politics); font-size:10px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
-.weather-hero { margin:16px 0 12px; padding:19px; border-radius:14px; background:var(--weather); color:white; }
-.weather-hero .tag { margin:0 0 5px; color:#d9edf3; }
-.weather-hero h1 { margin:0 0 8px; font:700 30px/1.05 Georgia,serif; }
-.weather-hero p { margin:0; color:#f2f8fa; font:400 15px/1.45 Georgia,serif; }
-.weather-updated { display:block; margin-top:11px; color:#d9edf3; font-size:12px; }
+.timeline-state { color:var(--muted); font-size:10px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
 .warning-stack { display:grid; gap:8px; margin:12px 0 16px; }
 .weather-warning { padding:13px 14px; border:1px solid #d3a742; border-left:5px solid #c08a12; border-radius:10px; background:#fff4cf; }
 .warning-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:5px; }
@@ -176,8 +167,8 @@ main { padding:0 14px; }
 .weather-sectionhead h2 { margin:0; font:700 23px Georgia,serif; }
 .weather-sectionhead p { margin:3px 0 0; color:var(--muted); font-size:12px; }
 .weather-compare { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; }
-.today-weather { min-width:0; overflow:hidden; padding:13px; border:1px solid #b9ccd3; border-radius:12px; background:var(--card); }
-.today-place { color:var(--weather); font-size:11px; font-weight:850; letter-spacing:.05em; text-transform:uppercase; }
+.today-weather { min-width:0; overflow:hidden; padding:13px; border:1px solid var(--rule); border-radius:4px; background:transparent; }
+.today-place { color:var(--muted); font-size:11px; font-weight:850; letter-spacing:.05em; text-transform:uppercase; }
 .today-weather h3 { margin:3px 0 8px; font:700 18px/1.12 Georgia,serif; }
 .today-temp { display:flex; align-items:baseline; gap:6px; margin-bottom:7px; }
 .today-temp strong { font:700 38px/.95 Georgia,serif; letter-spacing:-.04em; }
@@ -185,17 +176,17 @@ main { padding:0 14px; }
 .today-condition { min-height:54px; margin:0 0 9px; color:#343a3c; font:400 13px/1.35 Georgia,serif; }
 .today-facts { display:grid; gap:5px; margin:0 0 11px; }
 .today-fact { padding-top:5px; border-top:1px solid #e4e9eb; color:#3f494d; font-size:12px; line-height:1.35; }
-.water-box { padding:10px; border-radius:8px; background:var(--weather-soft); }
-.water-box b { display:block; margin-bottom:3px; color:var(--weather); font-size:11px; letter-spacing:.05em; text-transform:uppercase; }
+.water-box { padding:10px; border-radius:3px; background:#efede7; }
+.water-box b { display:block; margin-bottom:3px; color:var(--ink); font-size:11px; letter-spacing:.05em; text-transform:uppercase; }
 .water-value { display:block; margin-bottom:4px; font:700 21px/1.1 Georgia,serif; }
 .water-value.unavailable { color:#514f4a; font:700 14px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
 .water-meta { display:block; color:#59676c; font-size:10px; line-height:1.38; }
-.water-box a { display:inline-block; margin-top:7px; color:#174b60; font-size:11px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
-.forecast-table { overflow:hidden; margin-bottom:16px; border:1px solid #b9c8ce; border-radius:12px; background:var(--card); }
+.water-box a { display:inline-block; margin-top:7px; color:var(--ink); font-size:11px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
+.forecast-table { overflow:hidden; margin-bottom:16px; border:1px solid var(--rule); border-radius:4px; background:transparent; }
 .forecast-row { display:grid; grid-template-columns:54px repeat(2,minmax(0,1fr)); }
 .forecast-row + .forecast-row { border-top:1px solid var(--rule); }
 .forecast-row > * + * { border-left:1px solid var(--rule); }
-.forecast-heading { padding:10px 8px; background:#e5eef1; color:#244b5a; font-size:11px; font-weight:800; line-height:1.2; }
+.forecast-heading { padding:10px 8px; background:#ebe9e3; color:var(--ink); font-size:11px; font-weight:800; line-height:1.2; }
 .forecast-day { padding:10px 5px; color:var(--muted); font-size:10px; font-weight:750; text-align:center; }
 .forecast-day b { display:block; margin-bottom:2px; color:var(--ink); font-size:12px; }
 .forecast-cell { min-width:0; padding:9px 8px; }
@@ -204,7 +195,7 @@ main { padding:0 14px; }
 .forecast-detail { display:block; color:var(--muted); font-size:10px; line-height:1.35; }
 .forecast-model { display:inline-block; margin-top:5px; color:#52646b; font-size:9px; font-weight:750; }
 .forecast-model.provisional { padding:3px 4px; border-radius:4px; background:#f5e8ca; color:#6c511a; }
-.weather-method { margin:12px 0; padding:11px 13px; border-radius:9px; background:#e8e5dc; color:#48453f; font-size:12px; line-height:1.42; }
+.weather-method { margin:12px 0; padding:7px 0 7px 11px; border-left:2px solid #918d84; color:var(--muted); font-size:12px; line-height:1.42; }
 @media (min-width:760px) {
   .top { padding-inline:28px; }
   .brand { font-size:42px; }
@@ -213,6 +204,7 @@ main { padding:0 14px; }
   .section-tab { flex:1 1 0; min-width:0; padding-inline:8px; font-size:14px; }
   .section-tab::after { right:18px; left:18px; }
   main { padding-inline:28px; }
+  .service-hero h1,.politics-hero h1,.weather-hero h1 { font-size:38px; }
   .news-header h1 { font-size:38px; }
   .hero h2 { max-width:760px; font-size:42px; }
   .hero-figure .story-image { aspect-ratio:2/1; }
