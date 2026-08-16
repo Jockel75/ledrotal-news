@@ -19,6 +19,8 @@
   --card:#fffdfa;
   --green:#315c47;
   --blue:#273d52;
+  --politics:#6a4636;
+  --politics-soft:#eee5df;
   --weather:#1f5a70;
   --weather-soft:#e7f0f3;
   --safe:env(safe-area-inset-bottom,0px);
@@ -36,14 +38,6 @@ a { color:inherit; }
 .sub { color:var(--muted); font:italic 13px Georgia,serif; text-align:center; }
 .edition { display:flex; justify-content:space-between; gap:12px; margin-top:10px; color:var(--muted); font-size:12px; }
 .live::before { display:inline-block; width:7px; height:7px; margin-right:6px; border-radius:50%; background:var(--rust); content:""; }
-.chips { display:flex; gap:8px; overflow-x:auto; padding:10px 14px 8px; border-bottom:1px solid var(--rule); scrollbar-width:none; }
-.chips::-webkit-scrollbar { display:none; }
-.chip { flex:none; padding:8px 13px; border:1px solid var(--rule); border-radius:999px; background:transparent; color:var(--ink); font-size:13px; font-weight:650; white-space:nowrap; }
-.chip.active { border-color:var(--ink); background:var(--ink); color:white; }
-.chip.service-chip { border-color:#aeb8b1; color:var(--green); }
-.chip.service-chip.active { border-color:var(--green); background:var(--green); color:white; }
-.chip.weather-chip { border-color:#a9c1ca; color:var(--weather); }
-.chip.weather-chip.active { border-color:var(--weather); background:var(--weather); color:white; }
 main { padding:0 14px; }
 .hint { margin:13px 0; padding:11px 13px; border-radius:10px; background:#ece8dd; color:#3d3a35; font-size:13px; line-height:1.4; }
 .empty,.data-warning { padding:38px 15px; color:var(--muted); font:italic 16px Georgia,serif; text-align:center; }
@@ -57,16 +51,20 @@ main { padding:0 14px; }
 .meta { display:flex; flex-wrap:wrap; gap:5px; color:var(--muted); font-size:12px; line-height:1.4; }
 .hero { margin:14px 0 20px; padding-bottom:19px; border-bottom:1px solid var(--rule); }
 .hero-link,.story-link { display:block; color:inherit; text-decoration:none; }
-.hero-link:focus-visible,.story-link:focus-visible,.source-link:focus-visible,.nav:focus-visible,.chip:focus-visible,.viewerbar button:focus-visible { outline:3px solid rgba(39,61,82,.35); outline-offset:3px; }
+.hero-link:focus-visible,.story-link:focus-visible,.source-link:focus-visible,.nav:focus-visible,.viewerbar button:focus-visible { outline:3px solid rgba(39,61,82,.35); outline-offset:3px; }
+.news-header { margin:18px 0 10px; padding-bottom:10px; border-bottom:3px solid var(--ink); }
+.news-header span { color:var(--rust); font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+.news-header h1 { margin:3px 0 4px; font:700 31px/1.03 Georgia,serif; letter-spacing:-.025em; }
+.news-header p { margin:0; color:var(--muted); font-size:13px; line-height:1.4; }
 .hero-badge { display:inline-block; margin-bottom:3px; padding:5px 8px; border-radius:6px; background:var(--rust-soft); color:var(--rust); font-size:10px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
-.hero h1 { margin:6px 0 9px; font:700 31px/1.05 Georgia,serif; letter-spacing:-.028em; }
+.hero h2 { margin:6px 0 9px; font:700 31px/1.05 Georgia,serif; letter-spacing:-.028em; }
 .dek { margin:0 0 11px; color:#34322e; font:400 17px/1.42 Georgia,serif; }
 .story-image { display:block; width:100%; height:auto; object-fit:cover; background:#e8e4da; }
 .hero-figure,.article-figure { margin:0 0 14px; overflow:hidden; border-radius:14px; background:#e8e4da; }
 .hero-figure .story-image { aspect-ratio:16/9; }
 .article-figure .story-image { aspect-ratio:16/9; }
-.article-figure figcaption { padding:8px 10px; border-top:1px solid var(--rule); background:#eeebe3; color:var(--muted); font-size:11px; line-height:1.4; }
-.article-figure figcaption a { color:var(--blue); }
+.article-figure figcaption,.hero-figure figcaption { padding:8px 10px; border-top:1px solid var(--rule); background:#eeebe3; color:var(--muted); font-size:11px; line-height:1.4; }
+.article-figure figcaption a,.hero-figure figcaption a { color:var(--blue); }
 .sectionhead { display:flex; align-items:end; justify-content:space-between; margin:24px 0 6px; padding-bottom:6px; border-bottom:2px solid var(--ink); }
 .sectionhead h2 { margin:0; font:700 23px Georgia,serif; }
 .sectionhead span { color:var(--muted); font-size:12px; }
@@ -77,11 +75,13 @@ main { padding:0 14px; }
 .story p { margin:0 0 9px; color:#3c3934; font:400 15px/1.38 Georgia,serif; }
 .story-thumb { width:112px; height:98px; overflow:hidden; border-radius:9px; background:#e8e4da; }
 .story-thumb .story-image { width:100%; height:100%; }
-.bottom { position:fixed; bottom:0; left:50%; z-index:30; display:grid; grid-template-columns:repeat(5,1fr); width:min(920px,100%); height:calc(68px + var(--safe)); padding-bottom:var(--safe); transform:translateX(-50%); border-top:1px solid var(--rule); background:rgba(250,249,246,.97); backdrop-filter:blur(15px); }
-.nav { padding:8px 1px; border:0; background:transparent; color:var(--muted); font-size:10px; font-weight:650; }
-.nav span { display:block; margin-bottom:3px; font-size:20px; line-height:1.1; }
+.bottom { position:fixed; bottom:0; left:50%; z-index:30; display:grid; grid-template-columns:repeat(4,1fr); width:min(920px,100%); height:calc(70px + var(--safe)); padding-bottom:var(--safe); transform:translateX(-50%); border-top:1px solid var(--rule); background:rgba(250,249,246,.97); backdrop-filter:blur(15px); }
+.nav { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; min-width:0; padding:6px 2px; border:0; background:transparent; color:var(--muted); font-size:10px; font-weight:700; line-height:1.05; }
+.nav-icon { display:block; font-size:19px; line-height:1; }
+.nav-label { display:block; max-width:100%; text-align:center; }
 .nav.active { color:var(--ink); }
-.nav[data-section="Öffnungszeiten"].active { color:var(--green); }
+.nav[data-section="Politik & Projekte"].active { color:var(--politics); }
+.nav[data-section="Service"].active { color:var(--green); }
 .nav[data-section="Wetter & Wasser"].active { color:var(--weather); }
 .viewer { position:fixed; inset:0; z-index:50; display:none; overflow:auto; background:var(--paper); }
 .viewer.show { display:block; }
@@ -125,8 +125,33 @@ main { padding:0 14px; }
 .schedule dd { margin:0; font-weight:700; }
 .service-note,.service-season { margin:10px 0 0; padding:9px 10px; border-radius:7px; background:#f1eee6; color:#4b4842; font-size:12px; line-height:1.42; }
 .service-season { background:#e8f0eb; color:#315344; }
-.service-sources { display:flex; flex-wrap:wrap; gap:8px; margin-top:11px; }
-.service-sources a { color:var(--blue); font-size:12px; font-weight:700; text-decoration:underline; text-underline-offset:2px; }
+.service-body p { margin:10px 0 0; color:#3c3934; font:400 15px/1.5 Georgia,serif; }
+.service-status { display:inline-block; margin-bottom:6px; color:var(--green); font-size:10px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+.service-sources { margin-top:12px; padding:10px; border-radius:8px; background:#eef1ef; }
+.service-source + .service-source { margin-top:9px; padding-top:9px; border-top:1px solid #d3d9d5; }
+.service-source b,.service-source span { display:block; }
+.service-source b { font-size:12px; }
+.service-source span { margin-top:2px; color:var(--muted); font-size:11px; line-height:1.35; }
+.service-source a { display:inline-block; margin-top:5px; color:var(--blue); font-size:12px; font-weight:750; text-decoration:underline; text-underline-offset:2px; }
+.politics-hero { margin:16px 0 14px; padding:19px; border-radius:14px; background:var(--politics); color:white; }
+.politics-hero .tag { margin:0 0 5px; color:#eadbd3; }
+.politics-hero h1 { margin:0 0 8px; font:700 30px/1.05 Georgia,serif; }
+.politics-hero p { margin:0; color:#faf4f1; font:400 15px/1.45 Georgia,serif; }
+.politics-updated { display:block; margin-top:11px; color:#eadbd3; font-size:12px; }
+.dossier { margin:14px 0; padding:16px; border:1px solid #cfbcb1; border-radius:13px; background:var(--card); }
+.dossier .article-figure { margin:-1px -1px 14px; }
+.project-status { display:inline-block; padding:5px 8px; border-radius:6px; background:var(--politics-soft); color:var(--politics); font-size:10px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+.dossier h2 { margin:8px 0 8px; font:700 25px/1.08 Georgia,serif; letter-spacing:-.02em; }
+.dossier-summary { margin:0 0 14px; color:#3c3934; font:400 16px/1.45 Georgia,serif; }
+.project-facts { display:grid; gap:8px; margin:0 0 15px; }
+.project-fact { padding:10px 11px; border-radius:8px; background:#f1ede8; color:#413a35; font-size:13px; line-height:1.45; }
+.project-fact b { display:block; margin-bottom:2px; color:var(--politics); }
+.timeline { margin:12px 0 0; padding:0; list-style:none; }
+.timeline li { position:relative; margin-left:8px; padding:0 0 14px 18px; border-left:2px solid #cbb7ab; color:#403a36; font-size:13px; line-height:1.42; }
+.timeline li:last-child { padding-bottom:0; }
+.timeline li::before { position:absolute; top:3px; left:-6px; width:10px; height:10px; border-radius:50%; background:var(--politics); content:""; }
+.timeline b { display:block; color:var(--ink); }
+.timeline-state { color:var(--politics); font-size:10px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
 .weather-hero { margin:16px 0 12px; padding:19px; border-radius:14px; background:var(--weather); color:white; }
 .weather-hero .tag { margin:0 0 5px; color:#d9edf3; }
 .weather-hero h1 { margin:0 0 8px; font:700 30px/1.05 Georgia,serif; }
@@ -176,9 +201,9 @@ main { padding:0 14px; }
 @media (min-width:760px) {
   .top { padding-inline:28px; }
   .brand { font-size:42px; }
-  .chips { padding-inline:28px; }
   main { padding-inline:28px; }
-  .hero h1 { max-width:760px; font-size:42px; }
+  .news-header h1 { font-size:38px; }
+  .hero h2 { max-width:760px; font-size:42px; }
   .hero-figure .story-image { aspect-ratio:2/1; }
   .story-link.with-image { grid-template-columns:minmax(0,1fr) 220px; gap:24px; }
   .story-thumb { width:220px; height:132px; }
@@ -186,6 +211,9 @@ main { padding:0 14px; }
   .article h2 { font-size:40px; }
   .service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 24px; }
   .service-card:nth-child(2) { border-top:0; }
+  .dossier { padding:22px; }
+  .dossier h2 { font-size:31px; }
+  .project-facts { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .weather-compare { gap:16px; }
   .today-weather { padding:18px; }
   .today-weather h3 { font-size:22px; }
@@ -207,18 +235,15 @@ main { padding:0 14px; }
     <div class="sub" id="subtitle">Ledro · Garda · Trentino · Italien</div>
     <div class="edition"><span id="date">–</span><span class="live" id="editionLabel">Mobile Ausgabe</span></div>
   </header>
-  <div class="chips" id="chips" aria-label="Ressorts"></div>
   <main>
-    <div class="hint"><b>Wie eine App nutzen:</b> Auf dem iPhone in Safari „Teilen“ → „Zum Home-Bildschirm“.</div>
     <div id="feed"><div class="empty">Nachrichten werden geladen …</div></div>
   </main>
 </div>
 <nav class="bottom" aria-label="Hauptnavigation">
-  <button class="nav active" type="button" data-section="Heute"><span aria-hidden="true">⌂</span>Heute</button>
-  <button class="nav" type="button" data-section="Ledrotal"><span aria-hidden="true">●</span>Ledro</button>
-  <button class="nav" type="button" data-section="Wetter & Wasser"><span aria-hidden="true">☂</span>Wetter</button>
-  <button class="nav" type="button" data-section="Verkehr"><span aria-hidden="true">↗</span>Anreise</button>
-  <button class="nav" type="button" data-section="Öffnungszeiten"><span aria-hidden="true">◷</span>Öffnungszeiten</button>
+  <button class="nav active" type="button" data-section="Ledrotal"><span class="nav-icon" aria-hidden="true">●</span><span class="nav-label">Ledrotal</span></button>
+  <button class="nav" type="button" data-section="Politik & Projekte"><span class="nav-icon" aria-hidden="true">◆</span><span class="nav-label">Politik &amp; Projekte</span></button>
+  <button class="nav" type="button" data-section="Wetter & Wasser"><span class="nav-icon" aria-hidden="true">☂</span><span class="nav-label">Wetter &amp; Wasser</span></button>
+  <button class="nav" type="button" data-section="Service"><span class="nav-icon" aria-hidden="true">◷</span><span class="nav-label">Service</span></button>
 </nav>
 <div class="viewer" id="viewer" aria-hidden="true">
   <div class="viewerbar"><button id="back" type="button">‹ Zurück</button><b>Ledrotal Zeitung</b><button id="share" type="button">Teilen</button></div>
@@ -226,7 +251,7 @@ main { padding:0 14px; }
 </div>
 <script>
 let DATA=null;
-let current='Heute';
+let current='Ledrotal';
 let currentStory=null;
 const kicker=document.getElementById('kicker');
 const brand=document.getElementById('brand');
@@ -289,9 +314,12 @@ function publishableStories(){
 }
 
 function currentStories(){
-  const stories=publishableStories();
-  if(current==='Heute')return stories;
-  return stories.filter(story=>story.section===current||(story.filters||[]).includes(current));
+  const editionDate=DATA?.edition?.isoDate;
+  return publishableStories().filter(story=>{
+    if(story.section!=='Ledrotal')return false;
+    if(!editionDate)return true;
+    return (!story.activeFrom||story.activeFrom<=editionDate)&&(!story.activeUntil||story.activeUntil>=editionDate);
+  });
 }
 
 function sourceMeta(story){
@@ -304,10 +332,9 @@ function storyImage(story,kind){
   const image=imageFor(story);
   if(!image)return '';
   if(kind==='thumb')return `<div class="story-thumb"><img class="story-image" src="${esc(image.src)}" alt="${esc(image.alt)}" loading="lazy"></div>`;
-  if(kind==='article'){
-    return `<figure class="article-figure"><img class="story-image" src="${esc(image.src)}" alt="${esc(image.alt)}"><figcaption>${esc(image.caption||image.alt)} · Foto: ${esc(image.credit)} · ${esc(image.license)} · <a href="${esc(safeUrl(image.sourceUrl))}" target="_blank" rel="noopener noreferrer">Bildquelle</a></figcaption></figure>`;
-  }
-  return `<figure class="hero-figure"><img class="story-image" src="${esc(image.src)}" alt="${esc(image.alt)}"></figure>`;
+  if(kind==='hero')return `<figure class="hero-figure"><img class="story-image" src="${esc(image.src)}" alt="${esc(image.alt)}"><figcaption>${esc(image.caption||image.alt)} · Foto: ${esc(image.credit)} · ${esc(image.license)}</figcaption></figure>`;
+  const figureClass=kind==='article'?'article-figure':'hero-figure';
+  return `<figure class="${figureClass}"><img class="story-image" src="${esc(image.src)}" alt="${esc(image.alt)}"><figcaption>${esc(image.caption||image.alt)} · Foto: ${esc(image.credit)} · ${esc(image.license)} · <a href="${esc(safeUrl(image.sourceUrl))}" target="_blank" rel="noopener noreferrer">Bildquelle</a></figcaption></figure>`;
 }
 
 function sourceBlock(item,intro='Direkte Originalseiten zu dieser Meldung.'){
@@ -323,10 +350,8 @@ function setup(){
   subtitle.textContent=edition.subtitle||'';
   date.textContent=edition.date||'';
   editionLabel.textContent=edition.label||'Mobile Ausgabe';
-  const chips=document.getElementById('chips');
-  const sections=DATA.sections||['Heute'];
-  chips.innerHTML=sections.map((section,index)=>`<button class="chip${index===0?' active':''}" type="button" data-section="${esc(section)}">${esc(section)}</button>`).join('')+`<button class="chip weather-chip" type="button" data-section="Wetter & Wasser">Wetter & Wasser</button><button class="chip service-chip" type="button" data-section="Öffnungszeiten">Öffnungszeiten</button>`;
-  chips.querySelectorAll('.chip').forEach(button=>button.addEventListener('click',()=>select(button.dataset.section)));
+  const sections=DATA.sections||['Ledrotal'];
+  if(!sections.includes(current))current=sections[0]||'Ledrotal';
   render();
   if(location.hash)openStory(location.hash.slice(1),true);
 }
@@ -345,33 +370,47 @@ function bindStories(){
   }));
 }
 
+function renderStoryCard(story){
+  const status=normalizedStatus(story.status);
+  const hasImage=Boolean(imageFor(story));
+  return `<article class="story"><a class="story-link${hasImage?' with-image':''}" href="#${esc(story.id)}" data-story-id="${esc(story.id)}"><div><div class="tag">${esc(story.tag)}</div><h3>${esc(story.title)}</h3><p>${esc(story.teaser)}</p><div class="meta"><span class="status ${statusClass(status)}">${esc(status)}</span><span>· ${esc(story.readTime)}</span><span>· ${esc(sourceMeta(story))}</span></div></div>${storyImage(story,'thumb')}</a></article>`;
+}
+
+function storyGroup(title,subtitle,stories){
+  if(!stories.length)return '';
+  return `<div class="sectionhead"><h2>${esc(title)}</h2><span>${esc(subtitle)}</span></div>${stories.map(renderStoryCard).join('')}`;
+}
+
 function render(){
   if(current==='Wetter & Wasser'){
     renderWeather();
     return;
   }
-  if(current==='Öffnungszeiten'){
+  if(current==='Service'){
     renderServices();
+    return;
+  }
+  if(current==='Politik & Projekte'){
+    renderPolitics();
     return;
   }
   const list=currentStories();
   const feed=document.getElementById('feed');
+  const intro='<header class="news-header"><span>Lokale Ausgabe</span><h1>Heute im Tal</h1><p>Aktuelle Meldungen aus dem Ledrotal, danach weitere lokale Themen und kommende Termine.</p></header>';
   if(!list.length){
-    feed.innerHTML='<div class="empty">In diesem Ressort gibt es in dieser Ausgabe keine verifizierte Meldung.</div>';
+    feed.innerHTML=intro+'<div class="empty">Für diese Ausgabe liegt keine aktuelle, vollständig belegte Meldung vor.</div>';
     return;
   }
-  let html='';
-  const hero=list.find(story=>story.hero)||list[0];
-  if(current==='Heute'){
+  let html=intro;
+  const hero=list.find(story=>story.editorialGroup==='current'&&story.hero);
+  if(hero){
     const status=normalizedStatus(hero.status);
-    html+=`<article class="hero"><a class="hero-link" href="#${esc(hero.id)}" data-story-id="${esc(hero.id)}">${storyImage(hero,'hero')}<span class="hero-badge">Top-Meldung · ${esc(hero.section)}</span><div class="tag">${esc(hero.tag)}</div><h1>${esc(hero.title)}</h1><p class="dek">${esc(hero.teaser)}</p><div class="meta"><span class="status ${statusClass(status)}">${esc(status)}</span><span>·</span><span>${esc(hero.readTime)}</span><span>·</span><span>${esc(sourceMeta(hero))}</span></div></a></article><div class="sectionhead"><h2>Heute im Tal</h2><span>lokal zuerst</span></div>`;
+    html+=`<article class="hero"><a class="hero-link" href="#${esc(hero.id)}" data-story-id="${esc(hero.id)}">${storyImage(hero,'hero')}<span class="hero-badge">Aktuell · Ledrotal</span><div class="tag">${esc(hero.tag)}</div><h2>${esc(hero.title)}</h2><p class="dek">${esc(hero.teaser)}</p><div class="meta"><span class="status ${statusClass(status)}">${esc(status)}</span><span>·</span><span>${esc(hero.readTime)}</span><span>·</span><span>${esc(sourceMeta(hero))}</span></div></a></article>`;
   }
-  const rest=current==='Heute'?list.filter(story=>story.id!==hero.id):list;
-  html+=rest.map(story=>{
-    const status=normalizedStatus(story.status);
-    const hasImage=Boolean(imageFor(story));
-    return `<article class="story"><a class="story-link${hasImage?' with-image':''}" href="#${esc(story.id)}" data-story-id="${esc(story.id)}"><div><div class="tag">${esc(story.tag)}</div><h3>${esc(story.title)}</h3><p>${esc(story.teaser)}</p><div class="meta"><span class="status ${statusClass(status)}">${esc(status)}</span><span>· ${esc(story.readTime)}</span><span>· ${esc(sourceMeta(story))}</span></div></div>${storyImage(story,'thumb')}</a></article>`;
-  }).join('');
+  const remaining=list.filter(story=>story.id!==hero?.id);
+  html+=storyGroup('Aktuell im Tal','heute relevant',remaining.filter(story=>story.editorialGroup==='current'));
+  html+=storyGroup('Weitere lokale Meldungen','aus dem Ledrotal',remaining.filter(story=>story.editorialGroup==='local'));
+  html+=storyGroup('Kommende Termine & Kultur','chronologisch relevant',remaining.filter(story=>story.editorialGroup==='events'));
   feed.innerHTML=html;
   bindStories();
 }
@@ -429,14 +468,26 @@ function renderWeather(){
   document.getElementById('feed').innerHTML=`<section class="weather-hero"><div class="tag">Täglich aktualisiert</div><h1>${esc(weather.title||'Wetter & Wasser')}</h1><p>${esc(weather.intro||'Wettervergleich für Ledro und Riva del Garda.')}</p><span class="weather-updated">Daten geprüft: ${esc(weather.updated||'–')} · Meteotrentino-Bulletin: ${esc(weather.forecastIssued||'–')}</span></section>${warnings?`<div class="warning-stack">${warnings}</div>`:''}<div class="weather-sectionhead"><h2>Heute</h2><p>Temperatur, Wetterlage, Wind und verifizierte Wasserwerte im direkten Vergleich</p></div><div class="weather-compare">${locations.map(todayWeatherCard).join('')}</div><div class="weather-sectionhead"><h2>7-Tage-Vorschau</h2><p>Höchst-/Tiefstwerte · Niederschlagswahrscheinlichkeit · Wind und Böen</p></div><div class="forecast-table"><div class="forecast-row"><div class="forecast-heading">Tag</div><div class="forecast-heading">${esc(locations[0].name)}</div><div class="forecast-heading">${esc(locations[1].name)}</div></div>${days}</div>${weather.notice?`<p class="weather-method"><b>Methodik:</b> ${esc(weather.notice)}</p>`:''}${sourceBlock({sources},'Originalseiten zu Vorhersage, Warnungen, Wind- und Wasserwerten.')}`;
 }
 
+function renderPolitics(){
+  const politics=DATA.politics||{};
+  const dossiers=(politics.dossiers||[]).filter(dossier=>dossier?.id&&dossier?.title&&dossier?.status&&sourcesFor(dossier).length);
+  const cards=dossiers.map(dossier=>{
+    const latest=dossier.latestUpdate||{};
+    const timeline=(dossier.timeline||[]).map(item=>`<li><b>${esc(item.date)}</b><span class="timeline-state">${esc(item.state)}</span><br>${esc(item.text)}</li>`).join('');
+    return `<article class="dossier" id="${esc(dossier.id)}">${storyImage(dossier,'article')}<span class="project-status">${esc(dossier.status)}</span><h2>${esc(dossier.title)}</h2><p class="dossier-summary">${esc(dossier.summary)}</p><div class="project-facts"><div class="project-fact"><b>Aktueller Stand</b>${esc(dossier.currentStatus)}</div><div class="project-fact"><b>Letzte Entwicklung · ${esc(latest.date||'–')}</b>${esc(latest.text||'Keine neue Entwicklung dokumentiert.')}</div><div class="project-fact"><b>Kosten und Finanzierung</b>${esc(dossier.costs||'Noch nicht belastbar beziffert.')}</div><div class="project-fact"><b>Zeitrahmen</b>${esc(dossier.timeframe||'Noch nicht belastbar festgelegt.')}</div></div>${timeline?`<div class="sectionhead"><h2>Chronologie</h2><span>amtlich belegt</span></div><ol class="timeline">${timeline}</ol>`:''}${sourceBlock(dossier,'Originalquellen zum gesamten Dossier.')}</article>`;
+  }).join('');
+  document.getElementById('feed').innerHTML=`<section class="politics-hero"><div class="tag">Entscheidungen & Dossiers</div><h1>${esc(politics.title||'Politik & Projekte')}</h1><p>${esc(politics.intro||'Politische Entscheidungen und langfristige Vorhaben im Ledrotal.')}</p><span class="politics-updated">Zuletzt redaktionell geprüft: ${esc(politics.updated||'–')}</span></section>${politics.notice?`<div class="hint"><b>Redaktioneller Grundsatz:</b> ${esc(politics.notice)}</div>`:''}${cards||'<div class="empty">Noch kein vollständig belegtes Dossier vorhanden.</div>'}`;
+}
+
 function serviceSources(item){
   const sources=sourcesFor(item);
-  return `<div class="service-sources">${sources.map(source=>`<a href="${esc(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">Angabe prüfen · ${esc(source.publisher)}</a>`).join('')}</div>`;
+  return `<div class="service-sources" aria-label="Quellen">${sources.map(source=>`<div class="service-source"><b>${esc(source.publisher)}</b><span>${esc(source.date)}</span><span>${esc(source.title)}</span><a href="${esc(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">Originalquelle öffnen</a></div>`).join('')}</div>`;
 }
 
 function renderServiceItem(item){
   const schedule=(item.schedule||[]).map(row=>`<div class="schedule-row"><dt>${esc(row.days)}</dt><dd>${esc(row.hours)}</dd></div>`).join('');
-  return `<article class="service-card"><h3>${esc(item.name)}</h3><p class="service-place">${esc([item.locality,item.address].filter(Boolean).join(' · '))}</p>${schedule?`<dl class="schedule">${schedule}</dl>`:''}${item.season?`<p class="service-season"><b>Saisonal:</b> ${esc(item.season)}</p>`:''}${item.note?`<p class="service-note">${esc(item.note)}</p>`:''}${serviceSources(item)}</article>`;
+  const body=(item.body||[]).map(paragraph=>`<p>${esc(paragraph)}</p>`).join('');
+  return `<article class="service-card">${item.status?`<span class="service-status">${esc(item.status)}</span>`:''}<h3>${esc(item.name)}</h3><p class="service-place">${esc([item.locality,item.address].filter(Boolean).join(' · '))}</p>${schedule?`<dl class="schedule">${schedule}</dl>`:''}${body?`<div class="service-body">${body}</div>`:''}${item.season?`<p class="service-season"><b>Saisonal:</b> ${esc(item.season)}</p>`:''}${item.note?`<p class="service-note">${esc(item.note)}</p>`:''}${serviceSources(item)}</article>`;
 }
 
 function renderServices(){
@@ -446,7 +497,7 @@ function renderServices(){
     if(!items.length)return '';
     return `<details class="service-group"${index===0?' open':''}><summary><span>${esc(category.title)}</span><span class="service-count">${items.length} Einträge</span></summary><div class="service-grid">${items.map(renderServiceItem).join('')}</div></details>`;
   }).join('');
-  document.getElementById('feed').innerHTML=`<section class="service-hero"><div class="tag">Dauerhafter Service</div><h1>${esc(services.title||'Öffnungszeiten')}</h1><p>${esc(services.intro||'Verifizierte Anlaufstellen im Ledrotal.')}</p><span class="service-updated">Zuletzt redaktionell geprüft: ${esc(services.updated||'–')}</span></section>${services.notice?`<div class="hint"><b>Bitte beachten:</b> ${esc(services.notice)}</div>`:''}${categories||'<div class="empty">Noch keine verifizierten Öffnungszeiten vorhanden.</div>'}`;
+  document.getElementById('feed').innerHTML=`<section class="service-hero"><div class="tag">Dauerhafte Informationen</div><h1>${esc(services.title||'Service')}</h1><p>${esc(services.intro||'Verifizierte Anlaufstellen und Hinweise im Ledrotal.')}</p><span class="service-updated">Zuletzt redaktionell geprüft: ${esc(services.updated||'–')}</span></section>${services.notice?`<div class="hint"><b>Bitte beachten:</b> ${esc(services.notice)}</div>`:''}${categories||'<div class="empty">Noch keine verifizierten Serviceangaben vorhanden.</div>'}`;
 }
 
 function openStory(id,skipPush=false){

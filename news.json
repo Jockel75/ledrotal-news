@@ -1,5 +1,6 @@
 {
   "edition": {
+    "isoDate": "2026-08-16",
     "date": "Sonntag, 16. August 2026",
     "label": "Aktualisiert · Quellen geprüft",
     "brand": "Ledrotal Zeitung",
@@ -7,13 +8,10 @@
     "subtitle": "Ledro · Garda · Trentino · Italien"
   },
   "sections": [
-    "Heute",
     "Ledrotal",
-    "Orte & Termine",
-    "Verkehr",
-    "Kultur",
-    "Service & Regeln",
-    "Hintergrund"
+    "Politik & Projekte",
+    "Wetter & Wasser",
+    "Service"
   ],
   "stories": [
     {
@@ -21,7 +19,10 @@
       "priority": 100,
       "hero": true,
       "section": "Ledrotal",
-      "filters": ["Orte & Termine"],
+      "editorialGroup": "current",
+      "activeFrom": "2026-08-16",
+      "activeUntil": "2026-08-16",
+      "tags": ["Orte & Termine"],
       "tag": "Concei · Heute",
       "title": "Heute in Concei: Fünf Kilometer Farbe durch das Tal",
       "teaser": "Die nicht wettkampforientierte Central Color führt am Nachmittag auf einer fünf Kilometer langen Strecke durch das Grün der Val Concei.",
@@ -33,6 +34,14 @@
         "Die Veranstaltungsseite nennt ein Zeitfenster bis 20 Uhr. Vor Ort sollen außerdem ein Barbetrieb, Aperitifs und belegte Brote angeboten werden.",
         "Die Meldung stützt sich auf den aktuellen Veranstaltungseintrag von Garda Trentino mit Angaben der Pro Loco di Concei. Kurzfristige wetter- oder organisationsbedingte Änderungen sollten direkt beim Veranstalter geprüft werden."
       ],
+      "image": {
+        "src": "images/val-concei.jpg",
+        "alt": "Berglandschaft am östlichen Rand der Val Concei",
+        "caption": "Die Berglandschaft der Val Concei, Schauplatz der heutigen Central Color; die Aufnahme zeigt nicht die Veranstaltung.",
+        "credit": "Miloš Hlávka / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ledro-2017-06-21-Le_Montagne_alla_margine_est_della_Val_di_Concei.jpg"
+      },
       "sources": [
         {
           "publisher": "Garda Trentino",
@@ -43,41 +52,14 @@
       ]
     },
     {
-      "id": "a22-rueckreise-16-august",
-      "priority": 95,
-      "section": "Verkehr",
-      "tag": "Anreise · A22",
-      "title": "A22 rechnet heute mit starkem Rückreiseverkehr",
-      "teaser": "Der 16. August gehört laut Sommerprognose zu den besonders belasteten Reisetagen. Aktuelle Störungen sollten unmittelbar vor der Fahrt geprüft werden.",
-      "status": "Offiziell bestätigt",
-      "date": "16.08.2026",
-      "readTime": "2 Min.",
-      "body": [
-        "Auf der Brennerautobahn ist am heutigen Rückreise-Sonntag mit hoher Belastung in beiden Fahrtrichtungen zu rechnen. Die Sommerprognose der A22 führt den 16. August unter den besonders kritischen Tagen.",
-        "Das ist eine Verkehrsprognose und keine Aussage über eine durchgehend bestehende konkrete Warteschlange. Vor der Abfahrt sind deshalb die Echtzeitmeldungen, Webcams und Hinweise der A22 sowie die Verkehrslage in Trentino maßgeblich.",
-        "Für die Anreise ins Ledrotal bleibt nach der A22 außerdem die Strecke über Rovereto beziehungsweise Trento, Riva del Garda und die SS240 relevant. Zeitreserven sind an einem Rückreisetag sinnvoll."
-      ],
-      "sources": [
-        {
-          "publisher": "Autostrada del Brennero A22",
-          "date": "Stand 16.08.2026",
-          "title": "Previsioni traffico estive und aktuelle Verkehrsinformationen",
-          "url": "https://www.autobrennero.it/it/"
-        },
-        {
-          "publisher": "Corriere del Trentino",
-          "date": "11.07.2026",
-          "title": "Esodo estivo sull’A22, 17 giorni da bollino nero",
-          "url": "https://corrieredeltrentino.corriere.it/notizie/cronaca/26_luglio_11/esodo-estivo-sull-a22-17-giorni-da-bollino-nero-controllate-il-traffico-su-telegram-e-viaggiate-con-acqua-e-cibo-dc3d7f73-bdc8-4a3b-a1c3-08ddd9465xlk_amp.shtml"
-        }
-      ]
-    },
-    {
       "id": "mercatini-pieve-20-27-agosto",
       "priority": 90,
-      "section": "Orte & Termine",
-      "filters": ["Ledrotal"],
-      "tag": "Pieve di Ledro",
+      "section": "Ledrotal",
+      "editorialGroup": "events",
+      "activeFrom": "2026-08-16",
+      "activeUntil": "2026-08-27",
+      "tags": ["Orte & Termine"],
+      "tag": "Pieve di Ledro · Termine",
       "title": "Sommermärkte in Pieve: nächste Termine am 20. und 27. August",
       "teaser": "Im historischen Zentrum folgen ein Kunsthandwerksmarkt und eine Ausgabe des Markts für Gebrauchtes und Kreatives.",
       "status": "Offiziell bestätigt",
@@ -88,6 +70,14 @@
         "Am 27. August folgt der Markt für Gebrauchtes und Kreatives. Die Gemeinde nennt für beide Termine 8 bis 18 Uhr und als Ort den historischen Bereich von Pieve di Ledro rund um Via Vittoria 16.",
         "Bei Veranstaltungen im Freien sind kurzfristige Änderungen möglich. Maßgeblich bleibt der Veranstaltungseintrag der Gemeinde."
       ],
+      "image": {
+        "src": "images/pieve-di-ledro.jpg",
+        "alt": "Pieve di Ledro am Ufer des Ledrosees",
+        "caption": "Pieve di Ledro am Ledrosee; die Ortsansicht zeigt nicht den angekündigten Markt.",
+        "credit": "NeoMeesje / Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lago-di-ledro-widt-12.jpg"
+      },
       "sources": [
         {
           "publisher": "Comune di Ledro",
@@ -100,9 +90,12 @@
     {
       "id": "kawai-ledro-21-22-agosto",
       "priority": 88,
-      "section": "Kultur",
-      "filters": ["Ledrotal", "Orte & Termine"],
-      "tag": "Locca di Concei",
+      "section": "Ledrotal",
+      "editorialGroup": "events",
+      "activeFrom": "2026-08-16",
+      "activeUntil": "2026-08-22",
+      "tags": ["Kultur", "Orte & Termine"],
+      "tag": "Locca di Concei · Kultur",
       "title": "Kawai a Ledro: zwei Konzertabende am 21. und 22. August",
       "teaser": "Im Kulturzentrum von Locca stehen ein Abend für Sopran und Klavier sowie das Konzert des Haydn-Orchesters auf dem Programm.",
       "status": "Offiziell bestätigt",
@@ -137,9 +130,12 @@
     {
       "id": "sagra-mozac-lenzumo-2026",
       "priority": 86,
-      "section": "Orte & Termine",
-      "filters": ["Ledrotal"],
-      "tag": "Lenzumo · Val Concei",
+      "section": "Ledrotal",
+      "editorialGroup": "events",
+      "activeFrom": "2026-08-16",
+      "activeUntil": "2026-08-23",
+      "tags": ["Orte & Termine", "Tradition"],
+      "tag": "Lenzumo · Termine",
       "title": "Sagra dei Mozac am 22. und 23. August in Lenzumo",
       "teaser": "Die 43. Ausgabe verbindet typische Küche, Musik und das Sonntagsprogramm mit Caponec und traditioneller Unterhaltung.",
       "status": "Offiziell bestätigt",
@@ -162,8 +158,11 @@
     {
       "id": "ledrorunning-23-august-2026",
       "priority": 84,
-      "section": "Orte & Termine",
-      "filters": ["Ledrotal"],
+      "section": "Ledrotal",
+      "editorialGroup": "events",
+      "activeFrom": "2026-08-16",
+      "activeUntil": "2026-08-23",
+      "tags": ["Orte & Termine", "Sport"],
       "tag": "Molina di Ledro · Sport",
       "title": "Ledrorunning startet am 23. August in Molina",
       "teaser": "Die 17. Ausgabe führt über 9,36 Kilometer rund um den Ledrosee und ist im nationalen FIDAL-Kalender eingetragen.",
@@ -200,8 +199,11 @@
       "id": "ci-sto-affare-fatica-agosto-2026",
       "priority": 82,
       "section": "Ledrotal",
-      "filters": ["Orte & Termine"],
-      "tag": "Jugend & Gemeinde",
+      "editorialGroup": "events",
+      "activeFrom": "2026-08-16",
+      "activeUntil": "2026-08-28",
+      "tags": ["Orte & Termine", "Jugend"],
+      "tag": "Jugend · Termin",
       "title": "Projektwoche für Jugendliche vom 24. bis 28. August",
       "teaser": "Bei „Ci sto? Affare fatica!“ arbeiten 14- bis 19-Jährige vormittags in Gruppen an Aufgaben für das Gemeinwohl.",
       "status": "Offiziell bestätigt",
@@ -220,63 +222,100 @@
           "url": "https://www.comune.ledro.tn.it/Novita/Avvisi/Ci-sto-Affare-fatica2"
         }
       ]
-    },
-    {
-      "id": "carta-identita-cartacea-august-2026",
-      "priority": 70,
-      "section": "Service & Regeln",
-      "tag": "Dokumente · Fortlaufender Hinweis",
-      "title": "Papierausweis seit 3. August nur noch sehr eingeschränkt nutzbar",
-      "teaser": "Für Reisen ist die Carta d’identità cartacea nicht mehr gültig. Eine spätere Regelung schützt einzelne bestehende Verträge und wesentliche Dienste übergangsweise.",
-      "status": "Offiziell bestätigt",
-      "date": "06.07.2026",
-      "readTime": "3 Min.",
-      "body": [
-        "Seit dem 3. August 2026 ist die italienische Carta d’identità in Papierform grundsätzlich nicht mehr als regulärer Identitäts- und Reisedokumentersatz gültig. Für Reisen ins Ausland kann sie in keinem Fall mehr verwendet werden.",
-        "Der Decreto-Legge 108/2026 enthält allerdings Übergangsregeln: Bei bereits vor dem 3. August geschlossenen Vertragsverhältnissen bleibt eine damals hinterlegte Papieridentität bis zur ursprünglichen Dokumentfrist relevant. Für grundlegende Rechte und wesentliche Gesundheits- oder Sozialleistungen ist eine begrenzte Nutzung längstens bis 31. Januar 2027 vorgesehen.",
-        "Wer noch einen Papierausweis besitzt, sollte die CIE beim zuständigen Comune beantragen. Bei konkreten Sonderfällen sind die aktuellen Hinweise der Behörden entscheidend."
-      ],
-      "sources": [
-        {
-          "publisher": "Ministero dell’Interno",
-          "date": "08.05.2026",
-          "title": "Carta d’Identità: se non è elettronica, non vale",
-          "url": "https://www.interno.gov.it/it/stampa-e-comunicazione/comunicati-stampa/carta-didentita-non-e-elettronica-non-vale"
-        },
-        {
-          "publisher": "Commissariato del Governo per la Provincia di Trento",
-          "date": "06.07.2026",
-          "title": "Decreto Legge n. 108 del 26 giugno 2026",
-          "url": "https://prefettura.interno.gov.it/it/prefetture/trento/notizie/decreto-legge-n-108-26-giugno-2026"
-        }
-      ]
-    },
-    {
-      "id": "infrastruktur-ledro-hintergrund-2026",
-      "priority": 40,
-      "section": "Hintergrund",
-      "filters": ["Ledrotal"],
-      "tag": "Hintergrund · Infrastruktur",
-      "title": "Infrastrukturpaket für Ledro: die angekündigten Projekte im Überblick",
-      "teaser": "Die Provinz beziffert mehrere Vorhaben auf mehr als 65 Millionen Euro. Das Thema bleibt langfristig relevant, ist aber keine neue Tagesmeldung.",
-      "status": "Offiziell bestätigt",
-      "date": "23.07.2026",
-      "readTime": "3 Min.",
-      "body": [
-        "Dieser Beitrag ist als Hintergrund gekennzeichnet: Die Autonome Provinz Trient stellte das Infrastrukturpaket bereits am 23. Juli vor.",
-        "Der größte Einzelposten ist mit rund 52 Millionen Euro für die geplante Umfahrung von Molina genannt. Weitere Maßnahmen betreffen unter anderem die Verkehrssicherheit und Arbeiten im Bereich der Galleria Dom.",
-        "Konkrete Bauzeiten, Sperrungen oder neue Verkehrsführungen ergeben sich aus der Grundsatzmeldung noch nicht. Für die tägliche Fahrt sind deshalb jeweils aktuelle amtliche Verkehrshinweise maßgeblich."
-      ],
-      "sources": [
-        {
-          "publisher": "Provincia autonoma di Trento",
-          "date": "23.07.2026",
-          "title": "Val di Ledro, 65 milioni di opere sul territorio",
-          "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Val-di-Ledro-65-milioni-di-opere-sul-territorio"
-        }
-      ]
     }
   ],
+  "politics": {
+    "title": "Politik & Projekte",
+    "updated": "16.08.2026",
+    "intro": "Kommunale Entscheidungen, Infrastruktur und langfristige Vorhaben im Ledrotal – mit klar bezeichnetem Verfahrensstand statt wiederholter Tagesmeldungen.",
+    "notice": "Dossiers erscheinen im Tagesfeed nur bei einer echten neuen Entwicklung. Planungen, politische Aussagen und Ausschreibungen werden nicht als bereits beschlossene oder ausgeführte Tatsachen dargestellt.",
+    "dossiers": [
+      {
+        "id": "dossier-variante-molina",
+        "status": "In Planung",
+        "title": "Variante von Molina: Umfahrung mit 1,2 Kilometer langer Galerie",
+        "summary": "Die Provinz lässt die technische und wirtschaftliche Machbarkeit einer Umfahrung der SS240 mit zwei Kreisverkehren ausarbeiten. Ein Baubeschluss oder Baustart liegt noch nicht vor.",
+        "currentStatus": "Planung der technisch-wirtschaftlichen Machbarkeit (PFTE). Die Provinz nannte zuletzt einen erwarteten Baustart im Frühjahr 2029 und eine Fertigstellung im Sommer 2031; diese Angaben sind ein Planungszeitrahmen, kein abgeschlossener Bauvertrag.",
+        "latestUpdate": {
+          "date": "15.06.2026",
+          "text": "Die Provincia ordnete das Vorhaben weiterhin der PFTE-Phase zu und bezifferte den aktuellen Rahmen mit 52 Millionen Euro."
+        },
+        "costs": "Aktueller Provinzrahmen: rund 52 Mio. Euro. Im Januar und Februar 2026 war zunächst von 39 Mio. Euro Finanzierung für das Bauwerk sowie rund 1,66 Mio. Euro für den Planungsauftrag die Rede.",
+        "timeframe": "Nach aktueller Provinzplanung: möglicher Baubeginn Frühjahr 2029, mögliche Fertigstellung Sommer 2031.",
+        "image": {
+          "src": "images/molina-di-ledro.jpg",
+          "alt": "Molina di Ledro am Ufer des Ledrosees",
+          "caption": "Molina di Ledro am Ledrosee; die Ortsansicht ist keine Darstellung der geplanten Trasse.",
+          "credit": "NeoMeesje / Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lago-di-ledro-widt-19.jpg"
+        },
+        "timeline": [
+          {"date":"08.01.2026","state":"Ausschreibung","text":"APAC veröffentlicht die Ausschreibung für PFTE und optionales Ausführungsprojekt; vorgesehen sind etwa 1.200 Meter Galerie und zwei Kreisverkehre."},
+          {"date":"25.02.2026","state":"Ausschreibung","text":"Drei Bietergemeinschaften nehmen am Verfahren für die Planung teil; als nächster Schritt wird die Bewertungskommission angekündigt."},
+          {"date":"15.06.2026","state":"In Planung","text":"Die Provinz nennt die PFTE-Phase, rund 52 Millionen Euro und den unverbindlichen Zeitrahmen 2029 bis 2031."}
+        ],
+        "sources": [
+          {
+            "publisher": "Provincia autonoma di Trento",
+            "date": "08.01.2026",
+            "title": "Molina di Ledro, al via la progettazione della variante",
+            "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Molina-di-Ledro-al-via-la-progettazione-della-variante"
+          },
+          {
+            "publisher": "Provincia autonoma di Trento",
+            "date": "25.02.2026",
+            "title": "Variante di Molina di Ledro, tre raggruppamenti di professionisti in corsa",
+            "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Variante-di-Molina-di-Ledro-tre-raggruppamenti-di-professionisti-in-corsa"
+          },
+          {
+            "publisher": "Provincia autonoma di Trento",
+            "date": "15.06.2026",
+            "title": "Alto Garda e Ledro, oltre 618 milioni di investimenti per il futuro del territorio",
+            "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Alto-Garda-e-Ledro-oltre-618-milioni-di-investimenti-per-il-futuro-del-territorio"
+          }
+        ]
+      },
+      {
+        "id": "dossier-galleria-dom",
+        "status": "Ausschreibung",
+        "title": "Galleria Dom: Stabilisierung vor angekündigtem Baustart",
+        "summary": "Die Arbeiten zur Stabilisierung der Wände und eines Teils der Tunneldecke befinden sich nach der letzten amtlichen Meldung in der Vergabephase. Der Beginn wurde für September oder Oktober 2026 angekündigt.",
+        "currentStatus": "Vergabephase. Die Maßnahme ist konkret geplant, aber am redaktionellen Stichtag noch nicht als begonnen bestätigt. Vorgesehen sind zunächst nächtliche Werktagssperren und anschließend abschnittsweise Einbahnregelung.",
+        "latestUpdate": {
+          "date": "23.07.2026",
+          "text": "Die Provinz beziffert das Gesamtprojekt mit 4,10 Millionen Euro und kündigt einen etwa 16-monatigen, in Phasen gegliederten Bauablauf an."
+        },
+        "costs": "Gesamtwert laut Provincia: 4,10 Mio. Euro; davon mehr als 2,79 Mio. Euro für die Arbeiten.",
+        "timeframe": "Angekündigter Beginn September/Oktober 2026; etwa fünf Monate nächtliche Werktagssperren, danach ungefähr elf Monate Einbahnverkehr im Baustellenabschnitt. Pausen zu Weihnachten, Ostern und im Sommer sind vorgesehen.",
+        "timeline": [
+          {"date":"11.2023","state":"Ereignis","text":"Nach Starkregen und Schäden wird die Sicherung des strategischen Tunnels erneut zum zentralen Thema."},
+          {"date":"09.06.2026","state":"Ausschreibung","text":"APAC leitet das Verfahren zur Vergabe der Stabilisierungsarbeiten ein."},
+          {"date":"23.07.2026","state":"Ausschreibung","text":"Die Provinz nennt Vergabephase, Kosten, Bauablauf und den geplanten Start im Herbst 2026."}
+        ],
+        "sources": [
+          {
+            "publisher": "Provincia autonoma di Trento",
+            "date": "09.06.2026",
+            "title": "Galleria Dom, avviata procedura per l'affidamento dei lavori di messa in sicurezza",
+            "url": "https://www.ufficiostampa.provincia.tn.it/layout/set/print/Comunicati/Galleria-Dom-avviata-procedura-per-l-affidamento-dei-lavori-di-messa-in-sicurezza"
+          },
+          {
+            "publisher": "Provincia autonoma di Trento",
+            "date": "23.07.2026",
+            "title": "Galleria Dom, in autunno partiranno i lavori di stabilizzazione",
+            "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Galleria-Dom-in-autunno-partiranno-i-lavori-di-stabilizzazione"
+          },
+          {
+            "publisher": "Provincia autonoma di Trento",
+            "date": "15.06.2026",
+            "title": "Alto Garda e Ledro, oltre 618 milioni di investimenti per il futuro del territorio",
+            "url": "https://www.ufficiostampa.provincia.tn.it/Comunicati/Alto-Garda-e-Ledro-oltre-618-milioni-di-investimenti-per-il-futuro-del-territorio"
+          }
+        ]
+      }
+    ]
+  },
   "weather": {
     "title": "Wetter & Wasser",
     "updated": "16.08.2026, 21:22 CEST",
@@ -447,9 +486,9 @@
     ]
   },
   "services": {
-    "title": "Öffnungszeiten",
+    "title": "Service",
     "updated": "16.08.2026",
-    "intro": "Dauerhafte, von den Tagesnachrichten getrennte Serviceangaben für Ledro. Jede Angabe ist mit einer überprüfbaren Originalseite verknüpft.",
+    "intro": "Öffnungszeiten, öffentliche Einrichtungen, Regeln sowie Anreise und Verkehr – dauerhaft und klar von den Tagesnachrichten getrennt.",
     "notice": "Saisonzeiten, Feiertage und kurzfristige Schließungen können abweichen. Vor einer längeren Anfahrt bitte immer den verlinkten Betreiberhinweis prüfen.",
     "categories": [
       {
@@ -848,6 +887,70 @@
                 "date": "Stand 16.08.2026",
                 "title": "Le Sante Messe - Orario delle Messe",
                 "url": "https://www.parrocchieledro.it/messe.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rules",
+        "title": "Service & Regeln",
+        "items": [
+          {
+            "id": "carta-identita-cartacea-august-2026",
+            "kind": "notice",
+            "status": "Offiziell bestätigt",
+            "name": "Papierausweis seit 3. August nur noch sehr eingeschränkt nutzbar",
+            "locality": "Dauerhafter Dokumentenhinweis",
+            "body": [
+              "Seit dem 3. August 2026 ist die italienische Carta d’identità in Papierform grundsätzlich nicht mehr als regulärer Identitäts- und Reisedokumentersatz gültig. Für Reisen ins Ausland kann sie in keinem Fall mehr verwendet werden.",
+              "Der Decreto-Legge 108/2026 enthält begrenzte Übergangsregeln für bereits bestehende Vertragsverhältnisse sowie grundlegende Rechte und wesentliche Gesundheits- oder Sozialleistungen. Wer noch einen Papierausweis besitzt, sollte die CIE beim zuständigen Comune beantragen."
+            ],
+            "note": "Bei konkreten Sonderfällen sind die aktuellen Hinweise der zuständigen Behörden maßgeblich.",
+            "sources": [
+              {
+                "publisher": "Ministero dell’Interno",
+                "date": "08.05.2026",
+                "title": "Carta d’Identità: se non è elettronica, non vale",
+                "url": "https://www.interno.gov.it/it/stampa-e-comunicazione/comunicati-stampa/carta-didentita-non-e-elettronica-non-vale"
+              },
+              {
+                "publisher": "Commissariato del Governo per la Provincia di Trento",
+                "date": "06.07.2026",
+                "title": "Decreto Legge n. 108 del 26 giugno 2026",
+                "url": "https://prefettura.interno.gov.it/it/prefetture/trento/notizie/decreto-legge-n-108-26-giugno-2026"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "travel",
+        "title": "Anreise und Verkehr",
+        "items": [
+          {
+            "id": "anreise-a22-ss240",
+            "kind": "notice",
+            "status": "Laufender Service",
+            "name": "Anreise über A22, Riva del Garda und SS240",
+            "locality": "Brenner · Trento/Rovereto · Alto Garda · Ledro",
+            "body": [
+              "Für die Anreise ins Ledrotal sind nach der A22 je nach Ausgangspunkt die Zufahrten über Rovereto oder Trento, Riva del Garda und die SS240 relevant. Reiseprognosen beschreiben eine erwartete Belastung, aber keine dauerhaft bestehende konkrete Störung.",
+              "Unmittelbar vor der Fahrt sollten deshalb die Live-Verkehrslage der Brennerautobahn und die amtlichen Meldungen für das Trentino geprüft werden. Akute Sperrungen oder Unfälle mit unmittelbarer Bedeutung für Ledro erscheinen zusätzlich im Nachrichtenfeed – allgemeine Reisehinweise nicht."
+            ],
+            "note": "Zeitangaben und Routen können sich kurzfristig durch Baustellen, Unfälle, Wetter oder saisonalen Verkehr ändern.",
+            "sources": [
+              {
+                "publisher": "Autostrada del Brennero A22",
+                "date": "laufend aktualisiert",
+                "title": "Aktuelle Verkehrsinformationen und Webcams",
+                "url": "https://www.autobrennero.it/it/"
+              },
+              {
+                "publisher": "Provincia autonoma di Trento",
+                "date": "laufend aktualisiert",
+                "title": "Viaggiare in Trentino – Verkehrslage",
+                "url": "https://www.viaggiareintrentino.it/"
               }
             ]
           }
