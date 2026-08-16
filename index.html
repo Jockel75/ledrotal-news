@@ -1,185 +1,45 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#f7f5ef" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="Ledrotal" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="apple-touch-icon" href="assets/icon-192.png" />
-  <title>Ledrotal Zeitung</title>
-  <style>
-    :root{
-      --paper:#f7f5ef; --ink:#171717; --muted:#6a6862; --rule:#d8d4ca;
-      --accent:#233a52; --accent2:#a54c35; --card:#fffdfa; --safe-bottom:env(safe-area-inset-bottom,0px);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Arial,sans-serif}
-    body{min-height:100vh}
-    button,a{font:inherit}
-    .app{max-width:720px;margin:0 auto;min-height:100vh;padding-bottom:calc(78px + var(--safe-bottom))}
-    .topbar{position:sticky;top:0;z-index:20;background:rgba(247,245,239,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);padding:10px 16px 8px}
-    .kicker{font:600 12px/1.2 Georgia,"Times New Roman",serif;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);text-align:center}
-    .brand{font:700 35px/1.02 Georgia,"Times New Roman",serif;letter-spacing:-.03em;text-align:center;margin:1px 0 2px}
-    .subbrand{font:italic 13px/1.3 Georgia,"Times New Roman",serif;text-align:center;color:var(--muted)}
-    .edition{display:flex;justify-content:space-between;align-items:center;margin-top:9px;font-size:12px;color:var(--muted)}
-    .live{display:inline-flex;gap:6px;align-items:center}.dot{width:7px;height:7px;border-radius:99px;background:var(--accent2)}
-    .chips{display:flex;gap:8px;overflow:auto;padding:10px 14px 8px;scrollbar-width:none;border-bottom:1px solid var(--rule)}
-    .chips::-webkit-scrollbar{display:none}
-    .chip{white-space:nowrap;border:1px solid var(--rule);background:transparent;border-radius:999px;padding:8px 12px;color:var(--ink);font-weight:650;font-size:13px}
-    .chip.active{background:var(--ink);color:white;border-color:var(--ink)}
-    main{padding:0 14px}
-    .hero{margin:14px 0 20px;border-bottom:1px solid var(--rule);padding-bottom:18px;cursor:pointer}
-    .heroimg{height:245px;border-radius:14px;overflow:hidden;background:linear-gradient(140deg,#6d879a,#d8c49f 58%,#6d8a66);position:relative}
-    .heroimg:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.42),transparent 55%)}
-    .heroimg .lake{position:absolute;left:-5%;right:-5%;bottom:-16%;height:55%;background:#557d86;border-radius:50% 50% 0 0/35% 35% 0 0;opacity:.85}
-    .heroimg .mountain{position:absolute;bottom:36%;width:0;height:0;border-left:150px solid transparent;border-right:150px solid transparent;border-bottom:160px solid #5f6f61;left:4%;filter:drop-shadow(120px 25px 0 #7b846b)}
-    .herolabel{position:absolute;left:14px;bottom:12px;background:rgba(255,255,255,.92);padding:7px 9px;border-radius:7px;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
-    .sectiontag{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);margin-top:12px}
-    h1{font:700 31px/1.03 Georgia,"Times New Roman",serif;letter-spacing:-.025em;margin:5px 0 7px}
-    .dek{font:400 17px/1.38 Georgia,"Times New Roman",serif;color:#32312e;margin:0 0 10px}
-    .meta{font-size:12px;color:var(--muted);display:flex;gap:7px;flex-wrap:wrap;align-items:center}
-    .meta b{color:var(--ink)}
-    .sectionhead{display:flex;justify-content:space-between;align-items:end;margin:23px 0 8px;border-bottom:2px solid var(--ink);padding-bottom:6px}
-    .sectionhead h2{font:700 22px/1 Georgia,"Times New Roman",serif;margin:0}.sectionhead span{font-size:12px;color:var(--muted)}
-    .story{display:grid;grid-template-columns:1fr 112px;gap:13px;padding:14px 0;border-bottom:1px solid var(--rule);cursor:pointer}
-    .story.noimg{grid-template-columns:1fr}
-    .story h3{font:700 21px/1.09 Georgia,"Times New Roman",serif;margin:3px 0 6px;letter-spacing:-.015em}
-    .story p{margin:0 0 8px;color:#3b3934;font:400 15px/1.35 Georgia,"Times New Roman",serif}
-    .thumb{height:96px;border-radius:10px;background:linear-gradient(145deg,#809684,#d0c5a9);position:relative;overflow:hidden}
-    .thumb.road{background:linear-gradient(135deg,#6c7b7b,#b8b0a4)}
-    .thumb.road:after{content:"";position:absolute;width:34px;height:140%;background:#585858;left:42px;top:-10px;transform:rotate(13deg);box-shadow:inset 15px 0 0 #6f6f6f}
-    .thumb.road:before{content:"";position:absolute;width:2px;height:140%;background:#f5e7a0;left:60px;top:-10px;transform:rotate(13deg);z-index:2}
-    .thumb.water{background:linear-gradient(#b8cfdb 0 45%,#557e8c 45%)}
-    .thumb.market{background:linear-gradient(145deg,#d6c6a7,#9a6f4d)}
-    .thumb.wind{background:linear-gradient(150deg,#b6d0d8,#66808f)}
-    .thumb.house{background:linear-gradient(145deg,#c8b8a4,#806c58)}
-    .quick{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0 20px}
-    .quickcard{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:12px;min-height:117px;cursor:pointer}
-    .quickcard .icon{font-size:23px}.quickcard b{display:block;font:700 17px/1.1 Georgia,"Times New Roman",serif;margin-top:9px}.quickcard span{display:block;font-size:12px;color:var(--muted);margin-top:5px}
-    .bottom{position:fixed;left:50%;transform:translateX(-50%);bottom:0;z-index:25;width:min(720px,100%);height:calc(66px + var(--safe-bottom));padding-bottom:var(--safe-bottom);background:rgba(250,249,246,.96);backdrop-filter:blur(16px);border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(5,1fr)}
-    .navbtn{border:0;background:transparent;padding:9px 1px 6px;color:var(--muted);font-size:10px;font-weight:650}.navbtn .ico{font-size:20px;display:block;line-height:1.1;margin-bottom:3px}.navbtn.active{color:var(--ink)}
-    .article{display:none;background:var(--paper);position:fixed;inset:0;z-index:50;overflow:auto}.article.show{display:block}
-    .articlebar{position:sticky;top:0;z-index:4;background:rgba(247,245,239,.97);backdrop-filter:blur(14px);height:52px;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 12px}
-    .articlebar button{border:0;background:transparent;font-size:16px;font-weight:700;padding:8px}.articlebar .mini{font:700 16px Georgia,serif}
-    .articlebody{max-width:670px;margin:0 auto;padding:18px 18px 70px}
-    .articlebody h2{font:700 36px/1.04 Georgia,"Times New Roman",serif;letter-spacing:-.03em;margin:5px 0 10px}.articlebody .lead{font:400 20px/1.42 Georgia,serif;margin:0 0 15px;color:#33312d}.articlebody .by{font-size:12px;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:14px;margin-bottom:18px}
-    .articlebody p{font:400 18px/1.62 Georgia,"Times New Roman",serif;margin:0 0 19px}.articlebody h4{font:700 22px/1.2 Georgia,serif;margin:27px 0 9px}
-    .sourcebox{background:#eeece5;border-left:3px solid var(--accent);padding:12px 14px;margin:24px 0;font-size:13px;line-height:1.45;color:#45423d}
-    .install{display:none;margin:12px 0;background:#ece8dd;border-radius:12px;padding:12px 13px;font-size:13px;line-height:1.35}.install.show{display:block}
-    @media (min-width:680px){.heroimg{height:330px}.story{grid-template-columns:1fr 150px}.thumb{height:112px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f5ef">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Ledrotal Zeitung">
+<title>Ledrotal Zeitung</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#171717;--muted:#6c6962;--rule:#d9d5ca;--rust:#a84f36;--card:#fffdfa;--safe:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Arial,sans-serif}button{font:inherit}.app{max-width:720px;margin:auto;padding-bottom:calc(74px + var(--safe));min-height:100vh}
+.top{position:sticky;top:0;z-index:20;background:rgba(247,245,239,.96);backdrop-filter:blur(15px);border-bottom:1px solid var(--rule);padding:13px 16px 9px}.kicker{text-align:center;font:600 12px Georgia,serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.brand{text-align:center;font:700 38px/.98 Georgia,serif;letter-spacing:-.035em;margin:3px 0 2px}.sub{text-align:center;font:italic 14px Georgia,serif;color:var(--muted)}.edition{display:flex;justify-content:space-between;margin-top:11px;font-size:12px;color:var(--muted)}.live:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--rust);margin-right:6px}
+.chips{display:flex;gap:8px;overflow:auto;padding:10px 14px 8px;border-bottom:1px solid var(--rule);scrollbar-width:none}.chips::-webkit-scrollbar{display:none}.chip{border:1px solid var(--rule);background:transparent;padding:8px 13px;border-radius:999px;white-space:nowrap;font-weight:650}.chip.active{background:#161616;color:white;border-color:#161616}
+main{padding:0 14px}.hint{margin:13px 0;background:#ece8dd;border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.35}.hero{margin:14px 0 20px;padding-bottom:18px;border-bottom:1px solid var(--rule);cursor:pointer}.visual{height:250px;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(145deg,#91a6ae,#dacba7)}.visual:before,.thumb:before{content:"";position:absolute;inset:auto -6% -18% -6%;height:55%;background:#557d86;border-radius:50% 50% 0 0/35% 35% 0 0;opacity:.9}.visual:after{content:"";position:absolute;left:3%;bottom:34%;width:0;height:0;border-left:155px solid transparent;border-right:155px solid transparent;border-bottom:160px solid #637262;filter:drop-shadow(120px 20px 0 #80886d)}.badge{position:absolute;left:14px;bottom:12px;z-index:2;background:rgba(255,255,255,.94);padding:7px 10px;border-radius:8px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.tag{color:var(--rust);font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin-top:13px}h1{font:700 32px/1.03 Georgia,serif;letter-spacing:-.028em;margin:5px 0 8px}.dek{font:400 17px/1.42 Georgia,serif;color:#34322e;margin:0 0 10px}.meta{font-size:12px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}.meta b{color:var(--ink)}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;margin:24px 0 6px;border-bottom:2px solid var(--ink);padding-bottom:6px}.sectionhead h2{font:700 23px Georgia,serif;margin:0}.sectionhead span{font-size:12px;color:var(--muted)}.story{display:grid;grid-template-columns:1fr 112px;gap:13px;padding:15px 0;border-bottom:1px solid var(--rule);cursor:pointer}.story h3{font:700 21px/1.08 Georgia,serif;letter-spacing:-.015em;margin:4px 0 7px}.story p{font:400 15px/1.36 Georgia,serif;margin:0 0 8px;color:#3c3934}.thumb{height:98px;border-radius:10px;position:relative;overflow:hidden;background:linear-gradient(145deg,#99a98e,#d4c4a4)}.thumb.water{background:linear-gradient(#c1d5dc 0 45%,#5f8792 45%)}.thumb.market{background:linear-gradient(145deg,#dbc6a6,#9b6c4a)}.thumb.house{background:linear-gradient(145deg,#c5b49f,#7c6856)}.thumb.culture{background:linear-gradient(145deg,#574c66,#b38362)}.thumb.forest{background:linear-gradient(145deg,#90a37f,#475d4c)}
+.empty{text-align:center;color:var(--muted);padding:38px 15px;font:italic 16px Georgia,serif}.bottom{position:fixed;left:50%;transform:translateX(-50%);bottom:0;z-index:30;width:min(720px,100%);height:calc(66px + var(--safe));padding-bottom:var(--safe);background:rgba(250,249,246,.97);backdrop-filter:blur(15px);border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(5,1fr)}.nav{border:0;background:transparent;color:var(--muted);font-size:10px;font-weight:650;padding:8px 1px}.nav span{display:block;font-size:20px;line-height:1.1;margin-bottom:3px}.nav.active{color:var(--ink)}
+.viewer{display:none;position:fixed;inset:0;z-index:50;background:var(--paper);overflow:auto}.viewer.show{display:block}.viewerbar{position:sticky;top:0;z-index:3;height:52px;background:rgba(247,245,239,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 12px}.viewerbar button{border:0;background:transparent;padding:8px;font-weight:700}.viewerbar b{font:700 16px Georgia,serif}.article{max-width:670px;margin:auto;padding:19px 18px 70px}.article h2{font:700 37px/1.03 Georgia,serif;letter-spacing:-.03em;margin:5px 0 11px}.lead{font:400 20px/1.43 Georgia,serif;color:#33312d;margin:0 0 15px}.by{font-size:12px;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:14px;margin-bottom:19px}.article p{font:400 18px/1.62 Georgia,serif;margin:0 0 19px}.source{background:#eeebe3;border-left:3px solid #273d52;padding:12px 14px;margin:24px 0;font-size:13px;line-height:1.45}.source a{color:#193d63}
+@media(min-width:680px){.visual{height:330px}.story{grid-template-columns:1fr 150px}.thumb{height:112px}}
+</style>
 </head>
 <body>
-<div class="app" id="app">
-  <header class="topbar">
-    <div class="kicker">La Gazzetta della Casa Stawole</div>
-    <div class="brand">Ledrotal Zeitung</div>
-    <div class="subbrand">Ledro · Garda · Trentino · Italien</div>
-    <div class="edition"><span>Sonntag, 16. August 2026</span><span class="live"><i class="dot"></i> Mobile Ausgabe</span></div>
-  </header>
-  <div class="chips" id="chips"></div>
-  <main id="feed">
-    <div class="install" id="installHint"><b>Wie eine App nutzen:</b> Auf dem iPhone in Safari „Teilen“ → „Zum Home-Bildschirm“. Auf Android im Browser „App installieren“ bzw. „Zum Startbildschirm hinzufügen“.</div>
-    <section class="hero" data-id="infra">
-      <div class="heroimg"><div class="mountain"></div><div class="lake"></div><span class="herolabel">Top-Meldung · Ledrotal</span></div>
-      <div class="sectiontag">Infrastruktur</div>
-      <h1>65 Millionen Euro für Projekte im Ledrotal</h1>
-      <p class="dek">Die Provinz bündelt ein großes Infrastrukturpaket. Der größte Einzelposten ist die geplante Umfahrung von Molina.</p>
-      <div class="meta"><b>Offiziell bestätigt</b><span>·</span><span>3 Min.</span><span>·</span><span>Provincia autonoma di Trento, 23.07.2026</span></div>
-    </section>
-
-    <div class="sectionhead"><h2>Heute im Tal</h2><span>lokal zuerst</span></div>
-    <article class="story" data-id="wind"><div><div class="sectiontag">Natur & See</div><h3>Meteotrentino: Windprognosen jetzt auch für den Ledrosee</h3><p>Stündliche Vorhersagen für 48 Stunden sollen Planung und Sicherheit am See erleichtern.</p><div class="meta"><b>Offiziell bestätigt</b><span>· 2 Min.</span></div></div><div class="thumb wind"></div></article>
-    <article class="story" data-id="market"><div><div class="sectiontag">Pieve di Ledro</div><h3>Sommermärkte im historischen Zentrum von Pieve</h3><p>Gebraucht-, Kreativ- und Kunsthandwerksmärkte laufen im Juli und August an mehreren Donnerstagen.</p><div class="meta"><b>Offiziell bestätigt</b><span>· 2 Min.</span></div></div><div class="thumb market"></div></article>
-    <article class="story" data-id="wake"><div><div class="sectiontag">Pur</div><h3>Wakeboard-Anlage bleibt Gegenstand politischer Fragen</h3><p>Eine Landtagsanfrage fordert Prüfungen zu Genehmigungen, Sicherheit und Auswirkungen auf den Uferbereich.</p><div class="meta"><b>Pressebericht</b><span>· 3 Min.</span></div></div><div class="thumb water"></div></article>
-
-    <div class="sectionhead"><h2>Für Haus & Alltag</h2><span>nützlich vor Ort</span></div>
-    <article class="story" data-id="imis"><div><div class="sectiontag">Haus & Regeln</div><h3>IM.I.S. 2026: Zahlung in einer Rate bis 16. Dezember</h3><p>Für das Jahr 2026 verlangt Ledro keine Juni-Vorauszahlung; die kommunalen Sätze bleiben nach Gemeindeangaben unverändert.</p><div class="meta"><b>Offiziell bestätigt</b><span>· 2 Min.</span></div></div><div class="thumb house"></div></article>
-    <article class="story" data-id="waste"><div><div class="sectiontag">Alltag</div><h3>EasyWaste: Müllcontainer lassen sich auch per Smartphone öffnen</h3><p>Für bereits freigeschaltete Nutzer ergänzt die App die bestehende Karte; diese bleibt weiterhin gültig.</p><div class="meta"><b>Offiziell bestätigt</b><span>· 2 Min.</span></div></div><div class="thumb"></div></article>
-
-    <div class="sectionhead"><h2>Schnellzugriff</h2><span>für unterwegs</span></div>
-    <div class="quick">
-      <div class="quickcard" data-filter="Verkehr"><div class="icon">🚗</div><b>Verkehr & Anreise</b><span>Brenner, SS 240, Baustellen</span></div>
-      <div class="quickcard" data-filter="Garda"><div class="icon">🌊</div><b>Am Gardasee</b><span>Riva, Arco, Termine</span></div>
-      <div class="quickcard" data-filter="Entdecken"><div class="icon">🥾</div><b>Entdecken</b><span>Wege, Aussicht, Geheimtipps</span></div>
-      <div class="quickcard" data-filter="Welt"><div class="icon">🌍</div><b>Weltblick</b><span>kurz und neutral</span></div>
-    </div>
-  </main>
+<div class="app">
+<header class="top"><div class="kicker" id="kicker">La Gazzetta della Casa Stawole</div><div class="brand" id="brand">Ledrotal Zeitung</div><div class="sub" id="subtitle">Ledro · Garda · Trentino · Italien</div><div class="edition"><span id="date">–</span><span class="live" id="editionLabel">Mobile Ausgabe</span></div></header>
+<div class="chips" id="chips"></div>
+<main><div class="hint"><b>Wie eine App nutzen:</b> Auf dem iPhone in Safari „Teilen“ → „Zum Home-Bildschirm“.</div><div id="feed"><div class="empty">Nachrichten werden geladen …</div></div></main>
 </div>
-
-<nav class="bottom">
-  <button class="navbtn active" data-tab="Heute"><span class="ico">⌂</span>Heute</button>
-  <button class="navbtn" data-tab="Ledro"><span class="ico">●</span>Ledro</button>
-  <button class="navbtn" data-tab="Anreise"><span class="ico">↗</span>Anreise</button>
-  <button class="navbtn" data-tab="Garda"><span class="ico">≈</span>Garda</button>
-  <button class="navbtn" data-tab="Entdecken"><span class="ico">⌁</span>Entdecken</button>
-</nav>
-
-<div class="article" id="articleView" aria-hidden="true">
-  <div class="articlebar"><button id="backBtn">‹ Zurück</button><span class="mini">Ledrotal Zeitung</span><button id="shareBtn">Teilen</button></div>
-  <div class="articlebody" id="articleBody"></div>
-</div>
-
+<nav class="bottom"><button class="nav active" data-section="Heute"><span>⌂</span>Heute</button><button class="nav" data-section="Ledrotal"><span>●</span>Ledro</button><button class="nav" data-section="Verkehr"><span>↗</span>Anreise</button><button class="nav" data-section="Kultur"><span>♫</span>Kultur</button><button class="nav" data-section="Haus & Alltag"><span>⌁</span>Alltag</button></nav>
+<div class="viewer" id="viewer"><div class="viewerbar"><button id="back">‹ Zurück</button><b>Ledrotal Zeitung</b><button id="share">Teilen</button></div><div class="article" id="article"></div></div>
 <script>
-const stories = {
- infra:{section:'Infrastruktur',title:'65 Millionen Euro für Projekte im Ledrotal',lead:'Die Autonome Provinz Trient hat ein Infrastrukturpaket für das Ledrotal mit einem Volumen von mehr als 65 Millionen Euro vorgestellt. Der größte Einzelposten betrifft die Umfahrung von Molina.',status:'Offiziell bestätigt',source:'Provincia autonoma di Trento',date:'23.07.2026',body:[
-  'Nach Angaben der Provinz umfasst das Paket mehrere Projekte, die Verkehrssicherheit und Erreichbarkeit im Tal verbessern sollen. Für die geplante Umfahrung von Molina werden rund 52 Millionen Euro genannt.',
-  'Ein weiterer Schwerpunkt sind Sicherheitsarbeiten an der Galleria Dom. Die Provinz verweist dabei auch auf die Ereignisse rund um die Sperrung und den Erdrutsch im Jahr 2023.',
-  'Für Bewohner und Ferienhausbesitzer ist vor allem relevant, dass große Bauprojekte mittelfristig Auswirkungen auf Verkehrsführung, Bauzeiten und die Zufahrt über die SS 240 haben können. Konkrete Tagesbehinderungen sollten jeweils kurzfristig anhand offizieller Verkehrsmeldungen geprüft werden.'
- ],url:'https://www.ufficiostampa.provincia.tn.it/Comunicati/Val-di-Ledro-65-milioni-di-opere-sul-territorio'},
- wind:{section:'Natur & See',title:'Meteotrentino: Windprognosen jetzt auch für den Ledrosee',lead:'Meteotrentino hat seine stündlichen Windvorhersagen auf weitere Seen ausgeweitet – darunter den Ledrosee.',status:'Offiziell bestätigt',source:'Provincia autonoma di Trento',date:'17.07.2026',body:[
-  'Für den Ledrosee stehen nun Windprognosen mit stündlicher Auflösung für die kommenden 48 Stunden zur Verfügung. Die Daten werden zweimal täglich aktualisiert.',
-  'Das Angebot richtet sich insbesondere an Menschen, die auf dem Wasser unterwegs sind oder Aktivitäten am See planen. Zusätzlich werden Informationen zur Wassertemperatur angeboten.',
-  'Für Segler, Paddler, Surfer und Familien am Ufer ist die feinere zeitliche Auflösung besonders praktisch, weil lokale Windverhältnisse am See im Tagesverlauf deutlich variieren können.'
- ],url:'https://www.ufficiostampa.provincia.tn.it/Comunicati/Meteotrentino-amplia-le-previsioni-del-vento-sui-laghi-trentini'},
- market:{section:'Pieve di Ledro',title:'Sommermärkte im historischen Zentrum von Pieve',lead:'Im historischen Zentrum von Pieve di Ledro finden im Juli und August 2026 mehrere Gebraucht-, Kreativ- und Kunsthandwerksmärkte statt.',status:'Offiziell bestätigt',source:'Comune di Ledro',date:'2026',body:[
-  'Der Markt für Gebrauchtes und Kreatives ist für den 2., 16. und 30. Juli sowie den 13. und 27. August angekündigt.',
-  'Der Kunsthandwerksmarkt findet am 9. und 23. Juli sowie am 6. und 20. August statt. Als Zeitfenster nennt die Gemeinde jeweils 8 bis 18 Uhr.',
-  'Veranstaltungsort ist der Bereich um Via Vittoria 16 in Pieve di Ledro. Wer spontan hinfahren möchte, sollte vorab auf kurzfristige Änderungen durch Wetter oder Organisation achten.'
- ],url:'https://www.comune.ledro.tn.it/Vivere-il-comune/Eventi/Mercatino-dell-Usato-e-della-Creativita-e-Mercatino-dell-Artigianato-2026'},
- wake:{section:'Pur',title:'Wakeboard-Anlage bleibt Gegenstand politischer Fragen',lead:'Eine politische Anfrage verlangt Prüfungen zur Wakeboard-Anlage in Val di Pur. Dabei geht es unter anderem um Genehmigungen, Sicherheit, Landschaft und Verkehrsfragen.',status:'Pressebericht',source:'l’Adige',date:'28.07.2026',body:[
-  'Die Anfrage stammt von Lucia Coppola. Gefordert werden unter anderem Überprüfungen der Genehmigungslage sowie der Auswirkungen auf Schwimmer und kleine Boote.',
-  'Weitere angesprochene Punkte betreffen Landschaft und Vegetation sowie Parkplätze und Fußwege im Bereich von Pur.',
-  'Wichtig ist die Einordnung: Eine politische Anfrage ist kein Nachweis eines Verstoßes. Sie dokumentiert zunächst Fragen und Prüfaufträge, über die zuständige Stellen Auskunft geben sollen.'
- ],url:'https://www.ladige.it/territori/basso-sarca-ledro/impianto-di-wakeboard-a-ledro-chieste-verifiche-e-sopralluoghi-cvhqbfnz'},
- imis:{section:'Haus & Regeln',title:'IM.I.S. 2026: Zahlung in einer Rate bis 16. Dezember',lead:'Die Gemeinde Ledro informiert, dass für 2026 keine Vorauszahlung im Juni erforderlich ist. Die Steuer wird in einer einzigen Rate fällig.',status:'Offiziell bestätigt',source:'Comune di Ledro',date:'08.06.2026',body:[
-  'Nach Angaben der Gemeinde ist die IM.I.S. für das Jahr 2026 in einer einzigen Rate bis zum 16. Dezember 2026 zu zahlen.',
-  'Eine Vorauszahlung im Juni ist nicht vorgesehen. Die Gemeinde gibt außerdem an, dass die Sätze gegenüber 2025 unverändert bleiben.',
-  'Für Eigentümer bleibt trotzdem wichtig, die individuelle Berechnung und eventuelle Sonderfälle anhand des eigenen Steuerbescheids beziehungsweise der kommunalen Unterlagen zu prüfen.'
- ],url:'https://www.comune.ledro.tn.it/Novita/Avvisi/Imposta-Immobiliare-Semplice-IM.I.S.-aliquote-e-versamento-anno-2026'},
- waste:{section:'Alltag',title:'EasyWaste: Müllcontainer lassen sich auch per Smartphone öffnen',lead:'Die Comunità Alto Garda e Ledro hat die EasyWaste-KGN-App als zusätzliche Möglichkeit für bereits freigeschaltete Nutzer beschrieben.',status:'Offiziell bestätigt',source:'Comunità Alto Garda e Ledro',date:'13.04.2026',body:[
-  'Bereits aktivierte Nutzer können die vorgesehenen Abfallcontainer mit dem Smartphone öffnen. Die bisherige Karte wird dadurch nicht ungültig und kann weiterhin verwendet werden.',
-  'Für Ferienhausbesitzer kann die Smartphone-Lösung praktisch sein, wenn die Karte nicht griffbereit ist. Voraussetzung ist allerdings, dass der jeweilige Nutzer bereits für das System freigeschaltet wurde.',
-  'Bei Problemen mit Zugang oder Berechtigung sollte die zuständige Abfallverwaltung kontaktiert werden; die App ersetzt keine notwendige Registrierung.'
- ],url:''}
-};
-
-const chipNames=['Heute','Ledrotal','Pur','Pieve','Haus & Alltag','Verkehr','Garda','Entdecken'];
-const chips=document.getElementById('chips');
-chipNames.forEach((name,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=name;b.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');};chips.appendChild(b)});
-
-function openStory(id){
- const s=stories[id]; if(!s) return;
- const body=document.getElementById('articleBody');
- body.innerHTML=`<div class="sectiontag">${s.section}</div><h2>${s.title}</h2><p class="lead">${s.lead}</p><div class="by"><b>${s.status}</b> · ${s.source} · ${s.date}</div>${s.body.map(p=>`<p>${p}</p>`).join('')}<div class="sourcebox"><b>Quelle:</b> ${s.source}${s.url?`<br><a href="${s.url}" target="_blank" rel="noopener">Originalquelle öffnen</a>`:''}<br><br>Diese Demo zeigt die mobile Aufbereitung. Für die tägliche Ausgabe sollen neue Inhalte automatisiert geladen werden.</div>`;
- const view=document.getElementById('articleView');view.classList.add('show');view.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';history.pushState({article:id},'',`#${id}`);window.currentStory=id;
-}
-function closeStory(skipHistory=false){const view=document.getElementById('articleView');view.classList.remove('show');view.setAttribute('aria-hidden','true');document.body.style.overflow='';if(!skipHistory&&location.hash)history.back();}
-document.querySelectorAll('[data-id]').forEach(el=>el.addEventListener('click',()=>openStory(el.dataset.id)));
-document.getElementById('backBtn').onclick=()=>closeStory();
-document.getElementById('shareBtn').onclick=async()=>{const s=stories[window.currentStory];const data={title:s.title,text:s.lead,url:location.href};if(navigator.share){try{await navigator.share(data)}catch(e){}}else{await navigator.clipboard.writeText(`${s.title}\n${s.lead}`);alert('Text kopiert.');}};
-window.addEventListener('popstate',()=>{if(document.getElementById('articleView').classList.contains('show'))closeStory(true)});
-if(location.hash&&stories[location.hash.slice(1)])setTimeout(()=>openStory(location.hash.slice(1)),50);
-
-document.querySelectorAll('.navbtn').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.navbtn').forEach(x=>x.classList.remove('active'));btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});});
-document.querySelectorAll('.quickcard').forEach(c=>c.onclick=()=>alert(c.dataset.filter+' wird in der nächsten Ausbaustufe als eigener Feed gefiltert.'));
-
-if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
-const standalone=window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-if(!standalone) document.getElementById('installHint').classList.add('show');
+let DATA=null,current='Heute',currentStory=null;
+const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+async function load(){try{const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error(r.status);DATA=await r.json();setup();}catch(e){document.getElementById('feed').innerHTML='<div class="empty">news.json konnte nicht geladen werden. Bitte später neu laden.</div>';}}
+function setup(){const e=DATA.edition||{};kicker.textContent=e.kicker||'';brand.textContent=e.brand||'Ledrotal Zeitung';subtitle.textContent=e.subtitle||'';date.textContent=e.date||'';editionLabel.textContent=e.label||'Mobile Ausgabe';const c=document.getElementById('chips');c.innerHTML='';(DATA.sections||['Heute']).forEach((s,i)=>{const b=document.createElement('button');b.className='chip'+(i===0?' active':'');b.textContent=s;b.onclick=()=>select(s,b);c.appendChild(b)});render();if(location.hash)open(location.hash.slice(1),true)}
+function select(section,btn){current=section;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===btn));document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.section===section));render();window.scrollTo({top:0,behavior:'smooth'})}
+function stories(){let s=[...(DATA.stories||[])].sort((a,b)=>(b.priority||0)-(a.priority||0));return current==='Heute'?s:s.filter(x=>x.section===current||x.tag===current)}
+function visualClass(s){return ['water','market','house','culture','forest'].includes(s.imageStyle)?s.imageStyle:''}
+function render(){const list=stories(),feed=document.getElementById('feed');if(!list.length){feed.innerHTML='<div class="empty">In diesem Ressort gibt es in dieser Ausgabe keine eigene Meldung.</div>';return}let html='';const hero=list.find(x=>x.hero)||list[0];if(current==='Heute'){html+=`<section class="hero" data-id="${esc(hero.id)}"><div class="visual"><span class="badge">Top-Meldung · ${esc(hero.section)}</span></div><div class="tag">${esc(hero.tag)}</div><h1>${esc(hero.title)}</h1><p class="dek">${esc(hero.teaser)}</p><div class="meta"><b>${esc(hero.status)}</b><span>·</span><span>${esc(hero.readTime)}</span><span>·</span><span>${esc(hero.source)}, ${esc(hero.date)}</span></div></section><div class="sectionhead"><h2>Heute im Tal</h2><span>lokal zuerst</span></div>`}const rest=current==='Heute'?list.filter(x=>x.id!==hero.id):list;html+=rest.map(s=>`<article class="story" data-id="${esc(s.id)}"><div><div class="tag">${esc(s.tag)}</div><h3>${esc(s.title)}</h3><p>${esc(s.teaser)}</p><div class="meta"><b>${esc(s.status)}</b><span>· ${esc(s.readTime)}</span></div></div><div class="thumb ${visualClass(s)}"></div></article>`).join('');feed.innerHTML=html;feed.querySelectorAll('[data-id]').forEach(el=>el.onclick=()=>open(el.dataset.id))}
+function open(id,skipPush=false){const s=(DATA.stories||[]).find(x=>x.id===id);if(!s)return;currentStory=s;document.getElementById('article').innerHTML=`<div class="tag">${esc(s.tag)}</div><h2>${esc(s.title)}</h2><p class="lead">${esc(s.teaser)}</p><div class="by"><b>${esc(s.status)}</b> · ${esc(s.source)} · ${esc(s.date)} · ${esc(s.readTime)}</div>${(s.body||[]).map(p=>`<p>${esc(p)}</p>`).join('')}<div class="source"><b>Quelle:</b> ${esc(s.source)}${s.url?`<br><a href="${esc(s.url)}" target="_blank" rel="noopener">Originalquelle öffnen</a>`:''}</div>`;viewer.classList.add('show');document.body.style.overflow='hidden';if(!skipPush)history.pushState({article:id},'', '#'+id)}
+function close(skip=false){viewer.classList.remove('show');document.body.style.overflow='';currentStory=null;if(!skip&&location.hash)history.back()}
+back.onclick=()=>close();share.onclick=async()=>{if(!currentStory)return;const payload={title:currentStory.title,text:currentStory.teaser,url:location.href};if(navigator.share){try{await navigator.share(payload)}catch(e){}}else{try{await navigator.clipboard.writeText(location.href);alert('Link kopiert.')}catch(e){}}};window.addEventListener('popstate',()=>{if(viewer.classList.contains('show'))close(true)});document.querySelectorAll('.nav').forEach(b=>b.onclick=()=>{const s=b.dataset.section;const chip=[...document.querySelectorAll('.chip')].find(x=>x.textContent===s);if(chip)select(s,chip);else{current=s;document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x===b));render();window.scrollTo({top:0,behavior:'smooth'})}});load();
 </script>
 </body>
 </html>
