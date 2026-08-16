@@ -196,6 +196,125 @@ main { padding:0 14px; }
 .forecast-model { display:inline-block; margin-top:5px; color:#52646b; font-size:9px; font-weight:750; }
 .forecast-model.provisional { padding:3px 4px; border-radius:4px; background:#f5e8ca; color:#6c511a; }
 .weather-method { margin:12px 0; padding:7px 0 7px 11px; border-left:2px solid #918d84; color:var(--muted); font-size:12px; line-height:1.42; }
+@media (max-width:759px) {
+  .app { padding-bottom:calc(94px + var(--safe)); }
+  .top { padding:14px 16px 12px; }
+  .kicker { font-size:13px; line-height:1.25; }
+  .brand { margin:5px 0 3px; font-size:38px; line-height:1; }
+  .sub { font-size:15px; line-height:1.3; }
+  .edition { flex-direction:column; align-items:stretch; gap:4px; margin-top:12px; font-size:14px; line-height:1.3; }
+  .edition span { white-space:nowrap; }
+  .edition span:last-child { text-align:right; }
+  .section-nav-inner { height:50px; }
+  .section-tab { padding-inline:15px; font-size:17.5px; font-weight:600; }
+  .section-tab::after { right:15px; left:15px; height:3px; }
+  main { padding-inline:16px; }
+  .tag { font-size:14px; line-height:1.25; }
+  .meta { gap:7px; font-size:14px; line-height:1.5; }
+  .news-header { margin:25px 0 15px; padding-bottom:15px; }
+  .news-header span { font-size:14px; }
+  .news-header h1 { margin:5px 0 8px; font-size:48px; line-height:1.01; }
+  .news-header p { font-size:19px; line-height:1.5; }
+  .service-hero,.politics-hero,.weather-hero { margin:25px 0 19px; padding-bottom:15px; }
+  .service-hero .tag,.politics-hero .tag,.weather-hero .tag { margin-bottom:5px; font-size:13px; line-height:1.3; }
+  .service-hero h1,.politics-hero h1,.weather-hero h1 { margin-bottom:8px; font-size:32px; line-height:1.08; }
+  .service-hero p,.politics-hero p,.weather-hero p { font-size:19px; line-height:1.5; }
+  .service-updated,.politics-updated,.weather-updated { margin-top:9px; font-size:14px; line-height:1.4; }
+  .hint { margin:14px 0 23px; padding:9px 0 9px 13px; font-size:16px; line-height:1.5; }
+  .hint b { margin-bottom:4px; font-size:13px; line-height:1.25; }
+  .hero { margin:20px 0 30px; padding-bottom:26px; }
+  .hero-figure,.article-figure { margin-bottom:18px; border-radius:10px; }
+  .article-figure figcaption,.hero-figure figcaption { padding:10px 11px; font-size:13px; line-height:1.45; }
+  .hero-badge { margin-bottom:5px; padding:6px 9px; font-size:13px; }
+  .hero h2 { margin:8px 0 13px; font-size:38px; line-height:1.08; }
+  .dek { margin-bottom:15px; font-size:21px; line-height:1.5; }
+  .sectionhead { align-items:flex-end; margin:32px 0 10px; padding-bottom:9px; }
+  .sectionhead h2 { font-size:31px; line-height:1.08; }
+  .sectionhead span { max-width:125px; font-size:14px; line-height:1.25; text-align:right; }
+  .story-link { padding:24px 0; }
+  .story-link.with-image { display:flex; flex-direction:column; gap:0; }
+  .story-thumb { order:-1; width:100%; height:auto; margin-bottom:17px; aspect-ratio:16/9; border-radius:8px; }
+  .story h3 { margin:6px 0 11px; font-size:35px; line-height:1.12; }
+  .story p { margin-bottom:13px; font-size:20px; line-height:1.52; }
+  .bottom { height:calc(86px + var(--safe)); }
+  .nav { gap:5px; padding:8px 3px; font-size:15px; line-height:1.08; }
+  .nav-icon { font-size:20px; }
+  .article { padding:22px 18px 104px; }
+  .article h2 { margin:7px 0 15px; font-size:38px; line-height:1.09; }
+  .lead { margin-bottom:19px; font-size:21px; line-height:1.55; }
+  .by { margin-bottom:24px; padding-bottom:17px; font-size:14px; line-height:1.55; }
+  .article-body p { margin-bottom:23px; font-size:19px; line-height:1.72; }
+  .sources { margin-top:35px; padding-top:18px; }
+  .sources h3 { margin-bottom:7px; font-size:25px; }
+  .sources-intro { margin-bottom:15px!important; font-size:15px!important; line-height:1.5!important; }
+  .source-entry + .source-entry { margin-top:16px; padding-top:16px; }
+  .source-publisher { font-size:16px; line-height:1.35; }
+  .source-date { font-size:14px; line-height:1.4; }
+  .source-title { margin:6px 0 9px!important; font-size:16px!important; line-height:1.5!important; }
+  .source-link { font-size:15px; line-height:1.4; }
+  .service-group { margin:14px 0; }
+  .service-group summary { padding:18px 12px; font-size:24px; line-height:1.2; }
+  .service-count { font-size:13px; line-height:1.25; }
+  .service-grid { padding:0 12px; }
+  .service-card { padding:23px 0; }
+  .service-card h3 { margin-bottom:6px; font-size:25px; line-height:1.22; }
+  .service-place { margin-bottom:15px; font-size:15px; line-height:1.45; }
+  .schedule-row { grid-template-columns:minmax(108px,.8fr) minmax(0,1.35fr); gap:12px; padding:8px 0; font-size:18px; line-height:1.45; }
+  .service-note,.service-season { margin-top:14px; padding:8px 0 8px 11px; font-size:16px; line-height:1.5; }
+  .service-body p { margin-top:14px; font-size:18px; line-height:1.6; }
+  .service-status { margin-bottom:8px; font-size:13px; line-height:1.25; }
+  .service-sources { margin-top:16px; padding-top:14px; }
+  .service-source + .service-source { margin-top:13px; padding-top:13px; }
+  .service-source b { font-size:15px; line-height:1.4; }
+  .service-source span { margin-top:3px; font-size:14px; line-height:1.45; }
+  .service-source a { margin-top:7px; font-size:15px; line-height:1.4; }
+  .dossier { margin:18px 0; padding:20px 0 25px; }
+  .project-status { padding:5px 8px; font-size:13px; line-height:1.25; }
+  .dossier h2 { margin:11px 0 12px; font-size:35px; line-height:1.1; }
+  .dossier-summary { margin-bottom:19px; font-size:20px; line-height:1.5; }
+  .project-facts { gap:11px; margin-bottom:21px; }
+  .project-fact { padding:13px; font-size:16px; line-height:1.55; }
+  .project-fact b { margin-bottom:4px; }
+  .timeline li { padding:0 0 18px 20px; font-size:16px; line-height:1.5; }
+  .timeline-state { font-size:13px; line-height:1.3; }
+  .warning-stack { gap:11px; margin:15px 0 22px; }
+  .weather-warning { padding:16px; }
+  .warning-head { margin-bottom:8px; }
+  .warning-level { font-size:13px; line-height:1.25; }
+  .warning-status { font-size:13px; line-height:1.3; }
+  .weather-warning h2 { margin-bottom:8px; font-size:25px; line-height:1.18; }
+  .weather-warning p { font-size:17px; line-height:1.5; }
+  .weather-warning a { margin-top:10px; font-size:15px; line-height:1.4; }
+  .weather-sectionhead { margin:26px 0 11px; padding-bottom:8px; }
+  .weather-sectionhead h2 { font-size:31px; line-height:1.1; }
+  .weather-sectionhead p { margin-top:5px; font-size:15px; line-height:1.4; }
+  .weather-compare { grid-template-columns:1fr; gap:13px; }
+  .today-weather { padding:18px; }
+  .today-place { font-size:14px; }
+  .today-weather h3 { margin:5px 0 11px; font-size:25px; line-height:1.18; }
+  .today-temp { gap:9px; margin-bottom:11px; }
+  .today-temp strong { font-size:44px; }
+  .today-temp span { font-size:15px; line-height:1.35; }
+  .today-condition { min-height:0; margin-bottom:13px; font-size:18px; line-height:1.5; }
+  .today-facts { gap:8px; margin-bottom:15px; }
+  .today-fact { padding-top:8px; font-size:16px; line-height:1.45; }
+  .water-box { padding:13px; }
+  .water-box b { margin-bottom:5px; font-size:14px; }
+  .water-value { margin-bottom:7px; font-size:25px; line-height:1.2; }
+  .water-value.unavailable { font-size:17px; line-height:1.4; }
+  .water-meta { font-size:14px; line-height:1.5; }
+  .water-box a { margin-top:9px; font-size:14px; line-height:1.4; }
+  .forecast-row { grid-template-columns:60px repeat(2,minmax(0,1fr)); }
+  .forecast-heading { padding:11px 7px; font-size:13px; line-height:1.3; }
+  .forecast-day { padding:11px 5px; font-size:12px; line-height:1.35; }
+  .forecast-day b { font-size:14px; }
+  .forecast-cell { padding:11px 8px; }
+  .forecast-temp { font-size:19px; line-height:1.15; }
+  .forecast-condition { font-size:13px; line-height:1.35; }
+  .forecast-detail { font-size:12px; line-height:1.45; }
+  .forecast-model { font-size:11px; line-height:1.35; }
+  .weather-method { padding:9px 0 9px 13px; font-size:16px; line-height:1.5; }
+}
 @media (min-width:760px) {
   .top { padding-inline:28px; }
   .brand { font-size:42px; }
